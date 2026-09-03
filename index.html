@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Paulu's — Gestão Financeira</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAT40lEQVR42u2de5BkVX3HP79z7u3X7C7L4gN5aZQC2Y2CkmgAhVRMITEIIdJT0SBGSQZh3+wuS8CktxOCLPt+4q4JlqEUnDFITEoIiVFEtPAVU7oDBg2ouxJEYGFn+nXvPb/8cW73zOzMQh4C3dv3W9VVUzN3uvve3/f8zu99oH8gANx45eV8olIgAwCmL+6yUjGAsnnJKykV1vHkU28GhOGyzQjQT/cZ6/s5cvZsYAjQbP231WI/3GOlHDL76D0U8q8jimokrVNYefNPqVQM1arLNMDhq/4toMw+5jxKhRNptiKKhQEI/7jPtGDfbgF+dYsu9GpfhFakGC5j7YdmU60mfaIJ+5AAbfW+aelrgHfQbAlCQBQ7ioVjsaV3AJpqib5E0Bd3qTKAYDtmn6CAojI78wL6wtRVN6NxaCTJCNDPUJWMABkyAmTICJAhI0CGjACHqQ+AijmEd2CpVAIgYLhsqVQM2l9BocMvDqAII2XDnvltQcZAfbrwBRJ5hmo1Tq/xqNLOHhoWjCqDI47DOHEkh819DJf9Kh8cmerb7xoqUS+chco9E2JURxgaovh2lK8D+7G6Dxv8lIbsY9WG8SnvMTxsGRmBkZEkI0A3Cn6y0LcsnoPKW8Geg+pvoJwMevQ0bacKhRxY639OHLRaDpHHgAeBr2PMl3hq/AGqu2tTtMvg4UOE3iXAcNlOEoSwddk7UN6Hci5BcCyB9UJNEv/SGbeLBFFFEQQBMVgLgQVrIIohcY8i+gUSPs1Vm+8/xOdnBHjR4PdnqFYdlXKOucdcgjFXYu3pWAOtCJLEAQ4VQVT8hj/jvepBz0FBFRVFVAFDEBhyoX9fp/eBbGPZxs/ik0iGNWsUEc0I8GKv+o3LLsaaPycXvIEkgVaUCh2LiHSE2SECdkZDUACnAEl6feodtT0HnXjfQk4QgSh+AOeqLN9yV69rA+mhlR9Qrcb85ZWvZk5hE6G9yO/bUdJR35MFhgSEAYSBF3CjOf3OHX5vN1IiF0zYA1ECcaygyRQyKH4vyec8mZLkNuoHruaav97L8LBlcDDJCPBCGnobllxEGOwiDF5OrTFV8JoKK58TAkv691GcPoDyBIbV6bVesIV8wHjtChyfJxe8AngVCadgOB3hLRhzIvmcV/1RkoAK0vkshwClgqEVP07UWsyK7SO9uCVIzwh//eLrKOavJ04gTmJEgo4wQCgWJDX4HgA+g+rd7J/7A6pVx7aFxxAF+ybt8wnFQsBY472s2nr7dG1TzjHnuNMwXIjoxeTCk3AKzShJbYo2EWIC6zVNo7mOq7Ze3bFTeqTOULpb+MOGwcGEjUu2MFBawnjdr8TJqz6fs6kbdyfqtrB8y5cPMhgNRz79epx8bxoBDtTez/hRnwYCFowm7JkvafBnQpVXPlBg7twLEbOUXHAGcQJRnCBiJ7YcUQaKllrjc/xk3x+yaaTeKyToXgK09/x1S7ZyRGkxY/UIJUAQVBVBKRUNzehbaHwNy7Z+sXNPvsTLdbyFTUtPQRmdRoDx+iWs3PapzmdNfi6VigBmyu83LX0vxv4F+fBEanXn3UeR9F0jZhVD6o17aT77blbfcqAXSGC6Wvg3LbyOOanwIUyF77BGyIWGeusG9oydybKtX2S4bCmXfQVwtRr/Px+8Uq26VPi+gUQRlm+5jaei02k0t5LLGQIrqEuLTgkZq0cU8ueQn/OPbFheTLVUV2+z3ZcLGC5bBqsxN115IbNK11Orx53vqeoIAwM6Tr15Kau239ER0Avnhk1sCZ6YzwJL2bDkywT2b8jnj6TZ8luCEDJej5hVOpux2meoVi9Iv3tCl+YTTJetfEN52LFh+bHkcrcQxw5VA+nKDwMD7KfWOJdV2+9g11AI8KL54NVqjCJUKgErtn6OsfhtJMnDFPM29UJAxGuC2aV3s37xRqrVuJurjruLAAtGBRHFxTvJ5+YRJQ7EoKpYA0idRut8rrn5a+waCrl8d/SiryxJt5hKJeC6baMcGD+HVvQ9CpNJQMhYPWaguJx1iwepVuNu7UPsHgK01fi6Rb/LQOEC6o0JV89IQhga6s0PcvX2+ycJ/6VDmwQf2f0YT7fOJY4f9h5JahOghihyhMEublx8HOVh1wljZwSYAXvmK5VzAkRuwKmibes6tdhr9R2s3v6ZrhD+ZBIMly3Vnf/FeOt8kuRpwqDtGhqiRMmHcwlkOyLKglHJCHBoq98x+7TzKRXfSLPlfOw+3fdrjUcYa13NcNkytDvuqic4OJJQqQRcu+M/aDQvwVgD4htPRCy1RkIpfyHrF57P4EjSbVtBt2iAttpc4oPx0ra/lTAQouRPqe6usWe+pF093YVqNWbXUMjqnV+g0dxEqWDTCKVPODmniL2RoaGQPfO1m+IvpgtWvw+WrF94EoF5O40WaebOR/nGG/9O7aiR9LqYbsXQbr8dSHAdtcYPyYUmTUxZmpGjVFjASflBn8buHq/AdM93MBdQyAdpBs4rgsACuj0N6nR3AaugUIYVm+q4eAXWCJomhUQgcQqyKk0YJRkBDlb/Ys7FOVARFMVaS63+DC33OQDWVLs/1To4mFAuW1bu+Dz1xlcp5KxPIWNptZRC7lTmPHUOItottoB5yddNtepY+6HZoKcRxd59Qh35EBxf4dodT1Iu267c+2dCuZzS2tyQ3uEE0a1RkA+mF2YaIE24gB04EWtfTuIUEW/oiYDovwLC/Pm9U7gyOJigKrz6Z/dQbzxILvDejIqlFQnwLm4cOsJf99Ibg6YrPl/kteQC0LY3gPHagH8DlAWjvVVzt2aND2oJtxIEfvULQuwSCvmjCApvB2Bk2PQ7Adra8ViMIS3EVMQYWnGEMT/uBIl6C57IUXwn9WYCae2AqGKNIvrb/r72SEYAADVHTfysYATgWWB/agD2FgG81yKs3vkQiRslF0oaHRSSRFA5I9UUSUYAv2DyB9uGoBFxENGrqFQsIoro/d6dxWc2owSEk9lw2TxE9KW2A7qEAGaG4g0RivXeb11TvtmpNhcRnFMCewQ68CveaCybjACiB6asfm8KlKi7Uvsp9hxGO4brQ0QxaNqXoDjCAKy8GuCl9nC6xAbg8YlVAjgHIrMgfFm6V/aeJpifGq6R+RlRHGGMb1YRVYyBxB2bxQE67p38mMS1v4+gJL4LR09Kr+s9ArQN1wL7UQ5gZFLjESAclRGg7d5p/ENarRZizJRVIvat6XW9R4D2N/6JaSJSS9vQJjNgICNAu3L3G0/sRfnPNPnji0HiBDT1l7soefK/xpy9SSfBNXXby2UE8O5SkA5e+Bph4Js5BUsrUgL7JtYtno8I3VhO9T8jwHEWCGcwfJoZAaY8D/cPOCcTfrEmFHIW5LLUDegtAkzs90WgiFM6ZW5eA4xlBPDbgFePSe2L1Js/J7ATyZNGS7HyQdYPvQxwPaUF2p5LEh8JzPGBwCk2whMZAdproVIJWH3LAdDbyOegnTxJEkepcCSau64nikKmejhpppPjyIW208SqIt7jcfumekL9vQV4YzCWHTSarbQNWxEx1JsJ+dxC1i58czfX18/g4XgCOFngK4XbhS+pfePco1M8ob4mQLXqGC5bVm99mDi5lWLBpE0WgnOCkZBc8LdsWF705eMv6lYg017KoUbOzPCE9S2dSGa7wcW5J9FZj0yJF/S9EbhnvqIqSKtCvfUsgfEdQSKGZpRQyC9A3CepVh0LRuVFIIF0Ths7+CWdnw/9v+3GEZWziJL0WYtL6wNGWb3Odw+/xJVO3dMcWq06FiywrNi1j5sWX8sRA9sZq/nGUBFLvRFTKpbZsPRmBrdcgaowOmpfkNl97UrlalXZVSnBY1P/fuSA8kgQsHrdgRn/v1w2jIwklH5xGmHudbRiT2TRGGtAuX/SAnSZBmhjcDBheNhy9bYdHBi/i4FigGpaCi4BtXrMQOHDbF72SS6/3McP/KhX+SUKP+gYnJuW7SAae5jx4g8YLz7MWOGHjBUe4ongJ0j9DwA/RPJgtBM81l5MPidIJxBkiGNQuacbDMDuIwDAnj3pHt+8lEbzUfK5oNN02SZBIX8pCwa+xF8ten3aK+A9if9rbv2YxyQlkm/y+OgVr2Xz8n+mlL+SxB2DtccR2GMw5lUMFI+n2dyP5D9NpWIYHHTT1P+aasKG5UWE99GK0uesjiAwNKK9GPOAJ/yIywgw01YAsHL3L2hEF+DcfsLATiNBEJzF7NwDbF6+gsoHClSrMYIvt24Pfh59niSSYqhUAi7fFVOtxgwNhWxesohS8Zvkgt9irB4TJ+pfcYxIQiuqoe7iSeNk9SANklYwJ++hVDieKE7SkTaOXAjInazYVE8J95JrgO5NsrS7hW9aeAaF/F2IHEErmjwcKsEaSyEHjWgUp9toRCNcu+PJafv5Ec+cAvr9CYFpQqkYMDZ+ESu338mG5fMw7vfALKUQvpFmBEkyMQeoPZXEWqjXL+LqnX9/iKEUE6Nl5jz9XfLhfFqRegKow1oh0V/jqs3foVy23TB7uLuzbO1RMeuvOJ1c8U7C4DhqjTgVjG8gQR250BJYaLQeR7gL1btx5tvsZR+bNtXZvOQEnPx4EgGUXGhoxDsxgDUXkQtfRZz4uYNgJmb/aEwYBEBEM3ofq7Z9doaZQlO/702L/oQ5A7sZr3sSKQnFnKHW/Aort/5mN80O6v40a/uhVoZO4MiBWynmz2a8rn5W36RJXYoSWEsu9HH4RisC3YeyDyEGOXvK/apCPkdnvGycTB84qfjpX61oL/X6Jay++d7nEL7/v9kH5mHdKFaOIk7wAy7weY166zxWbvmnbhoq2f1RtXvv9UGiRbfuZ/bxt3J0UbD2TPJh4EfI4LyLJQbnlDhOiJxiJCCwc8kFJxDY15C4qWQX8TOF4zjBtYdAiqQhW69VcqGh1fo7nnrmPXzk498/pPABTj45YOPGhHN//ROU8m+hGXmCqiYU8pZ68z5Wbv0IlYph0aKumRzWG7F134NvGBlxLN/y50TxGUTxXeRyhmLebweoNwIR6w+JVCWOHY0ooREdYrWJSa9X0BhVJZ8zlAoWp9+jEZVZuvliqrf8zA+COITwdw2F7N4dcdOiyxkoDKbTTewkoikqq1LXr6u0bu9V2kxWnxuXnYuRJaDvpJAP0iGO4DRJm0yYNDF8OtlVFWOEMPCdyM0IVL+O8jH2772d6kjrece/trXC2sXnUAz/BeeERE060i5mVingwPjHWLntim4cKt2bZdeTR8YDrFvyqwT29xHehbpTyecKGOP3eVU/LLo1Q4tBaCFyTYzuQcw9OHcny7c8MM0TORSG0pX/0UWnUgq/BMwlSTQdbOXIhYYoeRSbnMpT88a6cY5wb9fdD5cte+brFIt609LXoHIqqm9A5HWgR6P6SkTeNGnle6Os2VoLZjdXbX6EyWcH+PnEz31WUHtW0dqFb6aQuwtjXuFPHDHGt7dLgjWG8cY5XLPzq93i9h1eBJiqEUxaXDJdaBuXvRb0R1PiAMVCwFjtPazafkcnCgjued2zSsWwYFT89PLF5xGGtyEytyN8j4iBYsj+A8tYvWPLcxqPGQFeADIsGJU0H28YHU142wknk8R7phOgfilj8z7FwTOBZ44aCmsqE4bgpqWrsHYtqkKcuIlR8kTMLoYcqG1jxdYl3Sx8OByPjZu8gtuew5lL9RD0d+nMHvO82kWqMVRj1n74ZPLFTRRyv0OtoZ2U9RTh129lxdYl6djbrq5oPvwI8EvTIgsERkgF6Nhw2Tzs7MUgK8kFs9Ion48Y+unlCbNKIQfqn2TFlj/yY2+rXX/mYH8TQDEMly2PPWWpVNoaJJlmVIq8H2SIQu446k2oNyfnCRKMsRRyAeP1DazYstK7jlXthbE2/a4B6qmbN1VNr7/qeIw7G+Ei4J0U8rNoRvgDK8SkwtfUmwhIXINacwkrtnycctn6YpLe6GgN+nTli6/T52RuWnQW1hyNkeNRnQ9yGpLMp5D3rVuNFtTqcXoa2dRVP1AIaLS+Q6N1Oat3fKsXD47qRwIIIpZmC0J7Pdb4KGDbg2tHE2tNf0KYzxEEPveoXvWXCpZWXKPeXM+PHrqBbXc3qVQCBgfjXnsYfW4DKMSxI0q0Ezr2h0waP61U1CebVDEmIJ+3tFqOVut26s3ruebmBztGYzdPMc0I8JwKwfhoiGjazuUQ9SPcjLHkA4u10Gg+Q6N1B4nbwcqt3wbaeQnXKyeEZQSYrgK84FQEI77iJzC2c4Bks1knir9BK7kDk9zBsm17veDTEHQPHhSZEWAywtBgBGIHSRLh4l/QlEeQ6LuIuR/layzf/Gjn+o7gq4fN6eH9SADfgp4LLY3mJoy9288okscJo5+zaOfYQXaCsGaNZc2aBJHkcHsYfaoBVAkMOLmPlZvvmVHgHg4RB8RUq4flk+jfLUAB0VkMly33HR0wb17ko3eiQNwvj8HQzxAcgyMJ8+b58K/04jy6jAAZMgJkyAiQISNAhowAGTICZMgIkCEjQIaMABkyAmTICJAhI0CGjAAZMgJkyAiQISNAhowAGTICZMgIkCEjQIaMABkBskeQESBDRoAMGQEyZATIkBEgQ0aADBkBMmQEyJARIENGgAwZATJkBMiQESBDRoAMGQEyZAQ4jKA40YwA/QmHiGBcLiNA/y38BGtzRLGi+igAC0Y1I0BfyF5j8rkAkSeot85j1Y4vU6mYbjvONSPAC7PjJ8wqBcTJtxlrnMnV2+5JD3pw9DH6Z1ZwMWep1W/lwfqH2b271u0HOmYE+GVCNKTRvJ6rtv4ZQHqyV98LH+C/AW+lUq5+rf6TAAAAAElFTkSuQmCC" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --b900:#12332570; --b800:#173c2c; --b700:#1f5c42; --b600:#2b7551; --b500:#3d9068;
+    --b400:#5aab82; --b200:#bfe0cd; --b100:#e4f3ea; --b50:#f6faf7;
+    --danger:#b3452f; --danger-bg:#fdf0ee; --warn:#93630f; --warn-bg:#fbf1e2;
+    --ink:#1c2622; --muted:#78716c; --muted2:#a8a29e; --border:#f1efe9;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:#fbfaf7;}
+  .serif{font-family:'Fraunces',serif;}
+  button{font-family:inherit; cursor:pointer;}
+  input,select,textarea{font-family:inherit; font-size:14px;}
+  a{color:inherit;}
+
+  .btn{display:inline-flex; align-items:center; gap:6px; justify-content:center; border:none; border-radius:10px; padding:9px 14px; font-size:14px; font-weight:500; transition:transform .05s ease;}
+  .btn:active{transform:scale(0.98);}
+  .btn:disabled{opacity:.6; cursor:default;}
+  .btn-primary{background:var(--b600); color:#fff;}
+  .btn-primary:hover{background:var(--b700);}
+  .btn-outline{background:#fff; color:var(--b700); border:1px solid var(--b200);}
+  .btn-outline:hover{background:var(--b50);}
+  .btn-danger{background:var(--danger-bg); color:var(--danger);}
+  .btn-danger:hover{filter:brightness(0.97);}
+  .btn-ghost{background:transparent; color:var(--b700);}
+  .icon-btn{padding:6px; border-radius:8px; border:none; background:transparent; display:inline-flex;}
+  .icon-btn:hover{background:#f5f4f0;}
+  .icon-btn.danger:hover{background:var(--danger-bg); color:var(--danger);}
+
+  .field{display:block; margin-bottom:12px;}
+  .field-label{display:block; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--b700); margin-bottom:4px;}
+  .field-hint{display:block; font-size:11px; color:#a8a29e; margin-top:4px;}
+  .input, select.input, textarea.input{
+    width:100%; border:1px solid #e7e5e0; background:#fff; border-radius:8px; padding:9px 11px;
+    outline:none; color:var(--ink); transition:box-shadow .1s;
+  }
+  .input:focus{box-shadow:0 0 0 3px var(--b100); border-color:var(--b400);}
+
+  .card{background:#fff; border:1px solid var(--border); border-radius:16px;}
+
+  .badge{display:inline-flex; align-items:center; gap:5px; border-radius:999px; padding:2px 9px; font-size:11px; font-weight:600;}
+  .badge-ok{background:var(--b100); color:var(--b700);}
+  .badge-pending{background:var(--warn-bg); color:var(--warn);}
+  .dot{width:6px; height:6px; border-radius:999px; display:inline-block;}
+
+  table{width:100%; border-collapse:collapse; font-size:14px;}
+  thead th{text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.03em; color:#a8a29e; padding:11px 14px; border-bottom:1px solid var(--border);}
+  tbody td{padding:11px 14px; border-bottom:1px solid #faf9f6;}
+  tbody tr:hover{background:#fafaf8;}
+
+  #root{min-height:100vh;}
+  .app-shell{min-height:100vh; display:flex;}
+  .sidebar{width:250px; flex-shrink:0; background:#fff; border-right:1px solid var(--border); display:flex; flex-direction:column; position:sticky; top:0; height:100vh;}
+  .sidebar-brand{padding:22px 18px; border-bottom:1px solid var(--border); text-align:center;}
+  .sidebar-nav{flex:1; padding:14px 10px; overflow-y:auto;}
+  .nav-item{width:100%; display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; border:none; background:transparent; color:#44544c; font-size:14px; font-weight:500; margin-bottom:3px; text-align:left;}
+  .nav-item:hover{background:var(--b50);}
+  .nav-item.active{background:var(--b600); color:#fff;}
+  .nav-group-toggle.active-group{color:var(--b700); background:var(--b50);}
+  .nav-subitems{padding-left:10px; margin-bottom:2px;}
+  .nav-subitem{padding-left:22px; font-size:13.5px;}
+  .sidebar-foot{padding:14px 16px; border-top:1px solid var(--border);}
+  .avatar{width:32px; height:32px; border-radius:999px; background:var(--b500); color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; flex-shrink:0;}
+  main.view{flex:1; padding:28px 32px; min-width:0;}
+
+  .stat-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:14px; display:flex; align-items:center; gap:12px;}
+  .stat-icon{border-radius:12px; padding:9px; display:flex;}
+  .stat-label{font-size:11px; text-transform:uppercase; letter-spacing:.03em; color:#a8a29e; font-weight:600; margin:0 0 2px;}
+  .stat-value{font-size:17px; font-weight:600; color:#292524; margin:0;}
+
+  .grid-4{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+  .grid-3{display:grid; grid-template-columns:1fr; gap:14px;}
+  .grid-2{display:grid; grid-template-columns:1fr; gap:14px;}
+  @media(min-width:900px){
+    .grid-4{grid-template-columns:repeat(4,1fr);}
+    .grid-3{grid-template-columns:repeat(3,1fr);}
+    .grid-2{grid-template-columns:1fr 1fr;}
+  }
+
+  .overlay{position:fixed; inset:0; background:rgba(0,0,0,.32); backdrop-filter:blur(2px); display:flex; align-items:center; justify-content:center; padding:16px; z-index:50;}
+  .modal{background:#fff; border-radius:18px; width:100%; max-width:460px; box-shadow:0 20px 50px rgba(0,0,0,.15); max-height:88vh; display:flex; flex-direction:column;}
+  .modal.wide{max-width:640px;}
+  .modal-head{display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid var(--border);}
+  .modal-body{padding:20px; overflow-y:auto;}
+  .confirm-box{background:#fff; border-radius:18px; width:100%; max-width:380px; padding:20px; box-shadow:0 20px 50px rgba(0,0,0,.15);}
+
+  .filter-bar{background:#fff; border:1px solid var(--border); border-radius:16px; padding:14px; margin-bottom:16px; display:grid; grid-template-columns:1fr; gap:10px;}
+  @media(min-width:900px){ .filter-bar{grid-template-columns:1.6fr .8fr .8fr 1fr 1fr .8fr;} }
+
+  .login-wrap{min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--b50);}
+  .login-box{width:100%; max-width:360px;}
+
+  .empty{text-align:center; color:#a8a29e; padding:40px 10px; font-size:14px;}
+  .muted{color:#a8a29e;}
+  .list-row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 16px; border-bottom:1px solid #faf9f6;}
+  .list-row:last-child{border-bottom:none;}
+
+  .toast{position:fixed; bottom:20px; right:20px; z-index:100; background:#292524; color:#fff; font-size:13px; padding:10px 16px; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.2); max-width:320px;}
+  .toast.error{background:var(--danger);}
+  .spinner{width:16px; height:16px; border:2px solid rgba(255,255,255,.4); border-top-color:#fff; border-radius:50%; display:inline-block; animation:spin .7s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+/* ============================== Configuração Supabase ============================== */
+const SB_URL = "https://lmwigswsxwneuohkxthy.supabase.co";
+const SB_ANON_KEY = "sb_publishable_Qykl9DhklJum3maGGDgZoA_z7EeidKN";
+const REFRESH_KEY = "sb_refresh_token";
+
+/* ============================== Constantes de domínio ============================== */
+const BRAND = {600:"#2b7551",700:"#1f5c42",800:"#173c2c",500:"#3d9068",400:"#5aab82",200:"#bfe0cd",100:"#e4f3ea",50:"#f6faf7"};
+const DANGER = "#b3452f", DANGER_BG = "#fdf0ee", WARN = "#93630f", WARN_BG = "#fbf1e2";
+
+const TIPO_LABEL = { entrada:"Entradas", saida:"Saídas", cartao:"Cartões e Débitos", vale:"Vales", fat_entrada:"Faturamentos — Entradas", fat_saida:"Faturamentos — Saídas" };
+const catsFor = (tipo) => STATE.categorias.filter(c=>c.tipo===tipo).map(c=>c.nome);
+const catsForFat = (tipo) => catsFor("fat_"+tipo);
+
+const addMonths = (dateStr, n) => { const d = new Date(dateStr+"T00:00:00"); d.setMonth(d.getMonth()+n); return d.toISOString().slice(0,10); };
+const splitValor = (total, n) => { const cents = Math.round(total*100); const base = Math.floor(cents/n); const resto = cents - base*n; const arr=[]; for(let i=0;i<n;i++){ arr.push((base + (i<resto?1:0))/100); } return arr; };
+
+/* ============================== Helpers genéricos ============================== */
+const todayISO = () => new Date().toISOString().slice(0,10);
+const currency = (v) => new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(v||0);
+const fmtDate = (d) => { if(!d) return "—"; const [y,m,day]=d.split("-"); return `${day}/${m}/${y}`; };
+const monthKey = (d) => d ? d.slice(0,7) : "";
+const monthLabel = (ym) => { const [y,m]=ym.split("-"); const n=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"]; return `${n[parseInt(m,10)-1]}/${y.slice(2)}`; };
+const lastNMonthKeys = (n) => { const arr=[]; const now=new Date(); for(let i=n-1;i>=0;i--){ const d=new Date(now.getFullYear(),now.getMonth()-i,1); arr.push(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`);} return arr; };
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function icon(name, size=16, color="currentColor", sw=2){
+  const P = {
+    plus:'<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>',
+    x:'<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+    check:'<polyline points="20 6 9 17 4 12"/>',
+    edit:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+    trash:'<polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
+    search:'<circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+    lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>',
+    users:'<circle cx="9" cy="8" r="3.2"/><path d="M2.2 20c0-3.4 3-5.9 6.8-5.9s6.8 2.5 6.8 5.9"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 14.3c2.7.4 4.7 2.5 4.7 5.7"/>',
+    logout:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>',
+    chevron:'<polyline points="9 18 15 12 9 6"/>',
+    alert:'<path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L14.7 3.9a2 2 0 0 0-3.4 0Z"/>',
+    calendar:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+    trending:'<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+    grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
+    down:'<circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/>',
+    up:'<circle cx="12" cy="12" r="10"/><polyline points="8 12 12 8 16 12"/><line x1="12" y1="16" x2="12" y2="8"/>',
+    clipboard:'<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M9 5V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="14" y2="15"/>',
+    sparkles:'<path d="M12 2.5 13.4 7 18 8.4 13.4 9.9 12 14.5 10.6 9.9 6 8.4 10.6 7Z"/><path d="M19 15l.6 1.8 1.9.6-1.9.6L19 20l-.6-2-1.9-.6 1.9-.6Z"/>',
+    card:'<rect x="2" y="5" width="20" height="14" rx="2.5"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/>',
+    folder:'<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${P[name]||""}</svg>`;
+}
+function toast(msg, isError){
+  const t = document.createElement("div");
+  t.className = "toast" + (isError ? " error" : "");
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(), 4000);
+}
+
+/* ============================== Camada Supabase (fetch puro) ============================== */
+async function sbAuthLogin(email, password){
+  const res = await fetch(`${SB_URL}/auth/v1/token?grant_type=password`, {
+    method:"POST",
+    headers:{ apikey:SB_ANON_KEY, "Content-Type":"application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  const data = await res.json();
+  if(!res.ok) throw new Error(data.error_description || data.msg || data.error || "Não foi possível entrar. Verifique e-mail e senha.");
+  return data;
+}
+async function sbAuthSignup(email, password){
+  const res = await fetch(`${SB_URL}/auth/v1/signup`, {
+    method:"POST",
+    headers:{ apikey:SB_ANON_KEY, "Content-Type":"application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  const data = await res.json();
+  if(!res.ok) throw new Error(data.error_description || data.msg || data.error || "Não foi possível criar o usuário.");
+  return data;
+}
+async function sbAuthRefresh(refresh_token){
+  const res = await fetch(`${SB_URL}/auth/v1/token?grant_type=refresh_token`, {
+    method:"POST",
+    headers:{ apikey:SB_ANON_KEY, "Content-Type":"application/json" },
+    body: JSON.stringify({ refresh_token }),
+  });
+  const data = await res.json();
+  if(!res.ok) throw new Error("sessão expirada");
+  return data;
+}
+async function saveRefreshToken(token){ try{ if(token) await window.storage.set(REFRESH_KEY, token, false); else await window.storage.delete(REFRESH_KEY, false); }catch(e){} }
+async function loadRefreshToken(){ try{ const r = await window.storage.get(REFRESH_KEY, false); return r ? r.value : null; }catch(e){ return null; } }
+
+async function sbFetch(path, {method="GET", body, retry=true}={}){
+  const doFetch = (token) => fetch(`${SB_URL}${path}`, {
+    method,
+    headers:{
+      apikey: SB_ANON_KEY,
+      Authorization: `Bearer ${token}`,
+      "Content-Type":"application/json",
+      ...(method!=="GET" ? {"Prefer":"return=representation"} : {}),
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+
+  let res = await doFetch(STATE.session.access_token);
+  if(res.status===401 && retry && STATE.session.refresh_token){
+    try{
+      const fresh = await sbAuthRefresh(STATE.session.refresh_token);
+      STATE.session = {...STATE.session, ...fresh};
+      await saveRefreshToken(fresh.refresh_token);
+      res = await doFetch(STATE.session.access_token);
+    }catch(e){
+      STATE.session = null; STATE.currentUser = null;
+      renderRoot();
+      throw new Error("Sua sessão expirou. Faça login novamente.");
+    }
+  }
+  if(res.status===204) return null;
+  const data = await res.json().catch(()=>null);
+  if(!res.ok) throw new Error((data && (data.message || data.error_description || data.msg)) || "Erro ao comunicar com o banco de dados.");
+  return data;
+}
+
+/* ============================== Estado global ============================== */
+const STATE = { loading:true, session:null, currentUser:null, users:[], lancamentos:[], cartaoLancamentos:[], valeLancamentos:[], faturamentoLancamentos:[], categorias:[], view:"dashboard", navOpen:{carteira:true, cartoes:true, vales:true, faturamento:true} };
+const CHARTS = {};
+
+async function bootstrap(){
+  const refreshToken = await loadRefreshToken();
+  if(refreshToken){
+    try{
+      const fresh = await sbAuthRefresh(refreshToken);
+      STATE.session = fresh;
+      await saveRefreshToken(fresh.refresh_token);
+      await loadProfileAndData();
+    }catch(e){
+      await saveRefreshToken(null);
+      STATE.session = null; STATE.currentUser = null;
+    }
+  }
+  STATE.loading = false;
+  renderRoot();
+}
+
+async function loadProfileAndData(){
+  const profiles = await sbFetch(`/rest/v1/profiles?id=eq.${STATE.session.user.id}&select=*`);
+  const profile = profiles && profiles[0];
+  if(!profile) throw new Error("Perfil não encontrado.");
+  STATE.currentUser = { id: STATE.session.user.id, email: STATE.session.user.email, nome: profile.nome, cargo: profile.cargo };
+  await Promise.all([reloadLancamentos(), reloadCartaoLancamentos(), reloadValeLancamentos(), reloadFaturamentoLancamentos(), reloadCategorias(), STATE.currentUser.cargo==="admin" ? reloadUsers() : Promise.resolve()]);
+}
+async function reloadLancamentos(){ STATE.lancamentos = await sbFetch(`/rest/v1/lancamentos?select=*&order=criado_em.desc`); }
+async function reloadCartaoLancamentos(){ STATE.cartaoLancamentos = await sbFetch(`/rest/v1/cartao_lancamentos?select=*&order=data.desc`); }
+async function reloadValeLancamentos(){ STATE.valeLancamentos = await sbFetch(`/rest/v1/vale_lancamentos?select=*&order=data.desc`); }
+async function reloadFaturamentoLancamentos(){ STATE.faturamentoLancamentos = await sbFetch(`/rest/v1/faturamento_lancamentos?select=*&order=criado_em.desc`); }
+async function reloadCategorias(){ STATE.categorias = await sbFetch(`/rest/v1/categorias?select=*&order=nome.asc`); }
+async function reloadUsers(){ STATE.users = await sbFetch(`/rest/v1/profiles?select=*&order=nome.asc`); }
+
+async function addCategoria(tipo, nome){
+  const [nova] = await sbFetch(`/rest/v1/categorias`, { method:"POST", body:{ tipo, nome } });
+  STATE.categorias = [...STATE.categorias, nova].sort((a,b)=>a.nome.localeCompare(b.nome));
+}
+async function editCategoria(id, nome){
+  const [atualizada] = await sbFetch(`/rest/v1/categorias?id=eq.${id}`, { method:"PATCH", body:{ nome } });
+  STATE.categorias = STATE.categorias.map(c=> c.id===id ? atualizada : c).sort((a,b)=>a.nome.localeCompare(b.nome));
+}
+async function deleteCategoria(id){
+  await sbFetch(`/rest/v1/categorias?id=eq.${id}`, { method:"DELETE" });
+  STATE.categorias = STATE.categorias.filter(c=>c.id!==id);
+}
+
+async function addLancamento(data){
+  const payload = { ...data, usuario_id: STATE.currentUser.id, usuario_nome: STATE.currentUser.nome };
+  const [novo] = await sbFetch(`/rest/v1/lancamentos`, { method:"POST", body: payload });
+  STATE.lancamentos = [novo, ...STATE.lancamentos];
+}
+async function editLancamento(id, data){
+  const [atualizado] = await sbFetch(`/rest/v1/lancamentos?id=eq.${id}`, { method:"PATCH", body:{...data, atualizado_em:new Date().toISOString()} });
+  STATE.lancamentos = STATE.lancamentos.map(l=> l.id===id ? atualizado : l);
+}
+async function deleteLancamento(id){
+  await sbFetch(`/rest/v1/lancamentos?id=eq.${id}`, { method:"DELETE" });
+  STATE.lancamentos = STATE.lancamentos.filter(l=>l.id!==id);
+}
+async function quitarConta(id){ await editLancamento(id, { status:"realizado", data_realizada: todayISO() }); }
+
+/* ---- Cartões e Débitos (carteira separada) ---- */
+async function addCartaoCompra({ descricao, categoria, cartao, portador, valorTotal, parcelasTotal, dataPrimeira, observacao }){
+  const compraId = crypto.randomUUID();
+  const valores = splitValor(valorTotal, parcelasTotal);
+  const rows = valores.map((valor, i) => ({
+    compra_id: compraId, descricao, categoria, cartao, portador, valor,
+    parcela_num: i+1, parcelas_total: parcelasTotal,
+    data: addMonths(dataPrimeira, i), status:"previsto", observacao,
+    usuario_id: STATE.currentUser.id, usuario_nome: STATE.currentUser.nome,
+  }));
+  const criados = await sbFetch(`/rest/v1/cartao_lancamentos`, { method:"POST", body: rows });
+  STATE.cartaoLancamentos = [...criados, ...STATE.cartaoLancamentos].sort((a,b)=> b.data.localeCompare(a.data));
+}
+async function editCartaoLancamento(id, data){
+  const [atualizado] = await sbFetch(`/rest/v1/cartao_lancamentos?id=eq.${id}`, { method:"PATCH", body:{...data, atualizado_em:new Date().toISOString()} });
+  STATE.cartaoLancamentos = STATE.cartaoLancamentos.map(l=> l.id===id ? atualizado : l);
+}
+async function deleteCartaoLancamento(id){
+  await sbFetch(`/rest/v1/cartao_lancamentos?id=eq.${id}`, { method:"DELETE" });
+  STATE.cartaoLancamentos = STATE.cartaoLancamentos.filter(l=>l.id!==id);
+}
+async function quitarParcela(id){ await editCartaoLancamento(id, { status:"realizado", data_pagamento: todayISO() }); }
+
+/* ---- Vales (carteira separada, apenas entradas) ---- */
+async function addVale(data){
+  const payload = { ...data, usuario_id: STATE.currentUser.id, usuario_nome: STATE.currentUser.nome };
+  const [novo] = await sbFetch(`/rest/v1/vale_lancamentos`, { method:"POST", body: payload });
+  STATE.valeLancamentos = [novo, ...STATE.valeLancamentos];
+}
+async function editVale(id, data){
+  const [atualizado] = await sbFetch(`/rest/v1/vale_lancamentos?id=eq.${id}`, { method:"PATCH", body:{...data, atualizado_em:new Date().toISOString()} });
+  STATE.valeLancamentos = STATE.valeLancamentos.map(l=> l.id===id ? atualizado : l);
+}
+async function deleteVale(id){
+  await sbFetch(`/rest/v1/vale_lancamentos?id=eq.${id}`, { method:"DELETE" });
+  STATE.valeLancamentos = STATE.valeLancamentos.filter(l=>l.id!==id);
+}
+async function quitarVale(id){ await editVale(id, { status:"realizado" }); }
+
+/* ---- Faturamentos (clone completo da Carteira + duplicatas) ---- */
+async function addFatLancamento(data){
+  const payload = { ...data, usuario_id: STATE.currentUser.id, usuario_nome: STATE.currentUser.nome };
+  const [novo] = await sbFetch(`/rest/v1/faturamento_lancamentos`, { method:"POST", body: payload });
+  STATE.faturamentoLancamentos = [novo, ...STATE.faturamentoLancamentos];
+}
+async function editFatLancamento(id, data){
+  const [atualizado] = await sbFetch(`/rest/v1/faturamento_lancamentos?id=eq.${id}`, { method:"PATCH", body:{...data, atualizado_em:new Date().toISOString()} });
+  STATE.faturamentoLancamentos = STATE.faturamentoLancamentos.map(l=> l.id===id ? atualizado : l);
+}
+async function deleteFatLancamento(id){
+  await sbFetch(`/rest/v1/faturamento_lancamentos?id=eq.${id}`, { method:"DELETE" });
+  STATE.faturamentoLancamentos = STATE.faturamentoLancamentos.filter(l=>l.id!==id);
+}
+async function quitarFatConta(id){ await editFatLancamento(id, { status:"realizado", data_realizada: todayISO() }); }
+
+/* ---- Gerenciar categorias ---- */
+function openCategoriasModal(tipo, onChanged){
+  function bodyHTML(){
+    const lista = STATE.categorias.filter(c=>c.tipo===tipo).sort((a,b)=>a.nome.localeCompare(b.nome));
+    return `
+      <form id="cat-add-form" style="display:flex;gap:8px;margin-bottom:14px;">
+        <input class="input" id="cat-nova" placeholder="Nome da nova categoria" required />
+        <button type="submit" class="btn btn-primary" style="flex-shrink:0;">${icon("plus",15)} Adicionar</button>
+      </form>
+      <div id="cat-list">
+        ${lista.map(c=>`
+          <div class="list-row" data-catrow="${c.id}">
+            <span class="cat-nome" style="font-size:14px;color:#44403c;flex:1;">${esc(c.nome)}</span>
+            <div style="display:flex;gap:2px;">
+              <button class="icon-btn cat-edit-btn" data-id="${c.id}">${icon("edit",15,"#78716c")}</button>
+              <button class="icon-btn danger cat-del-btn" data-id="${c.id}">${icon("trash",15,DANGER)}</button>
+            </div>
+          </div>`).join("") || `<p class="empty">Nenhuma categoria cadastrada ainda.</p>`}
+      </div>
+      <p class="field-hint" style="margin-top:10px;">Excluir uma categoria não altera lançamentos já criados com ela — só deixa de aparecer nas opções para novos lançamentos.</p>`;
+  }
+
+  function mount(body){
+    body.querySelector("#cat-add-form").addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      const input = body.querySelector("#cat-nova");
+      const nome = input.value.trim();
+      if(!nome) return;
+      try{
+        await addCategoria(tipo, nome);
+        body.innerHTML = bodyHTML(); mount(body);
+        onChanged && onChanged();
+      }catch(err){
+        toast(/duplicate|unique/i.test(err.message) ? "Essa categoria já existe." : err.message, true);
+      }
+    });
+    body.querySelectorAll(".cat-edit-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const row = body.querySelector(`[data-catrow="${b.dataset.id}"]`);
+      const cat = STATE.categorias.find(c=>c.id===b.dataset.id);
+      row.innerHTML = `
+        <input class="input cat-edit-input" value="${esc(cat.nome)}" style="flex:1;" />
+        <div style="display:flex;gap:2px;">
+          <button class="icon-btn cat-save-btn">${icon("check",15,BRAND[600])}</button>
+          <button class="icon-btn cat-cancelEdit-btn">${icon("x",15,"#78716c")}</button>
+        </div>`;
+      row.querySelector(".cat-save-btn").addEventListener("click", async ()=>{
+        const novoNome = row.querySelector(".cat-edit-input").value.trim();
+        if(!novoNome) return;
+        try{
+          await editCategoria(cat.id, novoNome);
+          body.innerHTML = bodyHTML(); mount(body);
+          onChanged && onChanged();
+        }catch(err){
+          toast(/duplicate|unique/i.test(err.message) ? "Essa categoria já existe." : err.message, true);
+        }
+      });
+      row.querySelector(".cat-cancelEdit-btn").addEventListener("click", ()=>{ body.innerHTML = bodyHTML(); mount(body); });
+    }));
+    body.querySelectorAll(".cat-del-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const cat = STATE.categorias.find(c=>c.id===b.dataset.id);
+      openConfirm(`Excluir a categoria "${cat.nome}"?`, async ()=>{
+        try{
+          await deleteCategoria(cat.id);
+          body.innerHTML = bodyHTML(); mount(body);
+          onChanged && onChanged();
+        }catch(err){ toast(err.message, true); }
+      });
+    }));
+  }
+
+  openNestedModal({ title:`Categorias — ${TIPO_LABEL[tipo]}`, bodyHTML: bodyHTML(), mount });
+}
+function manageCategoriasBtn(tipo){
+  return `<button type="button" id="btn-gerenciar-cat" style="border:none;background:none;font-size:11px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;padding:0;margin-top:5px;display:inline-flex;align-items:center;gap:3px;">${icon("edit",11)} Gerenciar categorias</button>`;
+}
+
+async function criarUsuario({ nome, email, senha, cargo }){
+  const data = await sbAuthSignup(email, senha);
+  const newId = data.user && data.user.id;
+  if(newId){
+    const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${newId}`, { method:"PATCH", body:{ nome, cargo } });
+    STATE.users = [...STATE.users, perfil].sort((a,b)=>a.nome.localeCompare(b.nome));
+  }
+  return data;
+}
+async function editarUsuario(id, { nome, cargo }){
+  const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${id}`, { method:"PATCH", body:{ nome, cargo } });
+  STATE.users = STATE.users.map(u=> u.id===id ? perfil : u);
+}
+
+/* ============================== Modal / Confirm ============================== */
+function closeModal(){ const m=document.getElementById("modal-overlay"); if(m) m.remove(); }
+function openModal({title, wide, bodyHTML, mount}){
+  closeModal();
+  const div = document.createElement("div");
+  div.id = "modal-overlay";
+  div.className = "overlay";
+  div.innerHTML = `
+    <div class="modal ${wide?"wide":""}">
+      <div class="modal-head">
+        <h3 class="serif" style="margin:0;font-size:18px;color:${BRAND[800]}">${esc(title)}</h3>
+        <button class="icon-btn" id="modal-close">${icon("x",18,"#78716c")}</button>
+      </div>
+      <div class="modal-body">${bodyHTML}</div>
+    </div>`;
+  document.body.appendChild(div);
+  div.addEventListener("mousedown", (e)=>{ if(e.target===div) closeModal(); });
+  document.getElementById("modal-close").addEventListener("click", closeModal);
+  if(mount) mount(div.querySelector(".modal-body"));
+}
+function closeNestedModal(){ const m=document.getElementById("nested-modal-overlay"); if(m) m.remove(); }
+function openNestedModal({title, bodyHTML, mount}){
+  closeNestedModal();
+  const div = document.createElement("div");
+  div.id = "nested-modal-overlay";
+  div.className = "overlay";
+  div.style.zIndex = "60";
+  div.innerHTML = `
+    <div class="modal">
+      <div class="modal-head">
+        <h3 class="serif" style="margin:0;font-size:18px;color:${BRAND[800]}">${esc(title)}</h3>
+        <button class="icon-btn" id="nested-modal-close">${icon("x",18,"#78716c")}</button>
+      </div>
+      <div class="modal-body">${bodyHTML}</div>
+    </div>`;
+  document.body.appendChild(div);
+  div.addEventListener("mousedown", (e)=>{ if(e.target===div) closeNestedModal(); });
+  document.getElementById("nested-modal-close").addEventListener("click", closeNestedModal);
+  if(mount) mount(div.querySelector(".modal-body"));
+}
+function closeConfirm(){ const c=document.getElementById("confirm-overlay"); if(c) c.remove(); }
+function openConfirm(text, onConfirm){
+  closeConfirm();
+  const div = document.createElement("div");
+  div.id = "confirm-overlay";
+  div.className = "overlay";
+  div.style.zIndex = "70";
+  div.innerHTML = `
+    <div class="confirm-box">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div style="background:${DANGER_BG};color:${DANGER};border-radius:999px;padding:8px;">${icon("alert",18,DANGER)}</div>
+        <p style="font-size:14px;color:#44403c;margin:4px 0 0;">${esc(text)}</p>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:18px;">
+        <button class="btn btn-outline" id="confirm-cancel">Cancelar</button>
+        <button class="btn btn-danger" id="confirm-ok">Excluir</button>
+      </div>
+    </div>`;
+  document.body.appendChild(div);
+  document.getElementById("confirm-cancel").addEventListener("click", closeConfirm);
+  document.getElementById("confirm-ok").addEventListener("click", ()=>{ closeConfirm(); onConfirm(); });
+}
+
+/* ============================== Root render ============================== */
+function renderRoot(){
+  const root = document.getElementById("root");
+  if(STATE.loading){ root.innerHTML = `<div class="login-wrap"><p class="muted" style="font-size:14px;">Carregando...</p></div>`; return; }
+  if(!STATE.currentUser){ renderLogin(root); return; }
+  root.innerHTML = `
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="view" id="main-view"><div id="view-container"></div></main>
+    </div>`;
+  renderSidebar();
+  renderView();
+}
+
+const P_ICON_B64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAH2CAYAAABOewE7AABL/ElEQVR42u2dd3xdd3n/38/3nHOH5DgDCIWEVcqIzWqglFkIe5ZRpAI/aOEHOGTYsjxIWL+ry0zwkGTHhLjs0lIkKLNAoWWllF0oYJeGTdhZTmLp3nvG9/n9cc6V5cQhTnyudCU979dLBISicc75nGd8nwHG0uAt555Jo1GxC2HMx9kl6GMaDQcI286+C/XqNk665r6AMDUU2MUxTMBL4/4oQeVvOGHVcaSsAxSG7MoYAIhdgj6/NztGa5D9D9XozsTZ9cC92TTxGxoNR7Pp7TLZG97oT/c5yK1t9gwGanehkyQMVFcj+iK7d4YJuP/JratyNl4VRIhTxes6Gn9bY6yZmQdlmID7kaGhgGbTs33DA6kED6cTK0JEkngGanflhBOegaCFlTZMwEZ/CbgbBcvLqVQcqJ8Li71CpusPs9LGisVcsH5DEQRl28tPJqxehrjj8V4P3Sv1hKGQZQ9ldPLrTA05hqczu3BmgY1+YKxwi4PK/6FeOx6fpTd40XqiUFDOBZRpu2QrGYuh+o0vfEGBkGr7HYjcFu8BmSdgETIPIvfg8Q/7eybecYBGw/HFL6pdPLPAxmIyNRUgopxw4PHUqvcmSTyIu1HYoz6jXh1AspfYfTQBG/3Cvn25FfV6TmF0/U3etzgB4SVs2zxI046UTMDG4tKtrBofuRdB8ATaHQW5iRBHHEmaUa+eSpA9G+xIyQRs9Mu9eCm1SgR6M1ZVwHtFs/XF19mR0grE3K5+oHt0NLl+Nam7jNDdnjRTRG7m/qgnihxJ5y/YdNGlTA0FdqRkFthYaLpHR949h4Hq7Umz7ObFm/8bhAF4twHAjpRMwMbi4FGETM8i84ocrWMkAe2OErqnsevcuzE9nRU9xMYKIbRLsMhMDQUMNzOO2/AIqtGDiGN/08mrI4RAqin1Wo2D/kzg/OKlbPGwWWBjQei6vU7OIgy4xeJTgrzZQV7E5PrVNJsZarkNE7DRexoNx/R0xuT6UxF5Ju1Yb4H1LWywCGnmGazdntT9NaBzMbVhAjYW4Pqn7kXUqwOov3UFGSKQpgp6No2GY2zMMtEmYKPHCM1mRuNva6AvIU6O5X4ExIlSrTyA4696DCJqg+9MwEZv3ed8ZM6q1U+jXr0rSZodoe75luAJHGhw7mGxtWECNnqCp9FwBO5sFD32mhoJaHWUwD2FbevX2JGSCdjonfXN656j6+4A+nDiRJBjvhcCmlGrRATyTLu/JmCj12inN+fworbBwQRs9Jwo7E0Tvoo195uADcMwARuGYQI2DMMEbBgmYMMwTMCGYZiADcMEbBiGCdgwDBOwYRgmYMMwARuGYQI2DMMEbBiGCdgwTMCGYZiADcMwARuGCdgwDBOwYRgmYMMwTMCGYQI2DMMEbBiGCdgwDBOwYZiADcMwARuGYQI2DBOwYRgmYMMwTMCGYZiADcMEbBhGHxHaJViGiAhDQwHgaDTyl/TYmIKAAKB2kUzAxrGSpEKl5FsggGqb6ekMyOY+32we/lVTQ459a2TuM2v3K/vWKGNjioiJfKm8q+0SLACKMNYQ1q4V9u0T7nhHYd26lAs3nEJFfoy4Cqp6zPdDNaNeDWi134Nzl+BdhvPXAy1EW4TpDCdf0WJ4OrvZ7zU0FLCmEPj+/crUlEfERG0CXgHXtNGQefkFT7Ppj/iVF264BxHfL03AXQKXfytV8B6UBGjhmEF1Brga5SrE/Qb8r8FdjpNfknE5Kr9hy86rbsICC41GMO/vUrPUJuClfw2Hhhxr1ghr9+sRrdt7Nw9yZXZXnNwT9WtQ7g16d1TugnCH0u+DFqKS4j9FmPtwN/inSK7BzEOcgvcHcPIrkJ8i/A+wj0z+h0r8Y9bvueomLfX+/cr0tDdBm4D7nzwx5I4o2Mn1VVTuATwADU5H/P1R7oVyR2oVwblDljH1kGW9/m310H8qCAqSS1x0nthEgADncgseOOZ+11zYV6H8CMd3QL6B128zePwPOLM5e9hPmxoKitj6pj0PwwS8aG7xWDPLRVCwY7ROkN0HDR6K6CNQfSDK3ahXc8uXeUizXKhKdkg0Iqg6RPrrHiiKqKKic7+rSkDghDCAMMhF3UlA/eWIfAvVSwncf5DwPTaPt+bF5MLYWGBiNgEvrqVtNtPDPr9z4x8Tur8g9U9AeAhO7ka1kj/YSZoLVjUXuoog2vVVl+71VhTB538kgIRzgnYuF7T3PwX9T1z4rwR8iXN3/PwI8bOJ2QS8wKJVFXZtOR3xT8bzJLw+iHqlCnQFq6AZiiAsfbEevar9nKVWCYgCISqOxdrxLOg3cMEnQD7JyI79N7rGY2OZZbZNwOVch/xcVA+zDru3nk6WPhvl6Qj3o1bJXeE8Juy60g7EKtq6ggaPIjgXUAkhCKDVyYBvgHyEQD7Khp0/OCxmnobi3NowAR+jtZ3ccnckezZenwPyYGqV3MomKaBpYV2dvfyOyun2eRwtIZUod7dbnQT4EiLvR9KPMbL7ikNingoYGvaH5RgME/ARhbt2v8xlkN/VqHHtdU8G/hb0CdSqddIM4qQQrVnZYxYz3fhZQqqV/BirE1+J8lHQ9zI6+aV59ye0WNkEfGPyI45DbvL4yF0ReSHIC6iE9wS62VUTba8tMwpBEFCNcu/G69cQfSeznWleefE1R7xfxgoV8NRQwNC8UsAd5z6YMHw5ynOoVY8jTiBJPYgi5h4vnJRVETKUgGpFCBx0kl8ivJdM38GmiZ+YkFeygG8o3IlNj0d0A8rTqEbQjs3a9o+aPYoSBgHVCrTjg8A/4biIDeP/bUJeSQLuttB1b/SuzU9F/SacewyBK4SrGSJmbfvVKosLqVWhEycIHyTTnWya+KYJeTkLWFWYHnZzyamdGx9HIOcTBo8FgU6nOLckMKUshVhZPSIB9SrEsQf5AN6/hdHJ7xQv6vBGlXEm4CX6dzQawdxx0M6NDyKU1yDuGXmVkAl3+Qg5TYD3oumFbNz1w9wiTwUMD2cm4KUa53Yt7vZNdyLi1Yi+hDAMaZtwl5mHlSESMFCFdnIQ4SJm4u28as9VdLvCVlhByFKuzRWmh3J3ed26iDWDGxB5JdXwNsx2Dt1sY3laZOdyi9yJLwd9AyMTfwfoSisGWZoCnm91d258DIG8hWrlgbRjyDIT7koRMpoRhCGVEOL0y2T+lWyauPRGz4gJuA+t7pvOuQ2D1TcgvDyPc+MUCPquPc/otVudV3nVKkHeVCIXkxxssGXvlQwNBct9FNDSedjnv1HHR56JC8apRndltuXz5nQ7x533VPui/e/GD263vVGLSR3LJZGpZAiOgZoQJ78g0fPYPP5P+bOzfJNcS+PmNRohzWZKY+QETnTbiIKXknlI0hSRpTlZMz/v1NILSBSIAojCou/isJ8JXvOmoayYCuK9gvh50zlcIW5Zotc1JQrzXuU4nSKb3cTmS36VF/VML7vYWPpcuIcKMsZHHo1zl1Ct3JPZdgYqS6d66rC+WUEI5sbWxGmZPyijGgW04w8i7iN4XY3oAE6OBz0J5DZ4PRmR26J6MsiJREGVMMybC1TnTRDximhhtURQXN7rvIQ8kIFaQJz+Fp9tYnTy/csxNu7fGzL/Qk9sfC3imjgR4mQJWN35LqyEBEFuFZ3LrV4nAdXfovpbkPuWd8ylKYMDIbMz5zO6+8I//HI8exUnRLcF7oB3d0H0HojeG7gnyt0I3G2oRLkVTzNIU8i0GAm0VFoqNSUIQqIQ4vTdqB9ldPLAnEdnAu6xy/yGdXdg1eA7qFWezGxbc7ezL63uod5XJSAKZc6F7cSQ+V8j7Ef124h8m8DtpxX+hChZBfpTRKrljJXVlIF6yGzrdVx74uvJB/cfelC7w9tvrgRx9zm3QSt3x3Nf1D8I5HSUNVSjVQQuF3RSDDXout396nJ3k1yD9YBOfBlpuo7Nu79Io+GKIfZqAi7z9+lWVG0b+Quqwd8ThXdmtt2PVvdQW9z86ROdBHz2c0S+DvIlvH6VyvE/4NzmwRt9h9effRcGw8vKmws9J+AxNu1q/kFL0x02v3+/zA1wz6dsHnk07I7RUxA9nUAegde/AL0/tWodyPumsyyfxtGvjSGqKZUoRDXD+9ewceKC5eBSh310gYWxMaHZTBkfOZMg2A0S0eor8R4u2loUIALtTosk/QZx8hngc5zivsPwvOmMh+L5Qw/2WDPjwlAX8VWp0NSbvBfDw25O2M1mxubxXwG/Aj4O5L3UcfxIPE9CeBTVyik454rpJcVLQPonbhYJiROPiGOg9mYmRh/CTPoyhndfsZRd6v4QRqPhEMlv+vjoBLVohHZH8er7Q7zFrCckpBbls5Pb8UE6yZfyOU/hv7Fhx09vFMN35yOPNRVpdi1U8feiXNCvfpko8/cqdX/ntfuFfWuEZjNjdPJnwM+Av2eysZrkukdA+kxUnkiteudi4gZkPisG/bk++LscoMy0UgZrz8DJWsZHXsBo82uFiDOW2GD6xRfH1FDAcDPjwv97HLXj30et+pfMtFJUg0WPd5UMFKIwoBI5Wh0lSS8F+QDiP8HGXb+4gQcRzG0omO+WNZdBtuSGcfNhw+2b1wGfBD7JRWevInVngD4X5CkM1k8gzaAT57Ho4rdwCiIhM+2USvQnBMEXGB85i9Hmu4u4mKUUFy+ugBuNkOFmyhvOPIXawEeoVh7EwVaCELGYOZFcuI5apbC2yS/odD6Ay97PyO5vH8Et9oUHsSwym7dA0H4unp4eyl+2w289WLjZH2f31jvSSZ4F/m+oRA8mDIK5IQq6yFVzXZfauRrVyrsYHzmN0eZ5NJv5fV0ivcbhooq32Uy5YOQ06sEniII/ZqaVIhItYhye11HXK0FxHvof+OzviMMPc9626w+ztIeGrtl0CEGh8DgOE/O2XwN7gD2Mb340Pn4Zos+iXq/TiSHNMhYzgy3i8F5px57B2iuY2PgnXH7l39BsziyV5Fa4qOLddtafUXGfIHAnM9vJcIsU7861qdUCOrEnST5KxkVsmvjcYb/zSrS0xyTm4mXXbKaM7vgC8AUmNtyDOHkJ8CIG67dfdCFLsRPqYCtlsP5s7nzyqVzw0r9i+O2/XArJrXDRxPuWcx9OtfIvIMfTiTPcInQQKfmD0xVuHE8hwXZGdnzrkDWZcnl7WtNEe+uSYfl1GxoKGAKGd/0QOJ/J9TuI5SWonsNg/VQ6CWRpikqwKJlrkZCZVkq9+mBk9Re54Jxncn7ze/0u4nBRxLt9w2OJwo8Aq0iSRWj/KyqlatWg2LQwjQQXzgm30XDs3y/IdAbDtjGgDKanM6bn5Q1GmlcAF7BjdC+d+GWormegfgrtTpG5XoQXukhIu5NSqfwxA9XPs33DM9nS/I9+FnG44OK98NxHUgk/jmqdJPMLfKPyHtIwDAlDSJLP4X1zbqi4DUtbuORX173e3LwauJDt695BR85F3HoGqycx2+52GC2wkCWkE2dE4W2ohP/KtnOH2dr8Fy5ZF3Hm3mRlCnjObT7nodQrn8BrnTT1iHMLKN38YRioh8TJj4iTBhvH/3HOvVuzRhlumrVdaPc6rwgL2NK8EhhjYsM7iXklgXsZYRjQ7ix8fCwSkKSeIBigVvkIO0aez5mT0/1oiXsv4PycN+UtZ92PavUTKKtJs4UUr6KaUauEpD6h3dlJe/bNnL/32jlX2RZrLXLSq3lIyBubvwDOYsfouyB7IwO1xxWlmiksYJJTxOEzDy4gCj7A9vUVtjT/od9E3NsLMlSk4redezcqlU/i5CTiBYx5VT1OHAP1kE78H2Q6emi28MqdZNjfQlZhetoxPPx14PGMj/4NwhsZqJ/KbKsIbRaqwEccmVdQpVZ9H9vPjdjSfDfr1kXs7Q93uncXotFwTE97doyeRBR+gjA4ZUHFi6ZUK44g6NDuvJKrxx/Fpolv0miEKGLi7WPXeng4o9FwNBqO0fH3krQeSCfeSxQ5osihmi7g7yNkKiSJp1Z7F9vPfR579ybFseIytcCKML1fuGRdwIx+iGplzYJ1FKnmEyYG6yFx/C3i7Ey27PoWikAjXyXaNJ30Pd1EYu4p/R44kx3rP0wYTjJYv2cxSmlhJoeICF4hTT21yvvYsSFmc/ND/eBO98IC57HM8HTGTO3tDNYevXDi9Z4gEGqVgHa8m6uufgRbdn2LRiNEsOzyUmR4OEMRpqYCNu/+NK2ZB9OJ30a14ggDQXVhPCkRIfNC6oUoej/bz3liPuZpcS1x+QLu9vNu3/AqBut/w8zsQlnelGrV4eRa4vj5bBzfQPM9bYaGguUyfWFFx8fDwxlTQwHn772WkfGziJO/Qvgt9WpQ7HBeKBEr3odUqh9ix/qHLLaIyxXwVCGW7SN/Sb3yRmbbKSxAzKuaMlgL8f67dNJHMDr5/uKiWoZ5WVnj6UPWeHTyn4nbDybOPs1APS9zVdUFELEjyxQYJIo+xoUj96LZTJkaCpa2gBuNfF7zhRvuQeTeS5Z5VHvbOqYoaMqqekg7+ShXJY9k667vz4tN1J76ZWqNG42QLRdfzsadT6bdeR2VcOFcahFHkmY4dztqwSfY9vKTGZ7O5oYwLiBhSULKk1aT66t4+SfC8Hjand5mnFUVcZ56NWSmM8GmiVEAc5lXCLnrmgtmY7PB+Mi3cME7qVVuQzvufdgmEtCJUwZqf4KvfZjJ9Y/hP/bnx2AL2E9czhujm7RKmWCgdjrtTtpz8QaiVMOA2WQLmyZGaTRccYZoLvPKEXHe0tlohIxOfoyD8SNI/XcYrIcLctQkEjLbThmoPoxM3sX0dFa0mi4hF7ob925bP8xA/eXM9DrjrD6fqRxAK3kxm8d3FC6zLucVGsbNWuOQV1/0A67+3aPoJB9mVb07kVN7LuKD7YTB+vPYsX5soZNaxybgRsMxNO3Zs+lOVKKLSRKPatBT8brA4YKUVjrMlsm8KsbiXaPZTPPw6R+uY2Tns5npTDBQXZjklpBb4nqtwbb1z1lIEbtj/vcFpZ2+nSg8iSTT3h2sq8cFgnMdWskzecWuD/VTSZvRB0xPZ6gKjYZj08Qos62tVKOg2DqhPZWw14Ak8VTCd7Ntw30Oi9H7UsBTU7nrvGPD2QzWn0C73bu4V1VxDgKX0YmHOG/XJ028xk24tEqzqTQaIZt2b6ed/C1hoAROUPU9/LlCmkEQDBK5KS46e1Xx7Er/CbjRyKdUjI/clSC4kHbHoz0VrycIHHHn+Wzd/XEuMfEaf/ipodlMWbcuYvPke+lkzyJwHcLA9VbEztGJU2rV0+iEe2k2fa+TWrdOwGvXCoKS+T1UolX5IqyenPcqTvKFXZ34ZWy+aJrPN8J+bKw2+pC9exPWrYvYMvkxOunTETnYexFLyGwrZbD+PLade3Ze5DEV9I+Au21420f+msH6U3rqOqMZ9VpIu/Nqtux+O5esizjDzniNWyPiXZ+llTxtQUSskg8iqFZ2suPc+891Vy26gFWFffuUC9YdTyDbSVKlVy2JqimD9ZCZ9l427XoTDbO8xjGK+LzdXyxEPEsYSLFxowdWGCHLBOequODveVejxtr9+VL1RRXw9HA+8DqqvYaB6qnEqe9Jc7UWlne2/TmuO+EspoYCxmzcjXGMIm40Qs7b/UXizrMRSRAnPctOd+Phgdp9ueqaCxmezhhrBIsn4O6Z7/jIvYjC9cy282kX5avXU4kC4vjnzPrn0mzmKzHFznmNY6TZTPl8I2TLnn+lnT6XMIDA9e6cuFupVatsYPuGx/ei6eHoBbh2f5648noBUVjFl7EO84baRRGnoDFZOsyrd1/B1JCzPl6jNM5oplyyLuIVuz5Mu/MyKlGAk94tNVN1xUnKXt6+9Tj2rdEyj5aOTsDdNRM7Nz6SSvRMWj1qVBDNqFcDOskmNl/09Xx3ktU2GyVz5t6ES9ZFbL3oHbQ7r6ZeC6FXXUziiJOMgepdOdDZRrPpmZ52CyvgfWu08G7fiHPQC4+jG/fOtKfZsnvPUt7ZaiwJEefljpt2vYnZ1iUMDvSuASJ3pTNqlTOZHD1jbjjBggg4b1bw7Bh9ErXqI+l0ejCMXT1R6GjHvwT38iLlbm6z0UuUZjNjairg2hPPZrb1GQZqPexiUkEVsuxi3vW3tdyVPvYQ9OYF3LW+pGPF79ED8yuKc0KSvYzN41ezdr9Y3GssiIj37VPGmko7fi7t+IdUoxD1PXj2xNFJMgYH7sXVq8/Pq7SOPSvtjsr67tz4BGrVP6fd8aWvulDNGKgFtDt/xyt2f9riXmNBaTY900OOV158DT75K7yfIQx60/zgxNFqZ4TheWzfdE+azWMu8HBHGfu+sli4XfIfVbjOs51fkg5sNdfZWBTycTghm/d8jzh5GVHkEOmFEREyD5WoBsk4oOzfL70RcNf6To4+hCh6dG59S459Fc3nGPmNnH/htaxda66zsViWOG9+2HLR+2m1J3sWD4sEzLYzBmpPYefGpzI9fUwJrZs332k2ShRQumXU4shotvNpNu/6UH5UZdsSjEVk79680OL0k7Yw2/46tWrYkyF5Qj6eVv02phqVwtOV8gTcnTC5a/PdCNxf0o615PGwihMhSWMq4Sggh5JlhrFo5FV/ZzRTnL6ALL2+N/GwODqJZ7B+Gpdfs66Y6xWUJ+Du59PsJdSqNdRnlFp1pRn1miNNL2bDzh8wNWXVVka/uNL5kLyNu35Iko1QiQKE8q2wQ+jEirjXMD5yAmNj2a2p0HJHNPDNZkpj3QCqLyROjs7VPnrXWXFBQKt9NeGqN9JoOPbtM+tr9Fc83GiEbN71Lmbb/0y91gNXWhxp5hmo3h7vNyGit6ZCyx3Bfc5N+Qn1J1Gv3Jkky0rtOBIyahXBZ+OMvPkKwKyv0Y94Gg1HwNl04iuJetB+KOJodxQJRnjL2X/E0JC/pcdKN/7i/fu1+PVfDKLlnhypJwgDWu3fkMS7URVrEzT61pVeu1bYuOt3pOkGoqgXR5yC9xkD1dW4cFMxFvkYBJzv9M3YftadcDyWTixIqS2DnmokwG7O33stY2OBtQkafcvwcF5queWi9zPb/niPXOmAdkcJ5OXs3HiHW1rc4Y74v6XyLOq1OupTykpeKUoQBMy2r8K7S1DM+hr9z759ec2ykw10koOETvKdXCVb4XrtOFQ3AsratXJrBVy4CH6IzIOWOONZNKNaEZR3sHn8asYaZn2NpeFKjzUCRid/Rpq9nmrVlR4LqwS0Y0VkHZPrb8fwsD/ajLQ7zH1uNj2T6++Ocw8mTiix7lkRCWh12jguLqy6Ja6MpSLivFrq+hMnmGn9D9WoXBHnM7Q8A9UTSN2ZgB7tOFp3o/+euqdSr1UK97ks/WbUqoLXjzM6+TOGbMqGsaTQQsgxXjYjIqV35QlCJ1HQs2icvYpmMzuadkN3Y/eZp+FLdp/BkXnA59Z3aMgeCWNpMVzULG+d/BSt+NPUq0G5CS1xpKlnsH5HVlf/OrfCN1+dlQtYNW8ieOvmkxF9CHF6pPj41r68PJXI0Yn3c913L0UVq3k2liTTha0MOY80SXEl7wETgTRTNFtPo+EYG8uOTsBdf7uVPJJa9Tgyn5W4acEThiD8A80vpgu9P9UwyhPwdMbUkGPjru+SpP9Aveqg1I6lgDhWapX7c9w1ZyCiN9ep5G5gxR+LcyAlFm/nyasEDaZu4KobxtKjOwon5PW0kzbOOcqtdsr3Xwsvn2f1b0bA3cNj9X9BWqL7rGRUIsH7r7B5/EdzmW7DWKo0m57pKcfI7h+TZe+iVnXlTrQsjpScPJWJDXdmevoPFna44v9UVl/3x4i7J0laOONl/C6qBAEgHzqixTeMJWmF9+X9u95vo91pIy4o0QoL6jPqtTqe59+cbtyh/zN7MPVKhNeyWgcVkZBWJyHVT5n7bCwrKzw15dh60U/x+g/Uq1LyXGlHkoLywmIPd3bzMbDIQxGhxOooTxSB1+9w3q4foti4HGP5MD2dW0thB+04KXfghTiSxFOJ1vDzLz8cuMlk1qEOC9UHkmUlnv+qEgYAnwXoxWInw1hEAWcMDTlGJ/8Hn36isMJlZqQ9UQiO/5O77WvkyAJuNj1vPutE4DTSrMw41ZGm4OXfAVi73+qejeVFtx4pcxMlaweUgE4M6F9y0dmrii0lcmQXulq9O1F4AqnXUs5/VZUgcMTJlWSz38r/2Glzn43lxXCRId4ycSmd5JtUKg5KGr8jIqQ+o179I5LoMQBMTbkjC1h1DZUo7xgq56fn5h/5NufvvZZGw1nnkbFMcYgogVxMUPLeMFFFRPE8p/DbObKAYW2pi0JFNV+Cxldv8HMMY3nR7WkfqH2I2c4VhEFQWr+wEhAnAvpEJtevLjaWyBEErPfGa4kJLMkn0Kt+3eJfY1kjRYb4zAuvBf0g1Up5nmzXja5VTybWRx7JjXZ547DclcyDaFnnvwGdOEb9PgCb+Wwsa+Y82+DdxMktnmt1s95s4JQweFqupX03sMAXnXsScIf8CKkMR1qV0AH6Cx50m8sBaDZNwMYyFvB0PtP5utXfJE6/W2oyKy/qELw+nkvWRTfMRjviyh0RPRGvuck+Zv1KXj6p/JAzminaKLvY2zD6MBYey3eJiXwgr38oK5sljjhVwuDuzAzcH4ChITcvBk5PIQhDfEk/sJvAEv43/8MsgWWsCIqCqOBD8yqzytJURrUC+McBsGbNPAssnFq0L5U9tPoyu6fGiiFfyeLYsvMysuwbxfjkcjSlIsWUnMce9rLILbCcgpPynFwVIcsg5WeAZaCNlUQxltl9NO/CK+1Q2OVTcvRB7Bg9iWbTd/NVDpU/KnnKbUCcQqS/AiwDbaw8Nzrzn6Td8aU1OAiCzzzVygmIng7AdB4HO4TblfbrK4oT8H6WTnZlEdybgI2V40aDcPDE/WTZfqKwzH1KPk+O+UcWhrFrgfVEtKQzYFEt9qBdy6xe1319GMaKodHoZqM/k5cTlx0H87D51t4hcnypLrQTgOsZ2zNj+jVWHGvX5mrK5N/IyuxQ0rzJH+7P5PrV3TjYAYOollTEIVpM47mu2LQm2BmwsZIYGs4trnNfo9U5gAtcKbXReVmlEoa3I9V7AzA85BxQz5NlZRRhQTHV42DhTpj9NVYWgtJoODaPX43If5XqRotmVCMQlyey1qwRhxKU/AcAtHJ3Yr8J2FiJFG6zXJrXWGjJXqg86NAPEiqolhyrirnNxgqOg4vaB9Uvlzupo6ixQO8LwNhY5kDDEnWbx8CqbbuLxsqNg6dylznku3TigzhXThys6kgzULk7F5x3PCLqSrWWKoIqOInsLhorNw6WfHvDxl2/Q+R/i9VCvoTvm/fZB+42RDN37Zr2dm41S/wDyo6rDWOp0Z3CKny71O4kpUhkhffIBaw9OebJLbCVURorHfXfKde6a17tKHqvXMBSWOAydNz9NqoD+VvIGvmNFUo3kZW57xUFGGWOnIVM79n9prPlbWTQvNwLOa4QtAnYWJl0E1nO/ZgkaZW2xbBbUincrSvg60o9QlIF0eO4ZF00zy4bxsqiO9zmutW/Q+WXpbUXiuaJLJE7Mrm+6oADpWlMybPQIsdx9Umr5gRtGCsw+i3W6abAz/KZ0WWc+HQnvnI74HYO5ao8Cy1l1GuCV/AcT611fB4Hj5kFNlYq3bj3x/mYqVKsWdeFXkUW/JEDfleikyuoKqGL8O5kAPZbOaWx4vlJubZdlTB0eL2jA/+bUksptbtVzZ8KwJrfm4CNFR4P+58XM63K0YKIJxAQPdWB+xVeAS3pmxdTKb3eLf/Eo+0GGiuTuXlwwa/ymmgt5yip2/Xn5I8cjl+SZEoxSqPE18497Q4aK5puIZPzvydNPU7K64/P6y3+yJEmv0b9TDFJo5xzqnxNS1fAtlbUWJl058HN6AHgOsSVPd7ido7bzvwOuILAUd45VQYqf8KO0frcoC/DWHGxb/HYr+I64PqiBLIcjakH5STHi9/TBi7P16GUdE6VZoqTO+D8XQGbzGGsVHI9jezuoFyHSLnfWeSEYhC1/LDUcypVT7USoD5vPF671gRsrFQJS6Gxa3GOUtp3uwVTyqpcwKr/U+6C72I+NO7BeTC/zwRsrEyKAeyoHixvxKN0o916d8H3PtJizGwpb525cq+HFJ+xRJax0uPhmbxpqIwYmKLngFouWOd+QCdOEFfWKtB8hq3o/di2+eR8hq2aFTZWsICZLdnHBajmAj5wwi9Bf17a5ABByDJPtXIcQfZnuSsxbWtGjZVHsQIFJS4/vlbnmBoKaDZTlO/mAi5rhi0+z2zr4y0ONoySw8i866/q5t4QyFdLTXN33Wj0cUVbVWb30FjBPvRMyfoCEDdXrxnoV8od/SGOJFUCdxqD19yHbn+kYaxItCfPvmNoOjft7fb3iJMrCYISB91pRq3qiOSpcz/PMFamBR4of7iFeje3y+X8vdcifLPUXS55VRZ4/SsUYWzM3GhjpVrgcv3n3B3vuMMso8rnSqzIAgiIEyUM/pSd594PEXOjjZXFXEuh1Hrw3X0uprHC4qp+jk6sICUOZteMasWh7nnmRhsr1wDrAGhZTf1Fgaa0i1roZr5f9Li13yXLfkwUCmhZaW9HnIDwXN7VqBXZaDtSMlaaggdLO0jqNvTrIRdaaTQCzjwzAT5LFGqJcbAjyTLq1btw4MCT5n6WYawEhqe7OjquvNFV2t3DPetu5Kurfowsk564up6z5/6bYawQ01t4nMfnWegSklmCFkms692N3hSrTvoS7fjXhKErzY0WAtqxErrHMLHhfjSbytCQWWFjuUs3F2ujUUc4Lp89VxICeD3gDvtxU1MBZzZnEfkUlTLdaCiSWQEZI4AyNGQ32FgBxhcYvGI1yOp8ikYJSSwVRRyIXHUDN3m6cHD1A6S+ZDdaAlodJXDPZdvmuzA07O1IyVjWdJcaRNGJwCq85o0+5b0grnBHDLgj/RKd+KeEkSsxGy2oz6hVB3DpKILapA5jWbN2bqnB7Us+2cldaOE37kY2v9EIGdndQZiiUmZV1mFW+CVsP+tODA2ZFTaWL91GIa+nltzpV6ww0t8cSTz5Dwn0vbTjrNyijq4VrqyC8NWImBU2lj9O7lLuQDt1+aYH96sbC7jZzK3iyO79ZNkXqVVAKbGGWQJabU8lehHbN92bYYuFjWWOcvcSB0IrzglJmuHcr29KOEWFlrs4N9ildlEIXpUorEJ6AaDzYgXDWE50S5TvTlZSGaVCPl+aawmy3x5ZwN1yxxOP/wStzs+IQlduAC4BrU5GvfIMdq5/AsPTGVN2LmwsK4Rm0zO5vgpyV7IsH8h+zN+12D2mXMH9T7zK3aTOG42AFzfbOHkblUgovXpK81WkBBNMrq8WJ1hmiY3lQXeZwWxwCnAHMg+UdAYcOHByOWc005uOPfPeXcH5dzLbOYALgvIa/XP/nDjJGKieRiKvYHo6sxppY9nQDQsjvQe1KEJ9OSuG5iyw/vRQrHtkN1dpPCpgZPcVqH8ntYogWnJDfuFKV8JXs3PjWprN1BJaxrKge4Qk3I+gxCOkrp+q/O8fFjAAj87fGgGTtDqziAsoN6MleA9BUAV9O42GK95c5kobS90Ca/GEn17qKJ1DSxOOQsDNpmdqyrFx1y/IsndTrwqUbIVFAjqdlIHaQ1h14FUMmyttLAOGp7OiYed++XLvksqShYBO7Ankh0f3Tfft03yZUuUttDszuNK2N9zYla6GY2xf/zCazdSy0saSpRsGPvjOpwJ3zwVcRiWHesIAvP6OA63Lj07AzaZnesqxdcfPyfwl1KoO1bL7eQXvBSEgDP+e8ZET2LfG5mcZS9V9zsXqktOpVap4X84UGhUlCEC4jObeWRoNd3QC2bdPURVCvYB2+2rCoDgCKtWVzrPS1eiPUd5ZLAZ3Fg8bS465BJY8PB8SWZLHKpofIXn+u/jMUQq42fRMTztGdl9BxgX5kLoeTNUQCWi1UwZrz2Lbua+h2Uy5ZF1oT4SxpBgrtpCoPqI897lrhRWEb3T/59G7qHM1y+4iZts/ohqVW501Px6ebafUa69nx4ZncebehEbDRGwsnfhXUHaMnoJwv5K3nYR5AovvFJ/wt+Qb551Dm8dbeLYSOCm3sGN+PKwBWeqJwr9n+4YHFufDJmJjKVD0EaQPp1arlxb/dhNYmf4S0R8WnvEt3NcyPJzXLG+Z/Aiz7U8yUAtQLX/bgoiQehAGicKPsu3su1hm2lgSrF3bHeT+xCKDU46RU5QwBPTbjOzuFEdUt2Lh0r41+ZQ9CUeIk9miykR7IGJHnGaEwSlUqv/Cm865zbyzNcPoR4Th4YzJ9VWUxxCX6D4LihNAvgzAmjxRdsu/ebe4Y/P4j4jT11Gr9MYK5yLOizwq4VoGon+hsX51UTNtx0tG/zE1lD+XCQ8kCu9KmnqQcp5VJSBOwPEfuaXPK71uXVw5POyZGgrYd9IO3DXPoVZ5EO04Q6QH1lFCZjspg7U/58TkozTWPZVmc5ahoYDpaVuW1q8owvTQArxoh2B6mr54FuaOj9zTqUTkAi7DAqsnCh1J+ht89N1cg/n8uvBW3559a5RmM2PHuS8l9d/AOVecDZd/bisSMtNOGaw9mhNXfYLG+mfS3H0dU0MBwybivqPRcEjTw0Lcm+n+cZ+bzSxPtl7zjHKzz+QCTv1X2LpjZr7xuvWZ3Xz0Tsjm5n+zfcP/47iBN3NwNkWkN9nirogHamdwov9Xtq97OsN7r2RqKmB42ETcP25kwHAzo7F+NX9UOZ1OEuDd0b3UnRe8Dhz11wd4ajWh1WmxaeIzdPt0Fst9Hp7OOPGaP8WFpxEniogr8fkHr/82P/49NgHnIs6z0kO7LmR85AnUa2fQavfIlS5EPNtOqVcfggx+njef+XSGh39GoxHSbKamnkW3vCHDzZRtZ9+FSvRRCO6fP2FyC/yyW/C1mYdaBK3WRuAzTE25RXuZd91nleHCfc6OWV+HrklAq5MS8Lk5i9x95x1zpLNvTb5AwumLSNKriQLpTYHHPBG3OilheB/qA5ey85wH2TlxH7BuXUSzmbJz4+lUqpcSBven1U6JE08cezpH85FktOOM1lF8tDsxIhnXXP9VNu2apNFwDA8v1s6t3H2eXF/F63OIkxLdZ/VUIiHz+9g4cRlajOopScCHtxym6UsJQ4dIby+kSEi7kxHIqQTVzzM+8uy5c2JVq51e0GSVClNDAXv3JuzY8CxC9wWcuxPtTgYS5lnYo/0gQI7yAwlQDRDOA7oNBIvjPnfbX717DLVKudlnyAs4HJ9GRBk7vNW2nB8yPJwH75t3fZjZzjYG6iGqaY9FHBCnHtVVROGHGB95NcPTGSJqBR8LGO+KKMPTGeMjr6QS/TNejyNOfM/CqPylkVGvBsTJFKOTX2JokZOZ+ZGO4vX/Fu0FZRowR5IA7uPzflbJAp6Lh6cCNk+ex8HZzzFQC/Ga9VjEjixT4tRTr72ByY1TvPmsE4uhAOZS9zzenc5ojJzAxMZ/ol57E0nqybJykzc3DtqUwAmd5CA+egWKsGaNLuJ1yJNXF6w/FeeeQjumvGUI6gkjR5z+lFOPzxsYDu0bLlnAoOzbl+8t9fHz6MQ/pxr1rsjjkIjzJWyzrZRqZYjB+lfYvuERNJspqmJFHz14YFWFZjNl+/qHcZL7CrXKXzPbSgFX3I9e+uwZ9Zojyf4fW3f8nLFGMD8mXATy5ytyL6ReHUB9SnlHqT5fbySfYLgZF0ZJeyXgPB4eGnJsfdvv6STPRnW2J73DR1ZynqEWuRdR+AUmNr4KkUPHXdZXfOyJmjzb7xFRJjaeTxR+EefuzWw7zePdnsfbGfVayMHZSzl44iRTQ0Exw3zxrkk3eYW+NHd1S9WUI0nB88Ejuc/lCxgoSh1DztvzX3TiFxIEjsBlPepcurGI48STZY5a9Y3s2vT5YqF4ClhsfCyxLijNZsq2DfdhcvTfqVXfTObz670w4lXCQIiT6xD3IppNX9TlL6b7nF+XLHg69dofE2dZeckr9USRoxP/kNWtrwBypDi/N+5l91hn60X/TKczSq0aIizMm7Ibf822UoLgUbjwq0xuejWNRmVuA4S51UfvLner3RpDFSY2nk8l+BpR+JjCZe5tvHvYkyoZUejI/EvZNPETpqYW23U+lKxSP9qDk1NPFIKTDxY98cFN+++9FPHm3RMcbF3IYD0EkgVzbZCQdpyR+TrV6A3c5rqvsmP0SQxPZ/nRlx05/QFrJ4V76hmezpjc+AROOvUr1KpvxusAre4R0QKFJUrCQD1kpn0Bmyen8wTaIlffda/P+MhfUIkeRif2+fFWaY9wQDvOcPzjYS+LG9Bb16dbG7qleT47N5zE4MDLONhKEKIFknGAqjLbyqhEf0qFT7Fr0xSpfx3DE/tAKOJj3wdv8/6wuGvXCiIZkDE+chrOvRbnnodI7tUgQU+PiG78MkkZrEccnP0IW3e/sojD+6FxIXfdM38eVQcxWtrrTMmoVQLana+yedf3aTTcTT2fvY5dlLFmxtqhgOFd6xjfOMiq+vMXVMRdaxwn+QWo14bR9OlMjL6d0O3g3ObP596oeYOGX5nC3S8MF8KY2HBnCEcRXUclGmC2rYW7vLBHc14zBqohrfY38Ve/gEbDMTaW0Wzqol6vvN7bs2P0wUTyZNqdks+9FQIHou+e5ykvioDzRmSdzudpHeCF6LU1VtWezcH2QoqYueTCbDvDSZ16bT2d+IVMju4lTt7G8EU/PfxhnvaLmiBZiBfb1JA77KV10ea7kOk5oC+jGp5AK86vV/5wLmy4oZpboST9CTOtv+Q175vJu5ykX+6Jotn/I6oJSerLs76qBEHAbPsqaumHgHxIXvPIXx4u0KOi6BiMjQlf+dUwDz1liuPqz+b61gKLmLyCS8ndaudOoFZ9BapnsWv0ffjgbWxsfneeZVp+7nWewHM0m+lcVnNiw/0gWEfiX0i9spp2B2baGSJuQd3l+eKtRAFZ9juS+Mm8Zu9vGFr0I6N51nc6Y8foQ4jkKbTa5VpfIaNWCZltf4CzL76GRiNEbrpRJ1xA4SiNhjA15RkeHuZhp7yXVfXnMzO7MGeIR3KrsyI+FncclcpZtDsvY2L0U6i8HZf8KyPNTvGulaIGdWmKuSvasWaW9+lS7K2tPAHNXgo8hVoU5ha3laILHOfeSLxhgNerSJMnsmXPZX3VMjrXfpy+gbBk69tNXnWSDKeXALB/v97Mg7zgN0jmBD2xcS/16suYaacoAbJoxRaKav4mrVXy2btJ+gNEpnFMs378ezcQRMja/crQlL9VLl03KXHBhjtT4YeIq5QzDEHTPFs72+ROv309+9ZENJvtw75kx+h9CfQ5wDBReG9EoB3nwsmPhBYvM6+aEUUBqtcQt5/M1rd+ra9aRees7/onUat+ik6SQYmZ526Nd6vzb2ze9fg/lLxaeAs83xJ3Sxw3Ntexc+PVDNTOo9XO8LoApXg38SLLLY7Sij2oUInuTRS+llb71UyMfAXch/H6aTZN7Dv0QMkh67Z2f3dKyeIWF+Q5j657nFutyc1rUP9kVJ8J+lBq1YAkhXbsQRTBLZrFnZ+wqlUCsuz3JOmT2PrWb/dZn7cw3Q2rDlxI9y5LyT8jNyeTN5e8WjwBz4kY8uz0xPns3PA7KpWdpClk3i9YccARhUwAAkniSYoqo0r0cILg4bQ6FzI+8h2c+yyi/44k32Z986obXeSuqIE5YY+NaTGgv3fiViRfZanHs3PjIwndU8myx5Jlf8pANSDLoJMwr265PwpaVFMGqiFp9jPi9Kls3b2/74Y0dIcF7Bg5k8Ha/ZhplT24IqMSOWY7+7j+xE+jKoikR6f4xXyrNRpB0Qj+HEL3bkQGiZN0wY8s/pAswBc7LUIqEYQBpBkkyZUg30b4Cp5vAvsYnL2cM/cmN/MwBDANP7/9nQncD8pzoed+5ZgwrOSTITLyBnNNURGkz/ZNqaYM1ELi5Du0Zp7B+Xt/0Xfi7Vbu3fbKE0mj/QRy22JliivxOmQM1ALanZcwOvnOo70G0icXKP9lLzj3wdQrH6AS3rVoTOi3lkDNhUw+bTAIHGGYn9llHjpxDPwCkctQfgD+h6A/geBXpPFV3O52B3jxvJj0zWedSDX6bekCFgHvtShfdcVunv6qOlPNf7/Bekgr/hTtmedx/t5r+3JQYff53L7+YlYNvJyZVsnPpnrCUEjTX3Btew1je1tzzvSSEPD8i/SGdXfguFXvpRY9jpl2hi5aXHx0DyHiEVVUBCcBYZALurtGOfVdC3g9yDUo1yEcAK4r3KQnlJoIWQqoepwItarQji/iwMQITfzRJG0WnO4EyB2jD6EiXybJlLK3ZqpmDNYDZlsbi/FAR+2B9Jcw5grnG44Trn0LlWgzaQppli16kuWWWGgVReZaKPNxMU5yUYuAk0ML69oxK0y8KZUoRDUmTUfYtOttRYWV9lGRxiF95MUuwuprvkG18gA6SVZuzXPX+ma/opKcxjl7Zm5JrqS/unK64h0bU0YnttCOh0Guol4NihE9/V4ZJSCuSISFh2ZCoWSqpGmeGGsnh4azrRzhKmjKYD3E64+IkzPYtOttRVdRP4o3bxccns5YddX5DNYfQCcuWbzkE0YqkYBu59y3HmRsLLglz7n0rRC6ya0dZ/8JldolRNFjmG3nhd6C9fUuLfFmBC6gWoE4/idmknN51Z6r+noccNd1fsuG+1ELv07mQ1RLTgAW1jfJLseHazi4qsVYU2/JQrT+bqdrPCqk+cV8RMnExlcibozQRXTitJg7ZO2AfW918dSrAWl2LVl2HqOTlxwWLvWrAZmactxun/Bf13yNWuV02kkPrG8R+86017F58u9uzQutvxvbm19MixlMsHHiTcTpw8n8Vxmsh4hIz+dtGcdodQNhsB6QZp8hy/6c0clLGCr6sPt5JU6jkZdufvPq17OqfjrtOC3f61Ofn/u297Oq9e4igXeLr0n/T6bozmBqNEK27voGV33rkbST1+DcLAPVYmieWi9v/wjXg3oGagHCVbQ7Z7Fh5xMZnfxfGo2Q6WL0b7+Sx+Qp2zc8llrl/OI4s/yQrTtdE/8qztybsHbtrZprvXRiyS9+sThmeE/Gp79yKY/9s48Bd6FauRc4wWfdQgVzqxdHuR7FU60EBE5I/fuIO89l8+5/L+rfXV90E/1hy+s45xzlpKtvhws+jchxeC+lFmx0vZO85vlzbN79qmPptFpas5O7Z4SNRsjW5veBpzE+8tc49zoG6vek3QHvLT5e6DhXyAjDkCiEJP0aPn0tG3d9du5e5SWBS+AEAYdIyo4N72Ggcgoz7QxXuvVVnIMky1DdUsYvvTTplrc1m55tmwepZiOobKJauQ2tDni/+N01K0G4QRhSjaAT/wTkzfzH5e9iuhgeeGu7tRbnecoTSNvWj7F6oMHBVo8qAYuOsYOzb2XL7nOOtVVy6T/c87OZk+tPRYOtIC+lFg3QikF90d9qQi7RVVbCID8Wase/xLGLq9JLaO6+7kb3ZCmJ9y3rn8FA9SMkSd7eWro+NN9zlPkrWeVO45erDxzmWa5IAXf/ju65McD2Tfck0s0oL6BWGTjkWuNKj2dWjG6L1sRKGBCF0Il/AbyNmXgvr9pz1ZIU7vzf+YKz1zJQ+09UV5Fm0pPy3UMlky9i0673lDGoYHlZJVVhetjNPUTbN92TUM9FeCHVygnECSRpVuygtWKQo3WTkZBqJX9a0nQ/cAmZfy+jkwfmLNhYM7slBQh9E4Y1m543nXMbBitfIXD3yEsle5F1np+42vXYsl52y9OtPDSYrivkOxHyItAXU43uhvd5XyxqVvlItlaL/ubQdd1kRfh3VPYiyccY2d1Z0sLtvuyHhx1r1ggnXPsZapUzepS06h4ZeURiHA9g/c4f0mhIGY0byzsuvKGQLzp7FUn12ThejPJoahUKq9ydQNm/nU8LIloF5wKqUf5odOJfI/IhAn0v6ye+eVjMuFSFe8OQa+fI3zNQe0H5LYI3SFwN1kOub53Hll1vKXPG18p4WFWFsbHgsDK13RsfRMb/QXkWleguOMnFnPqs6CRa3pZZ5/qac9FWIggE2vEMyucReT+t9qd45cXX3CA8WerjdueJd8MOBuubmGn1brCiakatGtDufIU7/eaRAGVew5WxQzc/yshrqqeGXHG88U3gm1x09muJ9XGIew7o46lXTkYEkhSSNI8BtVhhupQz2VpMFum+nMLAEUUBAnTiGdL0P0n4CGHwL5y74+eHkjxTQbE21gNLv3R1rklm5DUM1HosXpQggCxrEYX/d67brsQX4Mo9Wpk/H7nLjtGTCHgUok9HOQPn7kolyqdtJCn4LB/JqiKISl9Oujj09Ph5fckOFziiAIK5cUC/QdyXgU8Sus8dJtpu6DE07Zewm3xjPt8IOaOZsmNkIwPVcdqdHh0XzXOdB+ohM631bN51US+6r+xstGuVc9cmmyfmOqIPwvEY4NEo9ycKTyQMwPtcBGlWtDfOa95XpGjIXtxrGwb5h3PduVjX4uS/gS+B+wLt6Jucf+G1N3qhLdc9UevWRezdm7Bzw8up1S6m00nxPRxl3J1xNdv+FzbvelqvWidNwDeMlaeHbyxmgLduPpkkewDKQ/H8Oeh9gFOpVQTn8lFZmYcsy//ZLXiYb8HyWm1g/lbEHsTZQorKLxH9Hrivo/p1nP9vNu763WFfl++DEpb7cre5KqsNL2egcjFxmuF9DxOWRZ+v97+jEtyfs7ZfwdiY9OIam4BvzjLf1AN+yboBZgbuBtla1N0HOA3h7sCpwElUwoAgODQ6R/UGH8Xn0jLDSk2p10LanXEOHHgVzfe0j5jMW7tfl517fHMJqx0jG6lXxukkPRYved4kCkNm4yfyit2f6WWBiwn4llrnm7NY4yMnEAYnEyengLsTcAccdwBui+pJwAkgg0ANZQDh1NJjrtbsaxjd/UYm11e5+qTsmLZILN2knTA9lBf1jI+8mmr1DbTjDPW9PSpUTVlVDzk422Tz7rFeTx0JTZlH+6oT5fAsrNBoCPMHuA9PZ0V10gHgsj/4/aaGAn506t2oZftKHyvryQ9yrz4pO2yLxEqh0XDQzO/HzpHt1GubmW1nKL0X70At5GDrU/PE29PMvQn4WN7x+RoVf6M3/1hDWLtfCmt9uLTGxpSxsXwX7wXr2z0RVv6y0RV5V/LdvRk0QsYPvJOB2gvnjop6+Q5T9VSikE7yEzrZC4twpedn5ibg8oMShT+wgLrZpLDcQpIFVOwWlJqsGm6meW3zdf9Etfa4np7zHhKvEjpQbdGJh3jVnqv4k98HNHvf2GFPz2Ja8ChUuwwl0T3j3bbhPlTCKSrhab0tj5yHk4woCpltvZjz9vzX3ItkAbAifmOJvwaLTZdnNFO2jzyTangpgTttAVfzJAzUQmbaDbZc9IGFHpVrFthY2vGuSAYoExtfSxi8rthRlS2IeJWEVfWImdl3s3X36xYiaWUCNpZHpqHRCBhupjRefjIn1vdSrzyDmbYv9k31vtdbNWWwFjHb/iyn/ual+QihZkZzYZOH5kIbS4tDs9Dy0a+3Gfga1egZebJqgdpBVVPq1ZB2/G1c9hyGpz371uhiFMaYBTaWknjz+PJRjwp51p82cO41AMy2swVbRauaUa2ExOmP6SRP47w91x3LWFizwMbyZ2go7xhqNlPGRx7Asx/4BerV15Bk+cK4hdpcqZpRiQKy7NdknSdx3p5fM1XsUFokzAIb/UteFJPXMg8NBTz8lK2INAhd7dAR0QJNUOmKV/2VpPGT2PzWH/XDED8TsNG/7rI0U2imjI88FAl2UoseQqsD7XjhXOYbircVP5Hz9nxvIc96TcDG0mFqKMg7pZop29fdlmjwNcB6AueYbeVbNxZy2ft88cbpEzhvz7f7aS2qCdjoF4tb9GE3M0DYufGlhO61VKI7M9tW0swvqNU9suX9dr/tNDYBG4sv3LX7pRAujI88EecaVKKHEqcUVjdc8Gmhqim1Skia/ZpO9mTO2/PdflxIbgI2Fk+4+/fL3PHL5OhDgFcSBH8J5EdD+bnuwj+j3XPeJPsRM/FTedWey/pRvCZgY6HpTjnRuYEIk5sfCNkWlOdSCaHd8SgsaJx7mHhJGKxFdJL/oh0/nVft+XW/itcEbCyURTs0l7t77DKx6RGo34hmz6JacbQ60Orka00WbfaApqyqR7TizyDpEOftua7oL0779dKagI3eWlugaDhIWbcu4rT6U3HubODxVCvQ6nQrqYLFs7qaz70erIfMdt7FgW+vo/nFlEbDzcXmJmBjxcS23XnbXWt74Tl3pBr9NcKLCaP7AtDudKuo3KIJNxevJ3D5kPvZdoPRydehKjDmlsKkThOwceyWtjsbrNlMi4fe02iEnHj9o0BfgOozqFVPJEnzGBfRQrSLuyFSNaUShajO0u68jM27/pGpoQDE02RJjNk1ARu3LqbtTujMRXtoNtiu0fuDPBt/3V8RuLWEYb4JcqaVIQjSJ/umugPokvRHdNLns3XXN/qlusoEbPROsOAP25PUaDhOOvinaPYUlKeT6YOoVyTfLZV44kRhkd3kw/+Y/EWzqh7Siv+FmfTFvHr3Ff2caTYBG0fvDqsyT6zQbGY3Gqm7bfPJRPpgRB+Hv/axqNyHWrW7wqUovii2O/bTNFuvGZUwQATacZON42MA/Z5pNgEb8wQKjDVyWc0ffbt/vzI9nRXNPYdnXic23B5XuS8+fSSqj4D0AUTRSQRBd4vjfNFKz6dA3mKjiyKaMVgLSdNfkqbrGJ38FI2GY2xMiyw5JmCjX3A0GiEQMjWk7FujxYOquUW8ibG3qsKerbcnTu8O/r7A6YjcH+VeOI6nUj20qbET+yLuLfYoS38+S6oZzgXUayGd+GO047M4b15xRrO5pG+0CXjZ2VgBmCniuUNuYf6gChduXcXqdDWxnEzm74j6uyDu7ojeg4mNf4xyJ8JgNVElnzmfFpsY49gTF6tV8xLH7jbDPo3bC6tbq4RkfpZ251VsnJhc6i6zCXi5W944AeQZbN9wB5wcDzqAshqRE0GPh/hEWno8LqhTjSAoNOj9oe2KSaqk3a1rIsVKklywS2FDy+FW91I62bm8Ytd3b9DxhAnY6Dfzmwu4Ej2MKHwY3bXF3Y2IXnOhdv/ZiTO6X9RdWq4iRedPOC9yXhrk+6U89WpAmrXoxE1GxrfRPZduLg+rawJe7i50kniS5FAhwvy9xIcvIA/m1Nn91FLdgaaaEgYhlSggTj6LZpvYuOv75IUmbjmKF2yo3fK1xEg49yEUVU/SHbu6fFYVKhmKMlgPQX5DHL+MkfEnsHHX94tEni7n5eUmYGOpKtejZNQrAaFT2vHFdNqnMzLx9rl1K8vU6poLbSx14SqVKCBwkKSfxfvXMjr5NQCmpg6tW1kBmICNpRLj5gmqKMxXssbJd0my1zMy8cFcuEMBQ1N+KRdlmAttLE+Li6aEoTBYD/D6U9rJOVy1+s8YmfjgnLs8PN0t+VxRmAU2+ttVjsKASuToxJfTjieR9O8Y2X3dnNVdQe6yCdhYArolAxUqkSMMIE5/QifZQ3rdu9n8jqvn4tzhYb/YWxFMwIaRizYve0RCapV8JlaSfpdOdjFh/D7OfevBOeEODXtkOLOLZgI2Fp8MVQiCgFoU0kkgSf8NeBvXrP7o3DFQoxEy1sxMuCZgox9iW/AgedVUEECncyXt9EM43snI+NfnvrTrKjebKU27ciZgY5FFiyMMHZXI0Y4hzb5Mmr6PJPhntu74ff6lxfSP4WnPsFlcE7CxOFEtqoeLNnSkGaT+MjrxRxA3xciObx2ytkNBvuV+3rgewwRsLJRkVUE8ogoSEkVCFDqSFLLsZ7Tjf8XxQSS7lJHdneLfEhqNgLGxbKUVYJiAjcV3i1U0FyyOMHBEYYBz0OooafZ9Uv9vBPoJMvkKm8dbc/9q3mTgaTb9cpiKYQI2+t+6ivi53mEkJAgdUQDO5SN20vT3dJKvg/47gfs868e/W0zgKlzkqQCmYXjar4QmAxOwsUhxq+jhTf4EhIEQBnnGWDWf8+yzX9H23we+jOilwHcYnTgw9902FJZ27X61hJQJ2LilYpwzlvOs4CGXd95XFjOunAhBIDiXj9kRyad2xAlk/goy/2Nc+t8I3ySI/guZuWyuwOKQa9ydk+VpNtUsrQnYuDWIyNysK5F8Akf3w8mh6RsUY3aSFDLfJs2uRLJfEstPEf0BKj9A9DKEnzE6eeBGP6cr2LX7laFpjzS7x0WGCdi4leIF79sos6gkCG2gBcygei0i16BchehvUX6H6K9wlV/jst+RBVewaV6y6XCbLow1utsVPGNNNcGagI1yPeeUWjVktrULDS8krirt37Rovqd9C5xvYXro0GaGObGiMM8ltsSxCdjokQUWOcim8asP+clFNNxoyGHbGADW7lemgTVrlGZXqDfo8jGxmoCNhTTEGqAq7D0z5My96ZxtbTbVLs7ywiZyLE8rnK9R+fUdtLDAJlwTsGEYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGGYgA3DMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYhgnYMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMEzAhmECNgzDBGwYhgnYMAwTsGGYgA3DMAEbhmECNgwTsGEYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYhgnYMEzAhmGYgA3DMAEbhmECNgwTsGEYJmDDMEzAhmECNgzDBGwYhgnYMAwTsGGYgA3DMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMEzAhmECNgzDBGwYhgnYMEzAhmGYgA3DMAEbhmECNgwTsGEYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGGYgA3DMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYhgnYMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMEzAhmECNgzDBGwYhgnYMAwTsGGYgA3DMAEbhmECNgwTsGEYJmDDMEzAhmGYgA3DBGwYhgnYMAwTsGEYJmDDMAEbhmECNgzDBGwYJmDDMEzAhmGYgA3DMAEbhgnYMAwTsGEYJmDDMEzAhmECNgzDBGwYhgnYMEzAhmGYgA3DMAEbhmECNgwTsGEYJmDDMEzAhmECNpYXqmoXwQRsLDnhooCCq9rFMAEbS8vqepyEiAiilwGwdq1ZYhOwsQTUm1KJHEHQYWb2RWza9R4aDcfwcGbXZnkT2iVY8pY3ZaAWEqc/JU2ez+bdX6XRcDSb3i6OWWCjf4WrQMqqekic/DvXH3x4Id7QxGsW2Ohv9XqcCLVqyGx7D//56xGmpzOmhgKGm6ldHxOw0b+WNyMKAyCl017P6K63oQhjDcdw02JeE7DR1/FuvRqS+l/Rab+ArXu+wNRUgAx7MLfZYmCjT4WLgqYM1kOS7MvMJg9j654v0GiERabZjovMAht9HO9CvR7S7ryTH2dns3t3x+JdwwS8FOLdMAwQlNnOJjZNjAPkZ7wW7xrmQvd3vFurBghXkCRPYdPEOFNTAYrYMZFhAu5v9ebxbpp+i1b6cDbv/vRcvCsW7xrmQver1VVElIF6SKvzj6RXruO8980UxRkW7xom4D5Wb0YQhIROaLVfw+jkG+fiXROvYS50H+M1oxKFODlAJ3k2o5NvZGrI4l3DBLwEyDiuHpD5fXTSR7J514fzeHfa4l3DBNzfAUyohFGd2c4/05p5OFt3fd/iXcNi4KWCaBXvL2TjxPkAVpxh3FL+P97sBdJx7jiEAAAAAElFTkSuQmCC";
+
+function brandMark(size){
+  return `
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <img src="${P_ICON_B64}" alt="Paulu's" style="width:${size}px;height:auto;display:block;" />
+      <span class="serif" style="margin-top:4px;font-size:22px;letter-spacing:.02em;color:${BRAND[600]};">Paulu's</span>
+    </div>`;
+}
+
+function renderLogin(root){
+  root.innerHTML = `
+    <div class="login-wrap">
+      <div class="login-box">
+        <div style="text-align:center;margin-bottom:22px;">
+          ${brandMark(60)}
+          <p class="serif" style="font-style:italic;color:#78716c;margin-top:6px;font-size:14px;">Gestão Financeira</p>
+        </div>
+        <form id="login-form" class="card" style="padding:22px;">
+          <label class="field">
+            <span class="field-label">E-mail</span>
+            <input class="input" id="li-user" type="email" placeholder="voce@empresa.com" autocomplete="username" autofocus />
+          </label>
+          <label class="field">
+            <span class="field-label">Senha</span>
+            <input class="input" id="li-pass" type="password" placeholder="••••••••" autocomplete="current-password" />
+          </label>
+          <p id="li-err" style="color:${DANGER};font-size:12px;display:none;margin:0 0 10px;"></p>
+          <button class="btn btn-primary" style="width:100%;" type="submit" id="li-submit">Entrar</button>
+        </form>
+        <p class="muted" style="text-align:center;font-size:11px;margin-top:14px;">
+          Acesso via Supabase — use o e-mail e senha cadastrados pelo administrador.
+        </p>
+      </div>
+    </div>`;
+  document.getElementById("login-form").addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const email = document.getElementById("li-user").value.trim();
+    const pass = document.getElementById("li-pass").value;
+    const errEl = document.getElementById("li-err");
+    const btn = document.getElementById("li-submit");
+    errEl.style.display = "none";
+    btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Entrando...`;
+    try{
+      const session = await sbAuthLogin(email, pass);
+      STATE.session = session;
+      await saveRefreshToken(session.refresh_token);
+      await loadProfileAndData();
+      STATE.view = "dashboard";
+      renderRoot();
+    }catch(err){
+      errEl.textContent = err.message;
+      errEl.style.display = "block";
+      btn.disabled = false; btn.textContent = "Entrar";
+    }
+  });
+}
+
+const NAV_GROUPS = [
+  { id:"carteira", label:"Carteira", ic:"clipboard", items:[
+    {id:"dashboard", label:"Dashboard", ic:"grid"},
+    {id:"entradas", label:"Entradas", ic:"down"},
+    {id:"saidas", label:"Saídas", ic:"up"},
+    {id:"contas", label:"Contas a Pagar/Receber", ic:"clipboard"},
+    {id:"personalizado", label:"Análise Personalizada", ic:"sparkles"},
+  ]},
+  { id:"cartoes", label:"Cartões e Débitos", ic:"card", items:[
+    {id:"cartoes-dashboard", label:"Dashboard", ic:"grid"},
+    {id:"cartoes-lancamentos", label:"Gastos do Cartão", ic:"card"},
+  ]},
+  { id:"vales", label:"Vales", ic:"folder", items:[
+    {id:"vales-dashboard", label:"Dashboard", ic:"grid"},
+    {id:"vales-lancamentos", label:"Recebimentos", ic:"down"},
+  ]},
+  { id:"faturamento", label:"Faturamentos", ic:"sparkles", items:[
+    {id:"fat-dashboard", label:"Dashboard", ic:"grid"},
+    {id:"fat-entradas", label:"Entradas", ic:"down"},
+    {id:"fat-saidas", label:"Saídas", ic:"up"},
+    {id:"fat-contas", label:"Contas a Pagar/Receber", ic:"clipboard"},
+    {id:"fat-duplicatas", label:"Duplicatas a Pagar", ic:"card"},
+    {id:"fat-personalizado", label:"Análise Personalizada", ic:"sparkles"},
+  ]},
+];
+
+function renderSidebar(){
+  const sb = document.getElementById("sidebar");
+  const prevNav = sb.querySelector(".sidebar-nav");
+  const prevScrollTop = prevNav ? prevNav.scrollTop : 0;
+  const groupHTML = NAV_GROUPS.map(g=>{
+    const open = !!STATE.navOpen[g.id];
+    const hasActive = g.items.some(it=>it.id===STATE.view);
+    return `
+      <div class="nav-group">
+        <button class="nav-item nav-group-toggle ${hasActive?"active-group":""}" data-group="${g.id}">
+          ${icon(g.ic,17)} <span style="flex:1;text-align:left;">${esc(g.label)}</span>
+          <span style="transform:rotate(${open?90:0}deg);transition:transform .15s;display:inline-flex;">${icon("chevron",14)}</span>
+        </button>
+        <div class="nav-subitems" style="display:${open?"block":"none"};">
+          ${g.items.map(it=>`
+            <button class="nav-item nav-subitem ${STATE.view===it.id?"active":""}" data-view="${it.id}">
+              ${icon(it.ic,15)} ${esc(it.label)}
+            </button>`).join("")}
+        </div>
+      </div>`;
+  }).join("");
+  const usuariosHTML = STATE.currentUser.cargo==="admin" ? `
+      <button class="nav-item ${STATE.view==="usuarios"?"active":""}" data-view="usuarios">
+        ${icon("users",17)} Usuários
+      </button>` : "";
+  sb.innerHTML = `
+    <div class="sidebar-brand">${brandMark(34)}</div>
+    <nav class="sidebar-nav">${groupHTML}${usuariosHTML}</nav>
+    <div class="sidebar-foot">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div class="avatar">${esc(STATE.currentUser.nome.slice(0,1).toUpperCase())}</div>
+        <div style="min-width:0;">
+          <p style="margin:0;font-size:12px;font-weight:600;color:#44403c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(STATE.currentUser.nome)}</p>
+          <p style="margin:0;font-size:11px;color:#a8a29e;text-transform:capitalize;">${esc(STATE.currentUser.cargo)}</p>
+        </div>
+      </div>
+      <button class="btn btn-outline" style="width:100%;" id="btn-logout">${icon("logout",15)} Sair</button>
+    </div>`;
+  const newNav = sb.querySelector(".sidebar-nav");
+  if(newNav) newNav.scrollTop = prevScrollTop;
+  sb.querySelectorAll(".nav-group-toggle").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ const g=btn.dataset.group; STATE.navOpen[g]=!STATE.navOpen[g]; renderSidebar(); });
+  });
+  sb.querySelectorAll(".nav-subitem, .nav-item[data-view]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ STATE.view = btn.dataset.view; renderSidebar(); renderView(); });
+  });
+  document.getElementById("btn-logout").addEventListener("click", async ()=>{
+    STATE.session = null; STATE.currentUser = null; STATE.users=[]; STATE.lancamentos=[]; STATE.cartaoLancamentos=[]; STATE.valeLancamentos=[]; STATE.faturamentoLancamentos=[];
+    await saveRefreshToken(null);
+    renderRoot();
+  });
+}
+
+function renderView(){
+  const c = document.getElementById("view-container");
+  Object.keys(CHARTS).forEach(k=>{ CHARTS[k].destroy(); delete CHARTS[k]; });
+  if(STATE.view==="dashboard") renderDashboard(c);
+  else if(STATE.view==="entradas") renderLancamentosView(c,"entrada");
+  else if(STATE.view==="saidas") renderLancamentosView(c,"saida");
+  else if(STATE.view==="contas") renderContas(c);
+  else if(STATE.view==="personalizado") renderPersonalizado(c);
+  else if(STATE.view==="cartoes-dashboard") renderCartoesDashboard(c);
+  else if(STATE.view==="cartoes-lancamentos") renderCartoesLancamentos(c);
+  else if(STATE.view==="vales-dashboard") renderValesDashboard(c);
+  else if(STATE.view==="vales-lancamentos") renderValesLancamentos(c);
+  else if(STATE.view==="fat-dashboard") renderFatDashboard(c);
+  else if(STATE.view==="fat-entradas") renderFatLancamentosView(c,"entrada");
+  else if(STATE.view==="fat-saidas") renderFatLancamentosView(c,"saida");
+  else if(STATE.view==="fat-contas") renderFatContas(c);
+  else if(STATE.view==="fat-duplicatas") renderFatDuplicatas(c);
+  else if(STATE.view==="fat-personalizado") renderFatPersonalizado(c);
+  else if(STATE.view==="usuarios" && STATE.currentUser.cargo==="admin") renderUsuarios(c);
+}
+
+/* ============================== Stat card / badge helpers ============================== */
+function statCard(label, value, iconName, tint, color){
+  return `
+    <div class="stat-card">
+      <div class="stat-icon" style="background:${tint};">${icon(iconName,18,color)}</div>
+      <div><p class="stat-label">${esc(label)}</p><p class="stat-value">${value}</p></div>
+    </div>`;
+}
+/* ---- Seletor de período personalizado (usado nos dashboards) ---- */
+function defaultPeriodoState(){
+  const now = new Date();
+  return { de: `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-01`, ate: todayISO(), todos: false };
+}
+function periodoPickerHTML(prefix, state){
+  return `
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+      ${icon("calendar",16,"#a8a29e")}
+      <input class="input" type="date" id="${prefix}-de" style="width:auto;" value="${state.de}" ${state.todos?"disabled":""} />
+      <span class="muted" style="font-size:13px;">até</span>
+      <input class="input" type="date" id="${prefix}-ate" style="width:auto;" value="${state.ate}" ${state.todos?"disabled":""} />
+      <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#57534e;cursor:pointer;">
+        <input type="checkbox" id="${prefix}-todos" ${state.todos?"checked":""} style="width:15px;height:15px;" /> Todos os períodos
+      </label>
+    </div>`;
+}
+function wirePeriodoPicker(prefix, container, state, onChange){
+  container.querySelector(`#${prefix}-de`).addEventListener("change",(e)=>{ state.de=e.target.value; onChange(); });
+  container.querySelector(`#${prefix}-ate`).addEventListener("change",(e)=>{ state.ate=e.target.value; onChange(); });
+  container.querySelector(`#${prefix}-todos`).addEventListener("change",(e)=>{ state.todos=e.target.checked; onChange(); });
+}
+function noPeriodoFn(state, dateOf){
+  return (l) => state.todos ? true : ((d)=> d>=state.de && d<=state.ate)(dateOf(l));
+}
+function badge(status){
+  const ok = status==="realizado";
+  return `<span class="badge ${ok?"badge-ok":"badge-pending"}"><span class="dot" style="background:${ok?BRAND[500]:"#c9922c"}"></span>${ok?"Realizado":"Previsto"}</span>`;
+}
+function prazoBadge(l){
+  if(!l.data_vencimento) return `<span class="muted" style="font-size:12px;">—</span>`;
+  if(l.status==="realizado"){
+    const emDia = !l.data_realizada || l.data_realizada<=l.data_vencimento;
+    return emDia
+      ? `<span class="badge badge-ok"><span class="dot" style="background:${BRAND[500]}"></span>Pago no prazo</span>`
+      : `<span class="badge" style="background:${DANGER_BG};color:${DANGER};"><span class="dot" style="background:${DANGER}"></span>Pago com atraso</span>`;
+  }
+  const atrasado = l.data_vencimento < todayISO();
+  return atrasado
+    ? `<span class="badge" style="background:${DANGER_BG};color:${DANGER};"><span class="dot" style="background:${DANGER}"></span>Atrasado</span>`
+    : `<span class="badge badge-pending"><span class="dot" style="background:#c9922c"></span>No prazo</span>`;
+}
+
+/* ============================== Formulário de lançamento ============================== */
+function lancamentoFormHTML(tipo, item){
+  const cats = catsFor(tipo);
+  const label = tipo==="entrada" ? "De quem (origem)" : "Para quem (fornecedor / destino)";
+  const status = item?.status || "realizado";
+  return `
+    <form id="lanc-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Valor (R$)</span>
+          <input class="input" type="number" min="0" step="0.01" id="f-valor" value="${item?item.valor:""}" placeholder="0,00" required /></label>
+        <label class="field">
+          <span class="field-label">Categoria</span>
+          <select class="input" id="f-categoria">${cats.map(c=>`<option value="${esc(c)}" ${item&&item.categoria===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
+          ${manageCategoriasBtn(tipo)}
+        </label>
+      </div>
+      <label class="field"><span class="field-label">${label}</span>
+        <input class="input" id="f-contraparte" value="${esc(item?item.contraparte:"")}" placeholder="Nome do cliente, contrato ou fornecedor" required /></label>
+      <label class="field"><span class="field-label">Unidade / Local</span>
+        <input class="input" id="f-unidade" list="unidades-list" value="${esc(item?item.unidade:"")}" placeholder="ex: Unidade Centro" required />
+        <datalist id="unidades-list">${Array.from(new Set(STATE.lancamentos.map(l=>l.unidade))).map(u=>`<option value="${esc(u)}">`).join("")}</datalist>
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Status</span>
+          <select class="input" id="f-status">
+            <option value="realizado" ${status==="realizado"?"selected":""}>Realizado</option>
+            <option value="previsto" ${status==="previsto"?"selected":""}>Previsto (pendente)</option>
+          </select></label>
+        <label class="field"><span class="field-label" id="f-date-label">${status==="realizado"?"Data de realização":"Data prevista"}</span>
+          <input class="input" type="date" id="f-data" value="${status==="realizado" ? (item?.data_realizada||todayISO()) : (item?.data_prevista||todayISO())}" required /></label>
+      </div>
+      <label class="field"><span class="field-label">Observação (opcional)</span>
+        <textarea class="input" id="f-obs" rows="2" placeholder="Detalhes do lançamento...">${esc(item?item.observacao:"")}</textarea></label>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="f-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="f-submit">${icon("check",15)} Salvar lançamento</button>
+      </div>
+    </form>`;
+}
+function openLancamentoModal(tipo, item, onSaved){
+  const isEdit = !!item;
+  openModal({
+    title: isEdit ? "Editar lançamento" : `Nova ${tipo==="entrada"?"entrada":"saída"}`,
+    bodyHTML: lancamentoFormHTML(tipo, item),
+    mount: (body)=>{
+      const statusSel = body.querySelector("#f-status");
+      statusSel.addEventListener("change", ()=>{
+        const lbl = body.querySelector("#f-date-label");
+        lbl.textContent = statusSel.value==="realizado" ? "Data de realização" : "Data prevista";
+      });
+      body.querySelector("#f-cancel").addEventListener("click", closeModal);
+      const gerenciarBtn = body.querySelector("#btn-gerenciar-cat");
+      if(gerenciarBtn) gerenciarBtn.addEventListener("click", (e)=>{
+        e.preventDefault();
+        openCategoriasModal(tipo, ()=>{
+          const sel = body.querySelector("#f-categoria");
+          const atual = sel.value;
+          sel.innerHTML = catsFor(tipo).map(c=>`<option value="${esc(c)}" ${c===atual?"selected":""}>${esc(c)}</option>`).join("");
+        });
+      });
+      body.querySelector("#lanc-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const valor = parseFloat(body.querySelector("#f-valor").value);
+        const contraparte = body.querySelector("#f-contraparte").value.trim();
+        const unidade = body.querySelector("#f-unidade").value.trim();
+        if(!valor || valor<=0 || !contraparte || !unidade) return;
+        const status = body.querySelector("#f-status").value;
+        const data = body.querySelector("#f-data").value || todayISO();
+        const payload = {
+          tipo, valor, categoria: body.querySelector("#f-categoria").value, contraparte, unidade,
+          status, data_prevista: status==="realizado" ? (item?.data_prevista||data) : data,
+          data_realizada: status==="realizado" ? data : null,
+          observacao: body.querySelector("#f-obs").value.trim(),
+        };
+        const btn = body.querySelector("#f-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          if(isEdit) await editLancamento(item.id, payload);
+          else await addLancamento(payload);
+          closeModal();
+          onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar lançamento`; }
+      });
+    }
+  });
+}
+
+/* ============================== Entradas / Saídas ============================== */
+function renderLancamentosView(container, tipo){
+  const isEntrada = tipo==="entrada";
+  const categorias = catsFor(tipo);
+  const contraLabel = isEntrada ? "Origem" : "Destino";
+  const unidades = Array.from(new Set(STATE.lancamentos.map(l=>l.unidade))).sort();
+
+  const filters = { busca:"", de:"", ate:"", unidade:"", categoria:"", status:"" };
+
+  container.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">${isEntrada?"Entradas":"Saídas"}</h2>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;" id="lanc-summary"></p>
+      </div>
+      <button class="btn btn-primary" id="btn-novo-lanc">${icon("plus",16)} Novo lançamento</button>
+    </div>
+    <div class="filter-bar">
+      <div><span class="field-label">Buscar por nome</span>
+        <div style="position:relative;">
+          <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#a8a29e;">${icon("search",14)}</span>
+          <input class="input" style="padding-left:30px;" id="fl-busca" placeholder="Buscar ${contraLabel.toLowerCase()} ou observação" />
+        </div>
+      </div>
+      <div><span class="field-label">De</span><input class="input" type="date" id="fl-de" /></div>
+      <div><span class="field-label">Até</span><input class="input" type="date" id="fl-ate" /></div>
+      <div><span class="field-label">Unidade</span>
+        <select class="input" id="fl-unidade"><option value="">Todas</option>${unidades.map(u=>`<option value="${esc(u)}">${esc(u)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Categoria</span>
+        <select class="input" id="fl-categoria"><option value="">Todas</option>${categorias.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Status</span>
+        <select class="input" id="fl-status"><option value="">Todos</option><option value="realizado">Realizado</option><option value="previsto">Previsto</option></select></div>
+    </div>
+    <div id="lanc-results"></div>`;
+
+  function refresh(){
+    const dados = STATE.lancamentos.filter(l=>l.tipo===tipo).filter(l=>{
+      const dataRef = l.data_realizada || l.data_prevista;
+      if(filters.busca){ const alvo = `${l.contraparte} ${l.observacao}`.toLowerCase(); if(!alvo.includes(filters.busca.toLowerCase())) return false; }
+      if(filters.de && dataRef < filters.de) return false;
+      if(filters.ate && dataRef > filters.ate) return false;
+      if(filters.unidade && l.unidade!==filters.unidade) return false;
+      if(filters.categoria && l.categoria!==filters.categoria) return false;
+      if(filters.status && l.status!==filters.status) return false;
+      return true;
+    }).sort((a,b)=> (b.data_realizada||b.data_prevista).localeCompare(a.data_realizada||a.data_prevista));
+
+    const total = dados.reduce((s,l)=> s + (l.status==="realizado"?l.valor:0), 0);
+    document.getElementById("lanc-summary").innerHTML = `${dados.length} lançamento(s) · Total realizado: <b style="color:${isEntrada?BRAND[600]:DANGER};">${currency(total)}</b>`;
+
+    const rows = document.getElementById("lanc-results");
+    rows.innerHTML = `
+      <div class="card" style="overflow:hidden;">
+        <table>
+          <thead><tr>
+            <th>Data</th><th>Status</th><th>Categoria</th><th>${contraLabel}</th><th>Unidade</th>
+            <th style="text-align:right;">Valor</th><th>Lançado por</th><th style="text-align:right;">Ações</th>
+          </tr></thead>
+          <tbody>
+            ${dados.map(l=>`
+              <tr>
+                <td style="white-space:nowrap;">${fmtDate(l.data_realizada||l.data_prevista)}</td>
+                <td>${badge(l.status)}</td>
+                <td style="color:#57534e;">${esc(l.categoria)}</td>
+                <td style="font-weight:500;color:#44403c;">${esc(l.contraparte)}</td>
+                <td style="color:#78716c;">${esc(l.unidade)}</td>
+                <td style="text-align:right;font-weight:600;color:${isEntrada?BRAND[600]:DANGER};">${currency(l.valor)}</td>
+                <td style="color:#a8a29e;font-size:12px;">${esc(l.usuario_nome)}</td>
+                <td>
+                  <div style="display:flex;justify-content:flex-end;gap:2px;">
+                    <button class="icon-btn edit-btn" data-id="${l.id}">${icon("edit",15,"#78716c")}</button>
+                    <button class="icon-btn danger del-btn" data-id="${l.id}">${icon("trash",15,DANGER)}</button>
+                  </div>
+                </td>
+              </tr>`).join("") || `<tr><td colspan="8" class="empty">Nenhum lançamento encontrado para os filtros aplicados.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    rows.querySelectorAll(".edit-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.lancamentos.find(l=>l.id===b.dataset.id);
+      openLancamentoModal(tipo, item, refresh);
+    }));
+    rows.querySelectorAll(".del-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.lancamentos.find(l=>l.id===b.dataset.id);
+      openConfirm(`Excluir o lançamento de ${currency(item.valor)} referente a "${item.contraparte}"? Essa ação não pode ser desfeita.`, async ()=>{
+        try{ await deleteLancamento(item.id); refresh(); }catch(err){ toast(err.message, true); }
+      });
+    }));
+  }
+
+  container.querySelector("#btn-novo-lanc").addEventListener("click", ()=> openLancamentoModal(tipo, null, refresh));
+  ["busca","de","ate","unidade","categoria","status"].forEach(k=>{
+    const el = container.querySelector(`#fl-${k}`);
+    el.addEventListener(k==="busca"?"input":"change", ()=>{ filters[k]=el.value; refresh(); });
+  });
+  refresh();
+}
+
+/* ============================== Contas a Pagar / Receber ============================== */
+function renderContas(container){
+  const hoje = todayISO();
+  function build(){
+    const pagar = STATE.lancamentos.filter(l=>l.tipo==="saida" && l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista));
+    const receber = STATE.lancamentos.filter(l=>l.tipo==="entrada" && l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista));
+    const lista = (titulo, itens, cor, acaoLabel) => `
+      <div class="card" style="flex:1;overflow:hidden;">
+        <div style="padding:14px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+          <h3 class="serif" style="margin:0;font-size:17px;color:${BRAND[800]};">${titulo}</h3>
+          <span style="font-size:12px;font-weight:600;color:${cor};">${currency(itens.reduce((s,i)=>s+i.valor,0))}</span>
+        </div>
+        <div style="max-height:540px;overflow-y:auto;">
+          ${itens.map(l=>{
+            const atrasado = l.data_prevista < hoje;
+            return `<div class="list-row">
+              <div style="min-width:0;">
+                <p style="margin:0;font-size:14px;font-weight:500;color:#44403c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(l.contraparte)}</p>
+                <p style="margin:2px 0 0;font-size:12px;color:#a8a29e;">${esc(l.categoria)} · ${esc(l.unidade)}</p>
+                <p style="margin:2px 0 0;font-size:12px;${atrasado?`color:${DANGER};font-weight:600;`:"color:#a8a29e;"}">${atrasado?"Vencido em ":"Previsto para "}${fmtDate(l.data_prevista)}</p>
+              </div>
+              <div style="text-align:right;flex-shrink:0;">
+                <p style="margin:0;font-size:14px;font-weight:600;color:${cor};">${currency(l.valor)}</p>
+                <button class="quitar-btn" data-id="${l.id}" style="border:none;background:none;font-size:11px;margin-top:2px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;">${acaoLabel}</button>
+              </div>
+            </div>`;
+          }).join("") || `<p class="empty">Nada por aqui. Tudo em dia!</p>`}
+        </div>
+      </div>`;
+    container.innerHTML = `
+      <h2 class="serif" style="margin:0 0 4px;font-size:24px;color:${BRAND[800]};">Contas a Pagar e a Receber</h2>
+      <p class="muted" style="margin:0 0 18px;font-size:13px;">Lançamentos previstos que ainda não foram confirmados.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;" class="contas-flex">
+        ${lista("Contas a Pagar", pagar, DANGER, "Marcar como pago")}
+        ${lista("Contas a Receber", receber, BRAND[600], "Marcar como recebido")}
+      </div>
+      <style>@media(min-width:900px){.contas-flex{flex-direction:row !important;}}</style>`;
+    container.querySelectorAll(".quitar-btn").forEach(b=> b.addEventListener("click", async ()=>{
+      try{ await quitarConta(b.dataset.id); build(); }catch(err){ toast(err.message, true); }
+    }));
+  }
+  build();
+}
+
+/* ============================== Dashboard ============================== */
+function renderDashboard(container){
+  const periodoState = defaultPeriodoState();
+
+  function build(){
+    const noPeriodo = noPeriodoFn(periodoState, l=>l.data_realizada||l.data_prevista);
+    const entradasR = STATE.lancamentos.filter(l=>l.tipo==="entrada" && l.status==="realizado" && noPeriodo(l));
+    const saidasR = STATE.lancamentos.filter(l=>l.tipo==="saida" && l.status==="realizado" && noPeriodo(l));
+    const totalEntradas = entradasR.reduce((s,l)=>s+l.valor,0);
+    const totalSaidas = saidasR.reduce((s,l)=>s+l.valor,0);
+    const saldo = totalEntradas - totalSaidas;
+    const previstoEntradas = STATE.lancamentos.filter(l=>l.tipo==="entrada" && noPeriodo(l)).reduce((s,l)=>s+l.valor,0);
+    const previstoSaidas = STATE.lancamentos.filter(l=>l.tipo==="saida" && noPeriodo(l)).reduce((s,l)=>s+l.valor,0);
+
+    const porCategoria = {}; saidasR.forEach(l=>{ porCategoria[l.categoria]=(porCategoria[l.categoria]||0)+l.valor; });
+    const topCategorias = Object.entries(porCategoria).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const porUnidade = {}; entradasR.forEach(l=>{ porUnidade[l.unidade]=(porUnidade[l.unidade]||0)+l.valor; });
+    const topUnidades = Object.entries(porUnidade).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+    const pagarPend = STATE.lancamentos.filter(l=>l.tipo==="saida"&&l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista)).slice(0,4);
+    const receberPend = STATE.lancamentos.filter(l=>l.tipo==="entrada"&&l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista)).slice(0,4);
+
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Dashboard Financeiro</h2>
+          <p class="muted" style="margin:4px 0 0;font-size:13px;">Visão geral de entradas, saídas e fluxo de caixa da Paulu's.</p>
+        </div>
+        ${periodoPickerHTML("db", periodoState)}
+      </div>
+
+      <div class="grid-4" style="margin-bottom:16px;">
+        ${statCard("Entradas realizadas", currency(totalEntradas), "down", BRAND[100], BRAND[600])}
+        ${statCard("Saídas realizadas", currency(totalSaidas), "up", DANGER_BG, DANGER)}
+        ${statCard("Saldo do período", currency(saldo), "trending", saldo>=0?BRAND[100]:DANGER_BG, saldo>=0?BRAND[600]:DANGER)}
+        ${statCard("Total previsto pendente", currency((previstoEntradas-totalEntradas)+(previstoSaidas-totalSaidas)), "clipboard", WARN_BG, WARN)}
+      </div>
+
+      <div class="grid-3" style="margin-bottom:16px;">
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Fluxo de Caixa: Previsto vs. Realizado</h3>
+          <canvas id="chart-fluxo" height="200"></canvas>
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Categorias que mais consumiram</h3>
+          ${topCategorias.length ? `<canvas id="chart-cat" height="200"></canvas>` : `<p class="empty">Sem saídas realizadas no período.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Unidades com mais recebimento</h3>
+          ${topUnidades.length ? `<canvas id="chart-uni" height="200"></canvas>` : `<p class="empty">Sem entradas realizadas no período.</p>`}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h3 class="serif" style="margin:0;font-size:15px;color:${BRAND[800]};">Próximas contas a pagar</h3>${icon("chevron",16,"#d6d3cd")}
+          </div>
+          ${pagarPend.map(l=>`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #faf9f6;font-size:14px;"><span style="color:#57534e;">${esc(l.contraparte)}</span><span style="font-weight:500;color:${DANGER};">${currency(l.valor)}</span></div>`).join("") || `<p class="muted" style="font-size:13px;padding:10px 0;">Nenhuma pendência.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h3 class="serif" style="margin:0;font-size:15px;color:${BRAND[800]};">Próximas contas a receber</h3>${icon("chevron",16,"#d6d3cd")}
+          </div>
+          ${receberPend.map(l=>`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #faf9f6;font-size:14px;"><span style="color:#57534e;">${esc(l.contraparte)}</span><span style="font-weight:500;color:${BRAND[600]};">${currency(l.valor)}</span></div>`).join("") || `<p class="muted" style="font-size:13px;padding:10px 0;">Nenhuma pendência.</p>`}
+        </div>
+      </div>`;
+
+    wirePeriodoPicker("db", container, periodoState, build);
+
+    mkBarChart("chart-fluxo", ["Entradas","Saídas"], [
+      {label:"Previsto", data:[previstoEntradas, previstoSaidas], color:BRAND[200]},
+      {label:"Realizado", data:[totalEntradas, totalSaidas], color:BRAND[600]},
+    ], true);
+    if(topCategorias.length) mkHBarChart("chart-cat", topCategorias);
+    if(topUnidades.length) mkHBarChart("chart-uni", topUnidades);
+  }
+  build();
+}
+
+function mkBarChart(canvasId, labels, datasets, legend){
+  const ctx = document.getElementById(canvasId); if(!ctx) return;
+  if(CHARTS[canvasId]) CHARTS[canvasId].destroy();
+  CHARTS[canvasId] = new Chart(ctx, {
+    type:"bar",
+    data:{ labels, datasets: datasets.map(d=>({label:d.label, data:d.data, backgroundColor:d.color, borderRadius:5, maxBarThickness:38})) },
+    options:{ responsive:true, plugins:{ legend:{display:!!legend, labels:{boxWidth:10,font:{size:11}}}, tooltip:{callbacks:{label:(c)=>currency(c.raw)}} },
+      scales:{ x:{grid:{display:false}}, y:{ticks:{callback:(v)=> (v/1000)+"k"}, grid:{color:"#f1efe9"}} } }
+  });
+}
+function mkHBarChart(canvasId, entries){
+  const ctx = document.getElementById(canvasId); if(!ctx) return;
+  if(CHARTS[canvasId]) CHARTS[canvasId].destroy();
+  const palette=[BRAND[600],BRAND[500],BRAND[400],BRAND[200],"#dfeee5"];
+  CHARTS[canvasId] = new Chart(ctx, {
+    type:"bar",
+    data:{ labels: entries.map(e=>e[0]), datasets:[{ data: entries.map(e=>e[1]), backgroundColor: entries.map((_,i)=>palette[i%palette.length]), borderRadius:5 }] },
+    options:{ indexAxis:"y", responsive:true, plugins:{ legend:{display:false}, tooltip:{callbacks:{label:(c)=>currency(c.raw)}} },
+      scales:{ x:{display:false}, y:{grid:{display:false}, ticks:{font:{size:11}}} } }
+  });
+}
+
+/* ============================== Análise Personalizada ============================== */
+function renderPersonalizado(container){
+  let modo = "categoria";
+  let valorSel = "";
+
+  function build(){
+    const set = new Set(); STATE.lancamentos.forEach(l=> set.add(modo==="categoria"?l.categoria:l.contraparte));
+    const opcoes = Array.from(set).sort();
+    const filtrados = valorSel ? STATE.lancamentos.filter(l=> (modo==="categoria"?l.categoria:l.contraparte)===valorSel) : [];
+    const entradas = filtrados.filter(l=>l.tipo==="entrada"&&l.status==="realizado").reduce((s,l)=>s+l.valor,0);
+    const saidas = filtrados.filter(l=>l.tipo==="saida"&&l.status==="realizado").reduce((s,l)=>s+l.valor,0);
+
+    const porMes = {};
+    filtrados.forEach(l=>{ if(l.status!=="realizado") return; const mk=monthKey(l.data_realizada); porMes[mk]=porMes[mk]||0; porMes[mk]+= l.tipo==="entrada"?l.valor:-l.valor; });
+    const serieKeys = Object.keys(porMes).sort();
+
+    container.innerHTML = `
+      <h2 class="serif" style="margin:0 0 4px;font-size:24px;color:${BRAND[800]};">Análise Personalizada</h2>
+      <p class="muted" style="margin:0 0 18px;font-size:13px;">Filtre por categoria ou por cliente/fornecedor específico para ver um recorte dedicado.</p>
+      <div class="card" style="padding:14px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;">
+        <div><span class="field-label">Analisar por</span>
+          <select class="input" id="pz-modo" style="width:auto;"><option value="categoria" ${modo==="categoria"?"selected":""}>Categoria</option><option value="contraparte" ${modo==="contraparte"?"selected":""}>Cliente / Fornecedor</option></select></div>
+        <div style="flex:1;min-width:220px;"><span class="field-label">${modo==="categoria"?"Categoria":"Nome"}</span>
+          <select class="input" id="pz-valor"><option value="">Selecione...</option>${opcoes.map(o=>`<option value="${esc(o)}" ${o===valorSel?"selected":""}>${esc(o)}</option>`).join("")}</select></div>
+      </div>
+      <div id="pz-results">
+        ${!valorSel ? `<div class="card empty" style="border-style:dashed;padding:60px 10px;">Selecione uma categoria ou um cliente/fornecedor acima para gerar a análise.</div>` : `
+        <div class="grid-4" style="margin-bottom:16px;">
+          ${statCard("Total recebido", currency(entradas), "down", BRAND[100], BRAND[600])}
+          ${statCard("Total gasto", currency(saidas), "up", DANGER_BG, DANGER)}
+          ${statCard("Saldo líquido", currency(entradas-saidas), "trending", BRAND[100], BRAND[600])}
+          ${statCard("Lançamentos", filtrados.length, "clipboard", WARN_BG, WARN)}
+        </div>
+        <div class="card" style="padding:16px;margin-bottom:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Evolução mensal (líquido)</h3>
+          ${serieKeys.length ? `<canvas id="chart-pz" height="180"></canvas>` : `<p class="empty">Sem lançamentos realizados para esse recorte.</p>`}
+        </div>
+        <div class="card" style="overflow:hidden;">
+          <table><thead><tr><th>Data</th><th>Tipo</th><th>Categoria</th><th>Contraparte</th><th>Unidade</th><th style="text-align:right;">Valor</th></tr></thead>
+          <tbody>${filtrados.sort((a,b)=>(b.data_realizada||b.data_prevista).localeCompare(a.data_realizada||a.data_prevista)).map(l=>`
+            <tr><td>${fmtDate(l.data_realizada||l.data_prevista)}</td><td>${l.tipo==="entrada"?"Entrada":"Saída"}</td>
+            <td style="color:#78716c;">${esc(l.categoria)}</td><td style="font-weight:500;">${esc(l.contraparte)}</td><td style="color:#78716c;">${esc(l.unidade)}</td>
+            <td style="text-align:right;font-weight:600;color:${l.tipo==="entrada"?BRAND[600]:DANGER};">${currency(l.valor)}</td></tr>`).join("")}</tbody></table>
+        </div>`}
+      </div>`;
+
+    container.querySelector("#pz-modo").addEventListener("change",(e)=>{ modo=e.target.value; valorSel=""; build(); });
+    const valSel = container.querySelector("#pz-valor");
+    if(valSel) valSel.addEventListener("change",(e)=>{ valorSel=e.target.value; build(); });
+
+    if(valorSel && serieKeys.length){
+      const ctx = document.getElementById("chart-pz");
+      if(CHARTS["chart-pz"]) CHARTS["chart-pz"].destroy();
+      CHARTS["chart-pz"] = new Chart(ctx, {
+        type:"line",
+        data:{ labels: serieKeys.map(monthLabel), datasets:[{ data: serieKeys.map(k=>porMes[k]), borderColor:BRAND[600], backgroundColor:BRAND[100], fill:true, tension:.35, pointRadius:3 }] },
+        options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{label:(c)=>currency(c.raw)}}}, scales:{ y:{ticks:{callback:(v)=>(v/1000)+"k"}, grid:{color:"#f1efe9"}}, x:{grid:{display:false}} } }
+      });
+    }
+  }
+  build();
+}
+
+/* ============================== Cartões e Débitos ============================== */
+function cartaoBadge(status){
+  const ok = status==="realizado";
+  return `<span class="badge ${ok?"badge-ok":"badge-pending"}"><span class="dot" style="background:${ok?BRAND[500]:"#c9922c"}"></span>${ok?"Pago":"Em aberto"}</span>`;
+}
+function parcelaLabel(l){ return l.parcelas_total>1 ? `${l.parcela_num}/${l.parcelas_total}` : "Único"; }
+
+function cartaoCompraFormHTML(){
+  const cartoes = Array.from(new Set(STATE.cartaoLancamentos.map(l=>l.cartao))).sort();
+  const portadores = Array.from(new Set(STATE.cartaoLancamentos.map(l=>l.portador))).sort();
+  return `
+    <form id="cartao-form">
+      <label class="field"><span class="field-label">Descrição (estabelecimento / compra)</span>
+        <input class="input" id="cf-descricao" placeholder="ex: Supermercado Extra" required /></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field">
+          <span class="field-label">Categoria</span>
+          <select class="input" id="cf-categoria">${catsFor("cartao").map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select>
+          ${manageCategoriasBtn("cartao")}
+        </label>
+        <label class="field"><span class="field-label">Valor total (R$)</span>
+          <input class="input" type="number" min="0" step="0.01" id="cf-valor" placeholder="0,00" required /></label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Cartão</span>
+          <input class="input" id="cf-cartao" list="cartoes-list" placeholder="ex: Nubank Empresarial" required />
+          <datalist id="cartoes-list">${cartoes.map(c=>`<option value="${esc(c)}">`).join("")}</datalist></label>
+        <label class="field"><span class="field-label">Portador / Responsável</span>
+          <input class="input" id="cf-portador" list="portadores-list" placeholder="Quem usou o cartão" required />
+          <datalist id="portadores-list">${portadores.map(p=>`<option value="${esc(p)}">`).join("")}</datalist></label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Parcelado?</span>
+          <select class="input" id="cf-parcelado"><option value="nao">Não (à vista)</option><option value="sim">Sim</option></select></label>
+        <label class="field" id="cf-nparcelas-wrap" style="display:none;"><span class="field-label">Número de parcelas</span>
+          <input class="input" type="number" min="2" max="48" id="cf-nparcelas" value="2" /></label>
+      </div>
+      <label class="field"><span class="field-label" id="cf-data-label">Data</span>
+        <input class="input" type="date" id="cf-data" value="${todayISO()}" required /></label>
+      <label class="field"><span class="field-label">Observação (opcional)</span>
+        <textarea class="input" id="cf-obs" rows="2"></textarea></label>
+      <p class="field-hint" id="cf-parcela-hint" style="display:none;">As parcelas serão criadas mensalmente a partir da data acima, todas como "Em aberto".</p>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="cf-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="cf-submit">${icon("check",15)} Salvar gasto</button>
+      </div>
+    </form>`;
+}
+function openCartaoCompraModal(onSaved){
+  openModal({
+    title:"Novo gasto no cartão",
+    bodyHTML: cartaoCompraFormHTML(),
+    mount:(body)=>{
+      const parceladoSel = body.querySelector("#cf-parcelado");
+      const nparcelasWrap = body.querySelector("#cf-nparcelas-wrap");
+      const hint = body.querySelector("#cf-parcela-hint");
+      const dataLabel = body.querySelector("#cf-data-label");
+      parceladoSel.addEventListener("change", ()=>{
+        const sim = parceladoSel.value==="sim";
+        nparcelasWrap.style.display = sim ? "block" : "none";
+        hint.style.display = sim ? "block" : "none";
+        dataLabel.textContent = sim ? "Data da 1ª parcela" : "Data da compra";
+      });
+      body.querySelector("#cf-cancel").addEventListener("click", closeModal);
+      const gerenciarBtnCf = body.querySelector("#btn-gerenciar-cat");
+      if(gerenciarBtnCf) gerenciarBtnCf.addEventListener("click", (e)=>{
+        e.preventDefault();
+        openCategoriasModal("cartao", ()=>{
+          const sel = body.querySelector("#cf-categoria");
+          const atual = sel.value;
+          sel.innerHTML = catsFor("cartao").map(c=>`<option value="${esc(c)}" ${c===atual?"selected":""}>${esc(c)}</option>`).join("");
+        });
+      });
+      body.querySelector("#cartao-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const valorTotal = parseFloat(body.querySelector("#cf-valor").value);
+        const descricao = body.querySelector("#cf-descricao").value.trim();
+        const cartao = body.querySelector("#cf-cartao").value.trim();
+        const portador = body.querySelector("#cf-portador").value.trim();
+        if(!valorTotal || valorTotal<=0 || !descricao || !cartao || !portador) return;
+        const parcelasTotal = parceladoSel.value==="sim" ? Math.max(2, parseInt(body.querySelector("#cf-nparcelas").value,10)||2) : 1;
+        const btn = body.querySelector("#cf-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          await addCartaoCompra({
+            descricao, categoria: body.querySelector("#cf-categoria").value, cartao, portador,
+            valorTotal, parcelasTotal, dataPrimeira: body.querySelector("#cf-data").value || todayISO(),
+            observacao: body.querySelector("#cf-obs").value.trim(),
+          });
+          closeModal(); onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar gasto`; }
+      });
+    }
+  });
+}
+function cartaoEditFormHTML(item){
+  return `
+    <form id="cartao-edit-form">
+      ${item.parcelas_total>1 ? `<p class="field-hint" style="margin-top:-4px;">Parcela ${item.parcela_num} de ${item.parcelas_total} — o número de parcelas não pode ser alterado aqui.</p>` : ""}
+      <label class="field"><span class="field-label">Descrição</span><input class="input" id="ce-descricao" value="${esc(item.descricao)}" required /></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field">
+          <span class="field-label">Categoria</span>
+          <select class="input" id="ce-categoria">${catsFor("cartao").map(c=>`<option value="${esc(c)}" ${item.categoria===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
+          ${manageCategoriasBtn("cartao")}
+        </label>
+        <label class="field"><span class="field-label">Valor desta parcela (R$)</span>
+          <input class="input" type="number" min="0" step="0.01" id="ce-valor" value="${item.valor}" required /></label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Cartão</span><input class="input" id="ce-cartao" value="${esc(item.cartao)}" required /></label>
+        <label class="field"><span class="field-label">Portador</span><input class="input" id="ce-portador" value="${esc(item.portador)}" required /></label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Status</span>
+          <select class="input" id="ce-status">
+            <option value="previsto" ${item.status==="previsto"?"selected":""}>Em aberto</option>
+            <option value="realizado" ${item.status==="realizado"?"selected":""}>Pago</option>
+          </select></label>
+        <label class="field"><span class="field-label">Data</span><input class="input" type="date" id="ce-data" value="${item.data}" required /></label>
+      </div>
+      <label class="field"><span class="field-label">Observação</span><textarea class="input" id="ce-obs" rows="2">${esc(item.observacao||"")}</textarea></label>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="ce-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="ce-submit">${icon("check",15)} Salvar</button>
+      </div>
+    </form>`;
+}
+function openCartaoEditModal(item, onSaved){
+  openModal({
+    title:"Editar gasto do cartão",
+    bodyHTML: cartaoEditFormHTML(item),
+    mount:(body)=>{
+      body.querySelector("#ce-cancel").addEventListener("click", closeModal);
+      const gerenciarBtnCe = body.querySelector("#btn-gerenciar-cat");
+      if(gerenciarBtnCe) gerenciarBtnCe.addEventListener("click", (e)=>{
+        e.preventDefault();
+        openCategoriasModal("cartao", ()=>{
+          const sel = body.querySelector("#ce-categoria");
+          const atual = sel.value;
+          sel.innerHTML = catsFor("cartao").map(c=>`<option value="${esc(c)}" ${c===atual?"selected":""}>${esc(c)}</option>`).join("");
+        });
+      });
+      body.querySelector("#cartao-edit-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const valor = parseFloat(body.querySelector("#ce-valor").value);
+        const descricao = body.querySelector("#ce-descricao").value.trim();
+        const cartao = body.querySelector("#ce-cartao").value.trim();
+        const portador = body.querySelector("#ce-portador").value.trim();
+        if(!valor || valor<=0 || !descricao || !cartao || !portador) return;
+        const status = body.querySelector("#ce-status").value;
+        const btn = body.querySelector("#ce-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          await editCartaoLancamento(item.id, {
+            descricao, categoria: body.querySelector("#ce-categoria").value, valor, cartao, portador,
+            status, data: body.querySelector("#ce-data").value,
+            data_pagamento: status==="realizado" ? (item.data_pagamento||todayISO()) : null,
+            observacao: body.querySelector("#ce-obs").value.trim(),
+          });
+          closeModal(); onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar`; }
+      });
+    }
+  });
+}
+
+function renderCartoesLancamentos(container){
+  const cartoes = Array.from(new Set(STATE.cartaoLancamentos.map(l=>l.cartao))).sort();
+  const filters = { busca:"", de:"", ate:"", cartao:"", categoria:"", status:"" };
+
+  container.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Gastos do Cartão</h2>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;" id="cartao-summary"></p>
+      </div>
+      <button class="btn btn-primary" id="btn-novo-cartao">${icon("plus",16)} Novo gasto</button>
+    </div>
+    <div class="filter-bar">
+      <div><span class="field-label">Buscar</span>
+        <div style="position:relative;">
+          <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#a8a29e;">${icon("search",14)}</span>
+          <input class="input" style="padding-left:30px;" id="cfl-busca" placeholder="Descrição, portador ou observação" />
+        </div>
+      </div>
+      <div><span class="field-label">De</span><input class="input" type="date" id="cfl-de" /></div>
+      <div><span class="field-label">Até</span><input class="input" type="date" id="cfl-ate" /></div>
+      <div><span class="field-label">Cartão</span>
+        <select class="input" id="cfl-cartao"><option value="">Todos</option>${cartoes.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Categoria</span>
+        <select class="input" id="cfl-categoria"><option value="">Todas</option>${catsFor("cartao").map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Status</span>
+        <select class="input" id="cfl-status"><option value="">Todos</option><option value="realizado">Pago</option><option value="previsto">Em aberto</option></select></div>
+    </div>
+    <div id="cartao-results"></div>`;
+
+  function refresh(){
+    const dados = STATE.cartaoLancamentos.filter(l=>{
+      if(filters.busca){ const alvo = `${l.descricao} ${l.portador} ${l.observacao}`.toLowerCase(); if(!alvo.includes(filters.busca.toLowerCase())) return false; }
+      if(filters.de && l.data < filters.de) return false;
+      if(filters.ate && l.data > filters.ate) return false;
+      if(filters.cartao && l.cartao!==filters.cartao) return false;
+      if(filters.categoria && l.categoria!==filters.categoria) return false;
+      if(filters.status && l.status!==filters.status) return false;
+      return true;
+    }).sort((a,b)=> b.data.localeCompare(a.data));
+
+    const total = dados.reduce((s,l)=> s + (l.status==="realizado"?l.valor:0), 0);
+    document.getElementById("cartao-summary").innerHTML = `${dados.length} lançamento(s) · Total pago: <b style="color:${DANGER};">${currency(total)}</b>`;
+
+    const rows = document.getElementById("cartao-results");
+    rows.innerHTML = `
+      <div class="card" style="overflow:hidden;">
+        <table>
+          <thead><tr>
+            <th>Data</th><th>Status</th><th>Categoria</th><th>Descrição</th><th>Cartão</th><th>Portador</th><th>Parcela</th>
+            <th style="text-align:right;">Valor</th><th style="text-align:right;">Ações</th>
+          </tr></thead>
+          <tbody>
+            ${dados.map(l=>`
+              <tr>
+                <td style="white-space:nowrap;">${fmtDate(l.data)}</td>
+                <td>${cartaoBadge(l.status)}</td>
+                <td style="color:#57534e;">${esc(l.categoria)}</td>
+                <td style="font-weight:500;color:#44403c;">${esc(l.descricao)}</td>
+                <td style="color:#78716c;">${esc(l.cartao)}</td>
+                <td style="color:#78716c;">${esc(l.portador)}</td>
+                <td style="color:#a8a29e;">${parcelaLabel(l)}</td>
+                <td style="text-align:right;font-weight:600;color:${DANGER};">${currency(l.valor)}</td>
+                <td>
+                  <div style="display:flex;justify-content:flex-end;gap:2px;">
+                    <button class="icon-btn edit-cartao-btn" data-id="${l.id}">${icon("edit",15,"#78716c")}</button>
+                    <button class="icon-btn danger del-cartao-btn" data-id="${l.id}">${icon("trash",15,DANGER)}</button>
+                  </div>
+                </td>
+              </tr>`).join("") || `<tr><td colspan="9" class="empty">Nenhum gasto encontrado para os filtros aplicados.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    rows.querySelectorAll(".edit-cartao-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.cartaoLancamentos.find(l=>l.id===b.dataset.id);
+      openCartaoEditModal(item, refresh);
+    }));
+    rows.querySelectorAll(".del-cartao-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.cartaoLancamentos.find(l=>l.id===b.dataset.id);
+      openConfirm(`Excluir o gasto "${item.descricao}" (${parcelaLabel(item)}) de ${currency(item.valor)}? Essa ação não pode ser desfeita.`, async ()=>{
+        try{ await deleteCartaoLancamento(item.id); refresh(); }catch(err){ toast(err.message, true); }
+      });
+    }));
+  }
+
+  container.querySelector("#btn-novo-cartao").addEventListener("click", ()=> openCartaoCompraModal(refresh));
+  ["busca","de","ate","cartao","categoria","status"].forEach(k=>{
+    const el = container.querySelector(`#cfl-${k}`);
+    el.addEventListener(k==="busca"?"input":"change", ()=>{ filters[k]=el.value; refresh(); });
+  });
+  refresh();
+}
+
+function renderCartoesDashboard(container){
+  const periodoState = defaultPeriodoState();
+
+  function build(){
+    const noPeriodo = noPeriodoFn(periodoState, l=>l.data);
+    const doPeriodo = STATE.cartaoLancamentos.filter(noPeriodo);
+    const pagos = doPeriodo.filter(l=>l.status==="realizado");
+    const totalPago = pagos.reduce((s,l)=>s+l.valor,0);
+    const totalPeriodo = doPeriodo.reduce((s,l)=>s+l.valor,0);
+    const emAberto = totalPeriodo - totalPago;
+
+    const porCategoria = {}; pagos.forEach(l=>{ porCategoria[l.categoria]=(porCategoria[l.categoria]||0)+l.valor; });
+    const topCategorias = Object.entries(porCategoria).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const porCartao = {}; pagos.forEach(l=>{ porCartao[l.cartao]=(porCartao[l.cartao]||0)+l.valor; });
+    const topCartoes = Object.entries(porCartao).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+    const maiorCategoria = topCategorias[0] ? `${topCategorias[0][0]} · ${currency(topCategorias[0][1])}` : "—";
+    const cartaoMaisUsado = topCartoes[0] ? `${topCartoes[0][0]} · ${currency(topCartoes[0][1])}` : "—";
+
+    const parcelasAbertas = STATE.cartaoLancamentos.filter(l=>l.status==="previsto").sort((a,b)=>a.data.localeCompare(b.data));
+    const hoje = todayISO();
+
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Dashboard — Cartões e Débitos</h2>
+          <p class="muted" style="margin:4px 0 0;font-size:13px;">Carteira separada para gastos de cartão de crédito, com parcelas.</p>
+        </div>
+        ${periodoPickerHTML("cdb", periodoState)}
+      </div>
+
+      <div class="grid-4" style="margin-bottom:16px;">
+        ${statCard("Gasto pago no período", currency(totalPago), "up", DANGER_BG, DANGER)}
+        ${statCard("Em aberto no período", currency(emAberto), "clipboard", WARN_BG, WARN)}
+        ${statCard("Maior categoria", maiorCategoria, "sparkles", BRAND[100], BRAND[600])}
+        ${statCard("Cartão mais usado", cartaoMaisUsado, "card", BRAND[100], BRAND[600])}
+      </div>
+
+      <div class="grid-2" style="margin-bottom:16px;">
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Categorias que mais gastaram</h3>
+          ${topCategorias.length ? `<canvas id="chart-cartao-cat" height="200"></canvas>` : `<p class="empty">Sem gastos pagos no período.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Gasto por cartão</h3>
+          ${topCartoes.length ? `<canvas id="chart-cartao-uso" height="200"></canvas>` : `<p class="empty">Sem gastos pagos no período.</p>`}
+        </div>
+      </div>
+
+      <div class="card" style="padding:16px;">
+        <h3 class="serif" style="margin:0 0 6px;font-size:15px;color:${BRAND[800]};">Parcelas em aberto</h3>
+        <div style="max-height:360px;overflow-y:auto;">
+          ${parcelasAbertas.map(l=>{
+            const atrasado = l.data < hoje;
+            return `<div class="list-row">
+              <div style="min-width:0;">
+                <p style="margin:0;font-size:14px;font-weight:500;color:#44403c;">${esc(l.descricao)} <span class="muted" style="font-size:11px;">(${parcelaLabel(l)})</span></p>
+                <p style="margin:2px 0 0;font-size:12px;color:#a8a29e;">${esc(l.cartao)} · ${esc(l.portador)}</p>
+                <p style="margin:2px 0 0;font-size:12px;${atrasado?`color:${DANGER};font-weight:600;`:"color:#a8a29e;"}">${atrasado?"Vencida em ":"Prevista para "}${fmtDate(l.data)}</p>
+              </div>
+              <div style="text-align:right;flex-shrink:0;">
+                <p style="margin:0;font-size:14px;font-weight:600;color:${DANGER};">${currency(l.valor)}</p>
+                <button class="quitar-parcela-btn" data-id="${l.id}" style="border:none;background:none;font-size:11px;margin-top:2px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;">Marcar como pago</button>
+              </div>
+            </div>`;
+          }).join("") || `<p class="empty">Nenhuma parcela em aberto. Tudo em dia!</p>`}
+        </div>
+      </div>`;
+
+    wirePeriodoPicker("cdb", container, periodoState, build);
+    container.querySelectorAll(".quitar-parcela-btn").forEach(b=> b.addEventListener("click", async ()=>{
+      try{ await quitarParcela(b.dataset.id); build(); }catch(err){ toast(err.message, true); }
+    }));
+
+    if(topCategorias.length) mkHBarChart("chart-cartao-cat", topCategorias);
+    if(topCartoes.length) mkHBarChart("chart-cartao-uso", topCartoes);
+  }
+  build();
+}
+
+/* ============================== Vales (apenas entradas) ============================== */
+function valeBadge(status){
+  const ok = status==="realizado";
+  return `<span class="badge ${ok?"badge-ok":"badge-pending"}"><span class="dot" style="background:${ok?BRAND[500]:"#c9922c"}"></span>${ok?"Recebido":"A receber"}</span>`;
+}
+function valeFormHTML(item){
+  const status = item?.status || "realizado";
+  const origens = Array.from(new Set(STATE.valeLancamentos.map(l=>l.origem))).sort();
+  const unidades = Array.from(new Set(STATE.valeLancamentos.map(l=>l.unidade))).sort();
+  return `
+    <form id="vale-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Valor (R$)</span>
+          <input class="input" type="number" min="0" step="0.01" id="v-valor" value="${item?item.valor:""}" placeholder="0,00" required /></label>
+        <label class="field">
+          <span class="field-label">Categoria</span>
+          <select class="input" id="v-categoria">${catsFor("vale").map(c=>`<option value="${esc(c)}" ${item&&item.categoria===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
+          ${manageCategoriasBtn("vale")}
+        </label>
+      </div>
+      <label class="field"><span class="field-label">Descrição (motivo / cliente)</span>
+        <input class="input" id="v-descricao" value="${esc(item?item.descricao:"")}" placeholder="ex: Vale-refeição do mês" required /></label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Origem / Emissor</span>
+          <input class="input" id="v-origem" list="vale-origens-list" value="${esc(item?item.origem:"")}" placeholder="ex: Sodexo, Alelo, VR..." required />
+          <datalist id="vale-origens-list">${origens.map(o=>`<option value="${esc(o)}">`).join("")}</datalist></label>
+        <label class="field"><span class="field-label">Unidade</span>
+          <input class="input" id="v-unidade" list="vale-unidades-list" value="${esc(item?item.unidade:"")}" placeholder="ex: Unidade Centro" required />
+          <datalist id="vale-unidades-list">${unidades.map(u=>`<option value="${esc(u)}">`).join("")}</datalist></label>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Status</span>
+          <select class="input" id="v-status">
+            <option value="realizado" ${status==="realizado"?"selected":""}>Recebido</option>
+            <option value="previsto" ${status==="previsto"?"selected":""}>A receber</option>
+          </select></label>
+        <label class="field"><span class="field-label">Data</span>
+          <input class="input" type="date" id="v-data" value="${item?item.data:todayISO()}" required /></label>
+      </div>
+      <label class="field"><span class="field-label">Observação (opcional)</span>
+        <textarea class="input" id="v-obs" rows="2">${esc(item?item.observacao:"")}</textarea></label>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="v-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="v-submit">${icon("check",15)} Salvar vale</button>
+      </div>
+    </form>`;
+}
+function openValeModal(item, onSaved){
+  const isEdit = !!item;
+  openModal({
+    title: isEdit ? "Editar vale" : "Novo vale",
+    bodyHTML: valeFormHTML(item),
+    mount:(body)=>{
+      body.querySelector("#v-cancel").addEventListener("click", closeModal);
+      const gerenciarBtn = body.querySelector("#btn-gerenciar-cat");
+      if(gerenciarBtn) gerenciarBtn.addEventListener("click", (e)=>{
+        e.preventDefault();
+        openCategoriasModal("vale", ()=>{
+          const sel = body.querySelector("#v-categoria");
+          const atual = sel.value;
+          sel.innerHTML = catsFor("vale").map(c=>`<option value="${esc(c)}" ${c===atual?"selected":""}>${esc(c)}</option>`).join("");
+        });
+      });
+      body.querySelector("#vale-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const valor = parseFloat(body.querySelector("#v-valor").value);
+        const descricao = body.querySelector("#v-descricao").value.trim();
+        const origem = body.querySelector("#v-origem").value.trim();
+        const unidade = body.querySelector("#v-unidade").value.trim();
+        if(!valor || valor<=0 || !descricao || !origem || !unidade) return;
+        const payload = {
+          valor, categoria: body.querySelector("#v-categoria").value, descricao, origem, unidade,
+          status: body.querySelector("#v-status").value, data: body.querySelector("#v-data").value || todayISO(),
+          observacao: body.querySelector("#v-obs").value.trim(),
+        };
+        const btn = body.querySelector("#v-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          if(isEdit) await editVale(item.id, payload);
+          else await addVale(payload);
+          closeModal(); onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar vale`; }
+      });
+    }
+  });
+}
+function renderValesLancamentos(container){
+  const origens = Array.from(new Set(STATE.valeLancamentos.map(l=>l.origem))).sort();
+  const unidades = Array.from(new Set(STATE.valeLancamentos.map(l=>l.unidade))).sort();
+  const filters = { busca:"", de:"", ate:"", unidade:"", categoria:"", status:"" };
+
+  container.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Vales — Recebimentos</h2>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;" id="vale-summary"></p>
+      </div>
+      <button class="btn btn-primary" id="btn-novo-vale">${icon("plus",16)} Novo vale</button>
+    </div>
+    <div class="filter-bar">
+      <div><span class="field-label">Buscar</span>
+        <div style="position:relative;">
+          <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#a8a29e;">${icon("search",14)}</span>
+          <input class="input" style="padding-left:30px;" id="vfl-busca" placeholder="Descrição, origem ou observação" />
+        </div>
+      </div>
+      <div><span class="field-label">De</span><input class="input" type="date" id="vfl-de" /></div>
+      <div><span class="field-label">Até</span><input class="input" type="date" id="vfl-ate" /></div>
+      <div><span class="field-label">Unidade</span>
+        <select class="input" id="vfl-unidade"><option value="">Todas</option>${unidades.map(u=>`<option value="${esc(u)}">${esc(u)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Categoria</span>
+        <select class="input" id="vfl-categoria"><option value="">Todas</option>${catsFor("vale").map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Status</span>
+        <select class="input" id="vfl-status"><option value="">Todos</option><option value="realizado">Recebido</option><option value="previsto">A receber</option></select></div>
+    </div>
+    <div id="vale-results"></div>`;
+
+  function refresh(){
+    const dados = STATE.valeLancamentos.filter(l=>{
+      if(filters.busca){ const alvo = `${l.descricao} ${l.origem} ${l.observacao}`.toLowerCase(); if(!alvo.includes(filters.busca.toLowerCase())) return false; }
+      if(filters.de && l.data < filters.de) return false;
+      if(filters.ate && l.data > filters.ate) return false;
+      if(filters.unidade && l.unidade!==filters.unidade) return false;
+      if(filters.categoria && l.categoria!==filters.categoria) return false;
+      if(filters.status && l.status!==filters.status) return false;
+      return true;
+    }).sort((a,b)=> b.data.localeCompare(a.data));
+
+    const total = dados.reduce((s,l)=> s + (l.status==="realizado"?l.valor:0), 0);
+    document.getElementById("vale-summary").innerHTML = `${dados.length} vale(s) · Total recebido: <b style="color:${BRAND[600]};">${currency(total)}</b>`;
+
+    const rows = document.getElementById("vale-results");
+    rows.innerHTML = `
+      <div class="card" style="overflow:hidden;">
+        <table>
+          <thead><tr>
+            <th>Data</th><th>Status</th><th>Categoria</th><th>Descrição</th><th>Origem</th><th>Unidade</th>
+            <th style="text-align:right;">Valor</th><th style="text-align:right;">Ações</th>
+          </tr></thead>
+          <tbody>
+            ${dados.map(l=>`
+              <tr>
+                <td style="white-space:nowrap;">${fmtDate(l.data)}</td>
+                <td>${valeBadge(l.status)}</td>
+                <td style="color:#57534e;">${esc(l.categoria)}</td>
+                <td style="font-weight:500;color:#44403c;">${esc(l.descricao)}</td>
+                <td style="color:#78716c;">${esc(l.origem)}</td>
+                <td style="color:#78716c;">${esc(l.unidade)}</td>
+                <td style="text-align:right;font-weight:600;color:${BRAND[600]};">${currency(l.valor)}</td>
+                <td>
+                  <div style="display:flex;justify-content:flex-end;gap:2px;">
+                    <button class="icon-btn edit-vale-btn" data-id="${l.id}">${icon("edit",15,"#78716c")}</button>
+                    <button class="icon-btn danger del-vale-btn" data-id="${l.id}">${icon("trash",15,DANGER)}</button>
+                  </div>
+                </td>
+              </tr>`).join("") || `<tr><td colspan="8" class="empty">Nenhum vale encontrado para os filtros aplicados.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    rows.querySelectorAll(".edit-vale-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.valeLancamentos.find(l=>l.id===b.dataset.id);
+      openValeModal(item, refresh);
+    }));
+    rows.querySelectorAll(".del-vale-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.valeLancamentos.find(l=>l.id===b.dataset.id);
+      openConfirm(`Excluir o vale "${item.descricao}" de ${currency(item.valor)}? Essa ação não pode ser desfeita.`, async ()=>{
+        try{ await deleteVale(item.id); refresh(); }catch(err){ toast(err.message, true); }
+      });
+    }));
+  }
+
+  container.querySelector("#btn-novo-vale").addEventListener("click", ()=> openValeModal(null, refresh));
+  ["busca","de","ate","unidade","categoria","status"].forEach(k=>{
+    const el = container.querySelector(`#vfl-${k}`);
+    el.addEventListener(k==="busca"?"input":"change", ()=>{ filters[k]=el.value; refresh(); });
+  });
+  refresh();
+}
+function renderValesDashboard(container){
+  const periodoState = defaultPeriodoState();
+
+  function build(){
+    const noPeriodo = noPeriodoFn(periodoState, l=>l.data);
+    const doPeriodo = STATE.valeLancamentos.filter(noPeriodo);
+    const recebidos = doPeriodo.filter(l=>l.status==="realizado");
+    const totalRecebido = recebidos.reduce((s,l)=>s+l.valor,0);
+    const totalPeriodo = doPeriodo.reduce((s,l)=>s+l.valor,0);
+    const aReceber = totalPeriodo - totalRecebido;
+
+    const porCategoria = {}; recebidos.forEach(l=>{ porCategoria[l.categoria]=(porCategoria[l.categoria]||0)+l.valor; });
+    const topCategorias = Object.entries(porCategoria).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const porOrigem = {}; recebidos.forEach(l=>{ porOrigem[l.origem]=(porOrigem[l.origem]||0)+l.valor; });
+    const topOrigens = Object.entries(porOrigem).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+    const maiorCategoria = topCategorias[0] ? `${topCategorias[0][0]} · ${currency(topCategorias[0][1])}` : "—";
+    const origemPrincipal = topOrigens[0] ? `${topOrigens[0][0]} · ${currency(topOrigens[0][1])}` : "—";
+
+    const emAberto = STATE.valeLancamentos.filter(l=>l.status==="previsto").sort((a,b)=>a.data.localeCompare(b.data));
+    const hoje = todayISO();
+
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Dashboard — Vales</h2>
+          <p class="muted" style="margin:4px 0 0;font-size:13px;">Carteira separada para recebimentos em vales (refeição, alimentação, transporte...).</p>
+        </div>
+        ${periodoPickerHTML("vdb", periodoState)}
+      </div>
+
+      <div class="grid-4" style="margin-bottom:16px;">
+        ${statCard("Recebido no período", currency(totalRecebido), "down", BRAND[100], BRAND[600])}
+        ${statCard("A receber no período", currency(aReceber), "clipboard", WARN_BG, WARN)}
+        ${statCard("Maior categoria", maiorCategoria, "sparkles", BRAND[100], BRAND[600])}
+        ${statCard("Origem principal", origemPrincipal, "folder", BRAND[100], BRAND[600])}
+      </div>
+
+      <div class="grid-2" style="margin-bottom:16px;">
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Categorias que mais receberam</h3>
+          ${topCategorias.length ? `<canvas id="chart-vale-cat" height="200"></canvas>` : `<p class="empty">Sem vales recebidos no período.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Recebido por origem</h3>
+          ${topOrigens.length ? `<canvas id="chart-vale-origem" height="200"></canvas>` : `<p class="empty">Sem vales recebidos no período.</p>`}
+        </div>
+      </div>
+
+      <div class="card" style="padding:16px;">
+        <h3 class="serif" style="margin:0 0 6px;font-size:15px;color:${BRAND[800]};">Recebimentos em aberto</h3>
+        <div style="max-height:360px;overflow-y:auto;">
+          ${emAberto.map(l=>{
+            const atrasado = l.data < hoje;
+            return `<div class="list-row">
+              <div style="min-width:0;">
+                <p style="margin:0;font-size:14px;font-weight:500;color:#44403c;">${esc(l.descricao)}</p>
+                <p style="margin:2px 0 0;font-size:12px;color:#a8a29e;">${esc(l.origem)} · ${esc(l.unidade)}</p>
+                <p style="margin:2px 0 0;font-size:12px;${atrasado?`color:${DANGER};font-weight:600;`:"color:#a8a29e;"}">${atrasado?"Previsto em ":"Previsto para "}${fmtDate(l.data)}</p>
+              </div>
+              <div style="text-align:right;flex-shrink:0;">
+                <p style="margin:0;font-size:14px;font-weight:600;color:${BRAND[600]};">${currency(l.valor)}</p>
+                <button class="quitar-vale-btn" data-id="${l.id}" style="border:none;background:none;font-size:11px;margin-top:2px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;">Marcar como recebido</button>
+              </div>
+            </div>`;
+          }).join("") || `<p class="empty">Nenhum vale em aberto. Tudo em dia!</p>`}
+        </div>
+      </div>`;
+
+    wirePeriodoPicker("vdb", container, periodoState, build);
+    container.querySelectorAll(".quitar-vale-btn").forEach(b=> b.addEventListener("click", async ()=>{
+      try{ await quitarVale(b.dataset.id); build(); }catch(err){ toast(err.message, true); }
+    }));
+
+    if(topCategorias.length) mkHBarChart("chart-vale-cat", topCategorias);
+    if(topOrigens.length) mkHBarChart("chart-vale-origem", topOrigens);
+  }
+  build();
+}
+
+/* ============================== Faturamentos (clone da Carteira + Duplicatas) ============================== */
+function fatLancamentoFormHTML(tipo, item){
+  const cats = catsForFat(tipo);
+  const label = tipo==="entrada" ? "De quem (origem)" : "Para quem (fornecedor / destino)";
+  const status = item?.status || "realizado";
+  const isDuplicata = !!(item && item.duplicata);
+  return `
+    <form id="fat-lanc-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Valor (R$)</span>
+          <input class="input" type="number" min="0" step="0.01" id="ff-valor" value="${item?item.valor:""}" placeholder="0,00" required /></label>
+        <label class="field">
+          <span class="field-label">Categoria</span>
+          <select class="input" id="ff-categoria">${cats.map(c=>`<option value="${esc(c)}" ${item&&item.categoria===c?"selected":""}>${esc(c)}</option>`).join("")}</select>
+          ${manageCategoriasBtn("fat_"+tipo)}
+        </label>
+      </div>
+      <label class="field"><span class="field-label">${label}</span>
+        <input class="input" id="ff-contraparte" value="${esc(item?item.contraparte:"")}" placeholder="Nome do cliente, contrato ou fornecedor" required /></label>
+      <label class="field"><span class="field-label">Unidade / Local</span>
+        <input class="input" id="ff-unidade" list="fat-unidades-list" value="${esc(item?item.unidade:"")}" placeholder="ex: Unidade Centro" required />
+        <datalist id="fat-unidades-list">${Array.from(new Set(STATE.faturamentoLancamentos.map(l=>l.unidade))).map(u=>`<option value="${esc(u)}">`).join("")}</datalist>
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;">
+        <label class="field"><span class="field-label">Status</span>
+          <select class="input" id="ff-status">
+            <option value="realizado" ${status==="realizado"?"selected":""}>Realizado</option>
+            <option value="previsto" ${status==="previsto"?"selected":""}>Previsto (pendente)</option>
+          </select></label>
+        <label class="field"><span class="field-label" id="ff-date-label">${status==="realizado"?"Data de realização":"Data prevista"}</span>
+          <input class="input" type="date" id="ff-data" value="${status==="realizado" ? (item?.data_realizada||todayISO()) : (item?.data_prevista||todayISO())}" required /></label>
+      </div>
+      ${tipo==="entrada" ? `
+      <label class="field"><span class="field-label">Vencimento do faturamento</span>
+        <input class="input" type="date" id="ff-vencimento" value="${esc(item?.data_vencimento||"")}" />
+        <span class="field-hint">Data-limite de pagamento acordada com o cliente — usada para saber se está dentro do prazo.</span>
+      </label>` : ""}
+      ${tipo==="saida" ? `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:end;">
+        <label class="field" style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <input type="checkbox" id="ff-duplicata" ${isDuplicata?"checked":""} style="width:16px;height:16px;" />
+          <span style="font-size:13px;color:#44403c;">É uma duplicata?</span>
+        </label>
+        <label class="field" id="ff-numero-wrap" style="display:${isDuplicata?"block":"none"};">
+          <span class="field-label">Número da duplicata</span>
+          <input class="input" id="ff-numero-duplicata" value="${esc(item?.numero_duplicata||"")}" placeholder="ex: DP-00123" /></label>
+      </div>` : ""}
+      <label class="field"><span class="field-label">Observação (opcional)</span>
+        <textarea class="input" id="ff-obs" rows="2" placeholder="Detalhes do lançamento...">${esc(item?item.observacao:"")}</textarea></label>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="ff-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="ff-submit">${icon("check",15)} Salvar lançamento</button>
+      </div>
+    </form>`;
+}
+function openFatLancamentoModal(tipo, item, onSaved){
+  const isEdit = !!item;
+  openModal({
+    title: isEdit ? "Editar lançamento" : `Nova ${tipo==="entrada"?"entrada":"saída"} de faturamento`,
+    bodyHTML: fatLancamentoFormHTML(tipo, item),
+    mount: (body)=>{
+      const statusSel = body.querySelector("#ff-status");
+      statusSel.addEventListener("change", ()=>{
+        const lbl = body.querySelector("#ff-date-label");
+        lbl.textContent = statusSel.value==="realizado" ? "Data de realização" : "Data prevista";
+      });
+      body.querySelector("#ff-cancel").addEventListener("click", closeModal);
+      const dupCheck = body.querySelector("#ff-duplicata");
+      if(dupCheck) dupCheck.addEventListener("change", ()=>{
+        body.querySelector("#ff-numero-wrap").style.display = dupCheck.checked ? "block" : "none";
+      });
+      const gerenciarBtn = body.querySelector("#btn-gerenciar-cat");
+      if(gerenciarBtn) gerenciarBtn.addEventListener("click", (e)=>{
+        e.preventDefault();
+        openCategoriasModal("fat_"+tipo, ()=>{
+          const sel = body.querySelector("#ff-categoria");
+          const atual = sel.value;
+          sel.innerHTML = catsForFat(tipo).map(c=>`<option value="${esc(c)}" ${c===atual?"selected":""}>${esc(c)}</option>`).join("");
+        });
+      });
+      body.querySelector("#fat-lanc-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const valor = parseFloat(body.querySelector("#ff-valor").value);
+        const contraparte = body.querySelector("#ff-contraparte").value.trim();
+        const unidade = body.querySelector("#ff-unidade").value.trim();
+        if(!valor || valor<=0 || !contraparte || !unidade) return;
+        const status = body.querySelector("#ff-status").value;
+        const data = body.querySelector("#ff-data").value || todayISO();
+        const duplicata = tipo==="saida" && !!(body.querySelector("#ff-duplicata") && body.querySelector("#ff-duplicata").checked);
+        const numeroDuplicata = duplicata ? body.querySelector("#ff-numero-duplicata").value.trim() : null;
+        const vencimentoEl = body.querySelector("#ff-vencimento");
+        const dataVencimento = tipo==="entrada" ? (vencimentoEl && vencimentoEl.value ? vencimentoEl.value : null) : null;
+        const payload = {
+          tipo, valor, categoria: body.querySelector("#ff-categoria").value, contraparte, unidade,
+          status, data_prevista: status==="realizado" ? (item?.data_prevista||data) : data,
+          data_realizada: status==="realizado" ? data : null,
+          data_vencimento: dataVencimento,
+          duplicata, numero_duplicata: numeroDuplicata,
+          observacao: body.querySelector("#ff-obs").value.trim(),
+        };
+        const btn = body.querySelector("#ff-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          if(isEdit) await editFatLancamento(item.id, payload);
+          else await addFatLancamento(payload);
+          closeModal();
+          onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar lançamento`; }
+      });
+    }
+  });
+}
+function renderFatLancamentosView(container, tipo){
+  const isEntrada = tipo==="entrada";
+  const categorias = catsForFat(tipo);
+  const contraLabel = isEntrada ? "Origem" : "Destino";
+  const unidades = Array.from(new Set(STATE.faturamentoLancamentos.map(l=>l.unidade))).sort();
+
+  const filters = { busca:"", de:"", ate:"", unidade:"", categoria:"", status:"" };
+
+  container.innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Faturamentos — ${isEntrada?"Entradas":"Saídas"}</h2>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;" id="fat-lanc-summary"></p>
+      </div>
+      <button class="btn btn-primary" id="btn-novo-fat-lanc">${icon("plus",16)} Novo lançamento</button>
+    </div>
+    <div class="filter-bar">
+      <div><span class="field-label">Buscar por nome</span>
+        <div style="position:relative;">
+          <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#a8a29e;">${icon("search",14)}</span>
+          <input class="input" style="padding-left:30px;" id="ffl-busca" placeholder="Buscar ${contraLabel.toLowerCase()} ou observação" />
+        </div>
+      </div>
+      <div><span class="field-label">De</span><input class="input" type="date" id="ffl-de" /></div>
+      <div><span class="field-label">Até</span><input class="input" type="date" id="ffl-ate" /></div>
+      <div><span class="field-label">Unidade</span>
+        <select class="input" id="ffl-unidade"><option value="">Todas</option>${unidades.map(u=>`<option value="${esc(u)}">${esc(u)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Categoria</span>
+        <select class="input" id="ffl-categoria"><option value="">Todas</option>${categorias.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+      <div><span class="field-label">Status</span>
+        <select class="input" id="ffl-status"><option value="">Todos</option><option value="realizado">Realizado</option><option value="previsto">Previsto</option></select></div>
+    </div>
+    <div id="fat-lanc-results"></div>`;
+
+  function refresh(){
+    const dados = STATE.faturamentoLancamentos.filter(l=>l.tipo===tipo).filter(l=>{
+      const dataRef = l.data_realizada || l.data_prevista;
+      if(filters.busca){ const alvo = `${l.contraparte} ${l.observacao} ${l.numero_duplicata||""}`.toLowerCase(); if(!alvo.includes(filters.busca.toLowerCase())) return false; }
+      if(filters.de && dataRef < filters.de) return false;
+      if(filters.ate && dataRef > filters.ate) return false;
+      if(filters.unidade && l.unidade!==filters.unidade) return false;
+      if(filters.categoria && l.categoria!==filters.categoria) return false;
+      if(filters.status && l.status!==filters.status) return false;
+      return true;
+    }).sort((a,b)=> (b.data_realizada||b.data_prevista).localeCompare(a.data_realizada||a.data_prevista));
+
+    const totalFiltrado = dados.reduce((s,l)=> s + l.valor, 0);
+    const totalRealizado = dados.reduce((s,l)=> s + (l.status==="realizado"?l.valor:0), 0);
+    const totalPrevisto = dados.reduce((s,l)=> s + (l.status==="previsto"?l.valor:0), 0);
+    const corPrincipal = isEntrada?BRAND[600]:DANGER;
+    document.getElementById("fat-lanc-summary").innerHTML = `${dados.length} lançamento(s) selecionado(s) · Soma do filtro: <b style="color:${corPrincipal};">${currency(totalFiltrado)}</b> <span class="muted">(Realizado: ${currency(totalRealizado)} · Previsto: ${currency(totalPrevisto)})</span>`;
+
+    const rows = document.getElementById("fat-lanc-results");
+    rows.innerHTML = `
+      <div class="card" style="overflow:hidden;">
+        <table>
+          <thead><tr>
+            <th>Data</th><th>Status</th><th>Categoria</th><th>${contraLabel}</th><th>Unidade</th>
+            ${isEntrada ? `<th>Vencimento</th><th>Prazo</th>` : ""}
+            ${!isEntrada ? `<th>Duplicata</th>` : ""}
+            <th style="text-align:right;">Valor</th><th>Lançado por</th><th style="text-align:right;">Ações</th>
+          </tr></thead>
+          <tbody>
+            ${dados.map(l=>`
+              <tr>
+                <td style="white-space:nowrap;">${fmtDate(l.data_realizada||l.data_prevista)}</td>
+                <td>${badge(l.status)}</td>
+                <td style="color:#57534e;">${esc(l.categoria)}</td>
+                <td style="font-weight:500;color:#44403c;">${esc(l.contraparte)}</td>
+                <td style="color:#78716c;">${esc(l.unidade)}</td>
+                ${isEntrada ? `<td style="white-space:nowrap;color:#78716c;">${l.data_vencimento?fmtDate(l.data_vencimento):"—"}</td><td>${prazoBadge(l)}</td>` : ""}
+                ${!isEntrada ? `<td style="color:#78716c;font-size:12px;">${l.duplicata ? esc(l.numero_duplicata||"Sim") : "—"}</td>` : ""}
+                <td style="text-align:right;font-weight:600;color:${isEntrada?BRAND[600]:DANGER};">${currency(l.valor)}</td>
+                <td style="color:#a8a29e;font-size:12px;">${esc(l.usuario_nome)}</td>
+                <td>
+                  <div style="display:flex;justify-content:flex-end;gap:2px;">
+                    <button class="icon-btn edit-fat-btn" data-id="${l.id}">${icon("edit",15,"#78716c")}</button>
+                    <button class="icon-btn danger del-fat-btn" data-id="${l.id}">${icon("trash",15,DANGER)}</button>
+                  </div>
+                </td>
+              </tr>`).join("") || `<tr><td colspan="${isEntrada?10:9}" class="empty">Nenhum lançamento encontrado para os filtros aplicados.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    rows.querySelectorAll(".edit-fat-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.faturamentoLancamentos.find(l=>l.id===b.dataset.id);
+      openFatLancamentoModal(tipo, item, refresh);
+    }));
+    rows.querySelectorAll(".del-fat-btn").forEach(b=> b.addEventListener("click", ()=>{
+      const item = STATE.faturamentoLancamentos.find(l=>l.id===b.dataset.id);
+      openConfirm(`Excluir o lançamento de ${currency(item.valor)} referente a "${item.contraparte}"? Essa ação não pode ser desfeita.`, async ()=>{
+        try{ await deleteFatLancamento(item.id); refresh(); }catch(err){ toast(err.message, true); }
+      });
+    }));
+  }
+
+  container.querySelector("#btn-novo-fat-lanc").addEventListener("click", ()=> openFatLancamentoModal(tipo, null, refresh));
+  ["busca","de","ate","unidade","categoria","status"].forEach(k=>{
+    const el = container.querySelector(`#ffl-${k}`);
+    el.addEventListener(k==="busca"?"input":"change", ()=>{ filters[k]=el.value; refresh(); });
+  });
+  refresh();
+}
+function renderFatContas(container){
+  const hoje = todayISO();
+  function build(){
+    const pagar = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista));
+    const receber = STATE.faturamentoLancamentos.filter(l=>l.tipo==="entrada" && l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista));
+    const lista = (titulo, itens, cor, acaoLabel) => `
+      <div class="card" style="flex:1;overflow:hidden;">
+        <div style="padding:14px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+          <h3 class="serif" style="margin:0;font-size:17px;color:${BRAND[800]};">${titulo}</h3>
+          <span style="font-size:12px;font-weight:600;color:${cor};">${currency(itens.reduce((s,i)=>s+i.valor,0))}</span>
+        </div>
+        <div style="max-height:540px;overflow-y:auto;">
+          ${itens.map(l=>{
+            const atrasado = l.data_prevista < hoje;
+            return `<div class="list-row">
+              <div style="min-width:0;">
+                <p style="margin:0;font-size:14px;font-weight:500;color:#44403c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(l.contraparte)}</p>
+                <p style="margin:2px 0 0;font-size:12px;color:#a8a29e;">${esc(l.categoria)} · ${esc(l.unidade)}</p>
+                <p style="margin:2px 0 0;font-size:12px;${atrasado?`color:${DANGER};font-weight:600;`:"color:#a8a29e;"}">${atrasado?"Vencido em ":"Previsto para "}${fmtDate(l.data_prevista)}</p>
+              </div>
+              <div style="text-align:right;flex-shrink:0;">
+                <p style="margin:0;font-size:14px;font-weight:600;color:${cor};">${currency(l.valor)}</p>
+                <button class="quitar-fat-btn" data-id="${l.id}" style="border:none;background:none;font-size:11px;margin-top:2px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;">${acaoLabel}</button>
+              </div>
+            </div>`;
+          }).join("") || `<p class="empty">Nada por aqui. Tudo em dia!</p>`}
+        </div>
+      </div>`;
+    container.innerHTML = `
+      <h2 class="serif" style="margin:0 0 4px;font-size:24px;color:${BRAND[800]};">Faturamentos — Contas a Pagar e a Receber</h2>
+      <p class="muted" style="margin:0 0 18px;font-size:13px;">Lançamentos previstos que ainda não foram confirmados.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;" class="contas-flex">
+        ${lista("Contas a Pagar", pagar, DANGER, "Marcar como pago")}
+        ${lista("Contas a Receber", receber, BRAND[600], "Marcar como recebido")}
+      </div>
+      <style>@media(min-width:900px){.contas-flex{flex-direction:row !important;}}</style>`;
+    container.querySelectorAll(".quitar-fat-btn").forEach(b=> b.addEventListener("click", async ()=>{
+      try{ await quitarFatConta(b.dataset.id); build(); }catch(err){ toast(err.message, true); }
+    }));
+  }
+  build();
+}
+function renderFatDuplicatas(container){
+  const hoje = todayISO();
+  const filters = { busca:"", de:"", ate:"", unidade:"", categoria:"", status:"" };
+
+  function build(){
+    const todas = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && l.duplicata);
+    const unidades = Array.from(new Set(todas.map(l=>l.unidade))).sort();
+    const categorias = Array.from(new Set(todas.map(l=>l.categoria))).sort();
+
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Duplicatas a Pagar</h2>
+          <p class="muted" style="margin:4px 0 0;font-size:13px;" id="dup-summary"></p>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <div><span class="field-label">Buscar</span>
+          <div style="position:relative;">
+            <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:#a8a29e;">${icon("search",14)}</span>
+            <input class="input" style="padding-left:30px;" id="dup-busca" placeholder="Fornecedor ou nº da duplicata" />
+          </div>
+        </div>
+        <div><span class="field-label">Vencimento de</span><input class="input" type="date" id="dup-de" /></div>
+        <div><span class="field-label">Vencimento até</span><input class="input" type="date" id="dup-ate" /></div>
+        <div><span class="field-label">Unidade</span>
+          <select class="input" id="dup-unidade"><option value="">Todas</option>${unidades.map(u=>`<option value="${esc(u)}">${esc(u)}</option>`).join("")}</select></div>
+        <div><span class="field-label">Categoria</span>
+          <select class="input" id="dup-categoria"><option value="">Todas</option>${categorias.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select></div>
+        <div><span class="field-label">Status</span>
+          <select class="input" id="dup-status"><option value="">Todos</option><option value="previsto">Em aberto</option><option value="realizado">Pago</option></select></div>
+      </div>
+      <div id="dup-results"></div>
+      <p class="field-hint" style="margin-top:10px;">Para marcar uma saída como duplicata, use o campo "É uma duplicata?" ao criar ou editar um lançamento em Faturamentos → Saídas.</p>`;
+
+    ["busca","de","ate","unidade","categoria","status"].forEach(k=>{
+      const el = container.querySelector(`#dup-${k}`);
+      el.value = filters[k];
+      el.addEventListener(k==="busca"?"input":"change", ()=>{ filters[k]=el.value; refresh(); });
+    });
+
+    refresh();
+  }
+
+  function refresh(){
+    const duplicatas = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && l.duplicata).filter(l=>{
+      if(filters.busca){ const alvo = `${l.contraparte} ${l.numero_duplicata||""}`.toLowerCase(); if(!alvo.includes(filters.busca.toLowerCase())) return false; }
+      if(filters.de && l.data_prevista < filters.de) return false;
+      if(filters.ate && l.data_prevista > filters.ate) return false;
+      if(filters.unidade && l.unidade!==filters.unidade) return false;
+      if(filters.categoria && l.categoria!==filters.categoria) return false;
+      if(filters.status && l.status!==filters.status) return false;
+      return true;
+    }).sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista));
+
+    const totalAberto = duplicatas.filter(l=>l.status==="previsto").reduce((s,l)=>s+l.valor,0);
+    document.getElementById("dup-summary").innerHTML = `${duplicatas.length} duplicata(s) encontrada(s) · Em aberto: <b style="color:${DANGER};">${currency(totalAberto)}</b>`;
+
+    const rows = document.getElementById("dup-results");
+    rows.innerHTML = `
+      <div class="card" style="overflow:hidden;">
+        <table>
+          <thead><tr><th>Vencimento</th><th>Status</th><th>Nº Duplicata</th><th>Fornecedor</th><th>Categoria</th><th>Unidade</th><th style="text-align:right;">Valor</th><th style="text-align:right;">Ações</th></tr></thead>
+          <tbody>
+            ${duplicatas.map(l=>{
+              const atrasado = l.status==="previsto" && l.data_prevista < hoje;
+              return `<tr>
+                <td style="white-space:nowrap;${atrasado?`color:${DANGER};font-weight:600;`:""}">${fmtDate(l.data_prevista)}</td>
+                <td>${badge(l.status)}</td>
+                <td style="color:#78716c;">${esc(l.numero_duplicata||"—")}</td>
+                <td style="font-weight:500;color:#44403c;">${esc(l.contraparte)}</td>
+                <td style="color:#78716c;">${esc(l.categoria)}</td>
+                <td style="color:#78716c;">${esc(l.unidade)}</td>
+                <td style="text-align:right;font-weight:600;color:${DANGER};">${currency(l.valor)}</td>
+                <td style="text-align:right;">${l.status==="previsto" ? `<button class="quitar-dup-btn" data-id="${l.id}" style="border:none;background:none;font-size:11px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;">Marcar como pago</button>` : ""}</td>
+              </tr>`;
+            }).join("") || `<tr><td colspan="8" class="empty">Nenhuma duplicata encontrada para os filtros aplicados.</td></tr>`}
+          </tbody>
+        </table>
+      </div>`;
+
+    rows.querySelectorAll(".quitar-dup-btn").forEach(b=> b.addEventListener("click", async ()=>{
+      try{ await quitarFatConta(b.dataset.id); refresh(); }catch(err){ toast(err.message, true); }
+    }));
+  }
+
+  build();
+}
+function renderFatDashboard(container){
+  const periodoState = defaultPeriodoState();
+
+  function build(){
+    const noPeriodo = noPeriodoFn(periodoState, l=>l.data_realizada||l.data_prevista);
+    const entradasR = STATE.faturamentoLancamentos.filter(l=>l.tipo==="entrada" && l.status==="realizado" && noPeriodo(l));
+    const saidasR = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && l.status==="realizado" && noPeriodo(l));
+    const totalEntradas = entradasR.reduce((s,l)=>s+l.valor,0);
+    const totalSaidas = saidasR.reduce((s,l)=>s+l.valor,0);
+    const saldo = totalEntradas - totalSaidas;
+    const previstoEntradas = STATE.faturamentoLancamentos.filter(l=>l.tipo==="entrada" && noPeriodo(l)).reduce((s,l)=>s+l.valor,0);
+    const previstoSaidas = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && noPeriodo(l)).reduce((s,l)=>s+l.valor,0);
+    const duplicatasAbertas = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida" && l.duplicata && l.status==="previsto").reduce((s,l)=>s+l.valor,0);
+
+    const porCategoria = {}; saidasR.forEach(l=>{ porCategoria[l.categoria]=(porCategoria[l.categoria]||0)+l.valor; });
+    const topCategorias = Object.entries(porCategoria).sort((a,b)=>b[1]-a[1]).slice(0,5);
+    const porUnidade = {}; entradasR.forEach(l=>{ porUnidade[l.unidade]=(porUnidade[l.unidade]||0)+l.valor; });
+    const topUnidades = Object.entries(porUnidade).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+    const pagarPend = STATE.faturamentoLancamentos.filter(l=>l.tipo==="saida"&&l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista)).slice(0,4);
+    const receberPend = STATE.faturamentoLancamentos.filter(l=>l.tipo==="entrada"&&l.status==="previsto").sort((a,b)=>a.data_prevista.localeCompare(b.data_prevista)).slice(0,4);
+
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Dashboard — Faturamentos</h2>
+          <p class="muted" style="margin:4px 0 0;font-size:13px;">Carteira separada de faturamento, com controle de duplicatas.</p>
+        </div>
+        ${periodoPickerHTML("fdb", periodoState)}
+      </div>
+
+      <div class="grid-4" style="margin-bottom:16px;">
+        ${statCard("Entradas realizadas", currency(totalEntradas), "down", BRAND[100], BRAND[600])}
+        ${statCard("Saídas realizadas", currency(totalSaidas), "up", DANGER_BG, DANGER)}
+        ${statCard("Saldo do período", currency(saldo), "trending", saldo>=0?BRAND[100]:DANGER_BG, saldo>=0?BRAND[600]:DANGER)}
+        ${statCard("Duplicatas em aberto", currency(duplicatasAbertas), "card", WARN_BG, WARN)}
+      </div>
+
+      <div class="grid-3" style="margin-bottom:16px;">
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Fluxo de Caixa: Previsto vs. Realizado</h3>
+          <canvas id="chart-fat-fluxo" height="200"></canvas>
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Categorias que mais consumiram</h3>
+          ${topCategorias.length ? `<canvas id="chart-fat-cat" height="200"></canvas>` : `<p class="empty">Sem saídas realizadas no período.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Unidades com mais recebimento</h3>
+          ${topUnidades.length ? `<canvas id="chart-fat-uni" height="200"></canvas>` : `<p class="empty">Sem entradas realizadas no período.</p>`}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h3 class="serif" style="margin:0;font-size:15px;color:${BRAND[800]};">Próximas contas a pagar</h3>${icon("chevron",16,"#d6d3cd")}
+          </div>
+          ${pagarPend.map(l=>`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #faf9f6;font-size:14px;"><span style="color:#57534e;">${esc(l.contraparte)}</span><span style="font-weight:500;color:${DANGER};">${currency(l.valor)}</span></div>`).join("") || `<p class="muted" style="font-size:13px;padding:10px 0;">Nenhuma pendência.</p>`}
+        </div>
+        <div class="card" style="padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h3 class="serif" style="margin:0;font-size:15px;color:${BRAND[800]};">Próximas contas a receber</h3>${icon("chevron",16,"#d6d3cd")}
+          </div>
+          ${receberPend.map(l=>`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #faf9f6;font-size:14px;"><span style="color:#57534e;">${esc(l.contraparte)}</span><span style="font-weight:500;color:${BRAND[600]};">${currency(l.valor)}</span></div>`).join("") || `<p class="muted" style="font-size:13px;padding:10px 0;">Nenhuma pendência.</p>`}
+        </div>
+      </div>`;
+
+    wirePeriodoPicker("fdb", container, periodoState, build);
+
+    mkBarChart("chart-fat-fluxo", ["Entradas","Saídas"], [
+      {label:"Previsto", data:[previstoEntradas, previstoSaidas], color:BRAND[200]},
+      {label:"Realizado", data:[totalEntradas, totalSaidas], color:BRAND[600]},
+    ], true);
+    if(topCategorias.length) mkHBarChart("chart-fat-cat", topCategorias);
+    if(topUnidades.length) mkHBarChart("chart-fat-uni", topUnidades);
+  }
+  build();
+}
+function renderFatPersonalizado(container){
+  let modo = "categoria";
+  let valorSel = "";
+
+  function build(){
+    const set = new Set(); STATE.faturamentoLancamentos.forEach(l=> set.add(modo==="categoria"?l.categoria:l.contraparte));
+    const opcoes = Array.from(set).sort();
+    const filtrados = valorSel ? STATE.faturamentoLancamentos.filter(l=> (modo==="categoria"?l.categoria:l.contraparte)===valorSel) : [];
+    const entradas = filtrados.filter(l=>l.tipo==="entrada"&&l.status==="realizado").reduce((s,l)=>s+l.valor,0);
+    const saidas = filtrados.filter(l=>l.tipo==="saida"&&l.status==="realizado").reduce((s,l)=>s+l.valor,0);
+
+    const porMes = {};
+    filtrados.forEach(l=>{ if(l.status!=="realizado") return; const mk=monthKey(l.data_realizada); porMes[mk]=porMes[mk]||0; porMes[mk]+= l.tipo==="entrada"?l.valor:-l.valor; });
+    const serieKeys = Object.keys(porMes).sort();
+
+    container.innerHTML = `
+      <h2 class="serif" style="margin:0 0 4px;font-size:24px;color:${BRAND[800]};">Faturamentos — Análise Personalizada</h2>
+      <p class="muted" style="margin:0 0 18px;font-size:13px;">Filtre por categoria ou por cliente/fornecedor específico para ver um recorte dedicado.</p>
+      <div class="card" style="padding:14px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;">
+        <div><span class="field-label">Analisar por</span>
+          <select class="input" id="fpz-modo" style="width:auto;"><option value="categoria" ${modo==="categoria"?"selected":""}>Categoria</option><option value="contraparte" ${modo==="contraparte"?"selected":""}>Cliente / Fornecedor</option></select></div>
+        <div style="flex:1;min-width:220px;"><span class="field-label">${modo==="categoria"?"Categoria":"Nome"}</span>
+          <select class="input" id="fpz-valor"><option value="">Selecione...</option>${opcoes.map(o=>`<option value="${esc(o)}" ${o===valorSel?"selected":""}>${esc(o)}</option>`).join("")}</select></div>
+      </div>
+      <div id="fpz-results">
+        ${!valorSel ? `<div class="card empty" style="border-style:dashed;padding:60px 10px;">Selecione uma categoria ou um cliente/fornecedor acima para gerar a análise.</div>` : `
+        <div class="grid-4" style="margin-bottom:16px;">
+          ${statCard("Total recebido", currency(entradas), "down", BRAND[100], BRAND[600])}
+          ${statCard("Total gasto", currency(saidas), "up", DANGER_BG, DANGER)}
+          ${statCard("Saldo líquido", currency(entradas-saidas), "trending", BRAND[100], BRAND[600])}
+          ${statCard("Lançamentos", filtrados.length, "clipboard", WARN_BG, WARN)}
+        </div>
+        <div class="card" style="padding:16px;margin-bottom:16px;">
+          <h3 class="serif" style="margin:0 0 10px;font-size:15px;color:${BRAND[800]};">Evolução mensal (líquido)</h3>
+          ${serieKeys.length ? `<canvas id="chart-fat-pz" height="180"></canvas>` : `<p class="empty">Sem lançamentos realizados para esse recorte.</p>`}
+        </div>
+        <div class="card" style="overflow:hidden;">
+          <table><thead><tr><th>Data</th><th>Tipo</th><th>Categoria</th><th>Contraparte</th><th>Unidade</th><th style="text-align:right;">Valor</th></tr></thead>
+          <tbody>${filtrados.sort((a,b)=>(b.data_realizada||b.data_prevista).localeCompare(a.data_realizada||a.data_prevista)).map(l=>`
+            <tr><td>${fmtDate(l.data_realizada||l.data_prevista)}</td><td>${l.tipo==="entrada"?"Entrada":"Saída"}</td>
+            <td style="color:#78716c;">${esc(l.categoria)}</td><td style="font-weight:500;">${esc(l.contraparte)}</td><td style="color:#78716c;">${esc(l.unidade)}</td>
+            <td style="text-align:right;font-weight:600;color:${l.tipo==="entrada"?BRAND[600]:DANGER};">${currency(l.valor)}</td></tr>`).join("")}</tbody></table>
+        </div>`}
+      </div>`;
+
+    container.querySelector("#fpz-modo").addEventListener("change",(e)=>{ modo=e.target.value; valorSel=""; build(); });
+    const valSel = container.querySelector("#fpz-valor");
+    if(valSel) valSel.addEventListener("change",(e)=>{ valorSel=e.target.value; build(); });
+
+    if(valorSel && serieKeys.length){
+      const ctx = document.getElementById("chart-fat-pz");
+      if(CHARTS["chart-fat-pz"]) CHARTS["chart-fat-pz"].destroy();
+      CHARTS["chart-fat-pz"] = new Chart(ctx, {
+        type:"line",
+        data:{ labels: serieKeys.map(monthLabel), datasets:[{ data: serieKeys.map(k=>porMes[k]), borderColor:BRAND[600], backgroundColor:BRAND[100], fill:true, tension:.35, pointRadius:3 }] },
+        options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{label:(c)=>currency(c.raw)}}}, scales:{ y:{ticks:{callback:(v)=>(v/1000)+"k"}, grid:{color:"#f1efe9"}}, x:{grid:{display:false}} } }
+      });
+    }
+  }
+  build();
+}
+
+/* ============================== Usuários ============================== */
+function usuarioFormHTML(item){
+  return `
+    <form id="user-form">
+      <label class="field"><span class="field-label">Nome completo</span><input class="input" id="uf-nome" value="${esc(item?item.nome:"")}" required /></label>
+      ${item ? "" : `
+      <label class="field"><span class="field-label">E-mail</span><input class="input" type="email" id="uf-email" required /></label>
+      <label class="field"><span class="field-label">Senha provisória</span><input class="input" type="password" id="uf-senha" required minlength="6" /></label>`}
+      <label class="field"><span class="field-label">Perfil de acesso</span>
+        <select class="input" id="uf-cargo">
+          <option value="financeiro" ${(!item||item.cargo==="financeiro")?"selected":""}>Financeiro</option>
+          <option value="admin" ${item&&item.cargo==="admin"?"selected":""}>Administrador</option>
+        </select></label>
+      ${item ? `<p class="field-hint">Alteração de e-mail ou senha deve ser feita pelo próprio usuário na tela de login do Supabase.</p>` : `<p class="field-hint">Dependendo da configuração do projeto, pode ser necessário confirmar o e-mail antes do primeiro acesso.</p>`}
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
+        <button type="button" class="btn btn-outline" id="uf-cancel">Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="uf-submit">${icon("check",15)} Salvar</button>
+      </div>
+    </form>`;
+}
+function openUsuarioModal(item, onSaved){
+  openModal({
+    title: item ? "Editar usuário" : "Novo usuário",
+    bodyHTML: usuarioFormHTML(item),
+    mount:(body)=>{
+      body.querySelector("#uf-cancel").addEventListener("click", closeModal);
+      body.querySelector("#user-form").addEventListener("submit", async (e)=>{
+        e.preventDefault();
+        const nome = body.querySelector("#uf-nome").value.trim();
+        const cargo = body.querySelector("#uf-cargo").value;
+        const btn = body.querySelector("#uf-submit");
+        btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
+        try{
+          if(item){
+            await editarUsuario(item.id, { nome, cargo });
+          }else{
+            const email = body.querySelector("#uf-email").value.trim();
+            const senha = body.querySelector("#uf-senha").value;
+            if(!email || senha.length < 6) throw new Error("Preencha e-mail e uma senha com pelo menos 6 caracteres.");
+            await criarUsuario({ nome, email, senha, cargo });
+          }
+          closeModal(); onSaved && onSaved();
+        }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar`; }
+      });
+    }
+  });
+}
+function renderUsuarios(container){
+  function build(){
+    container.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+        <div><h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Usuários</h2>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;">Gerencie quem tem acesso ao sistema financeiro.</p></div>
+        <button class="btn btn-primary" id="btn-novo-user">${icon("plus",16)} Novo usuário</button>
+      </div>
+      <div class="card" style="overflow:hidden;">
+        <table><thead><tr><th>Nome</th><th>Perfil</th><th style="text-align:right;">Ações</th></tr></thead>
+        <tbody>${STATE.users.map(u=>`
+          <tr>
+            <td style="font-weight:500;color:#44403c;">${esc(u.nome)}${u.id===STATE.currentUser.id?` <span class="muted" style="font-size:10px;">(você)</span>`:""}</td>
+            <td style="color:#78716c;text-transform:capitalize;">${esc(u.cargo)}</td>
+            <td><div style="display:flex;justify-content:flex-end;gap:2px;">
+              <button class="icon-btn edit-user-btn" data-id="${u.id}">${icon("edit",15,"#78716c")}</button>
+            </div></td>
+          </tr>`).join("")}</tbody></table>
+      </div>
+      <p class="muted" style="font-size:11px;margin-top:10px;">Remover o acesso de um usuário exige a chave de administração do Supabase (Service Role) e, por segurança, não fica disponível dentro do app — faça isso pelo painel do Supabase em Authentication → Users.</p>`;
+    container.querySelector("#btn-novo-user").addEventListener("click", ()=> openUsuarioModal(null, build));
+    container.querySelectorAll(".edit-user-btn").forEach(b=> b.addEventListener("click", ()=>{
+      openUsuarioModal(STATE.users.find(u=>u.id===b.dataset.id), build);
+    }));
+  }
+  build();
+}
+
+/* ============================== Boot ============================== */
+bootstrap();
+</script>
+</body>
+</html>
