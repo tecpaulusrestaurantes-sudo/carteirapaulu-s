@@ -263,8 +263,18 @@ async function loadProfileAndData(){
   const profiles = await sbFetch(`/rest/v1/profiles?id=eq.${STATE.session.user.id}&select=*`);
   const profile = profiles && profiles[0];
   if(!profile) throw new Error("Perfil não encontrado.");
-  STATE.currentUser = { id: STATE.session.user.id, email: STATE.session.user.email, nome: profile.nome, cargo: profile.cargo };
-  await Promise.all([reloadLancamentos(), reloadCartaoLancamentos(), reloadValeLancamentos(), reloadFaturamentoLancamentos(), reloadCategorias(), STATE.currentUser.cargo==="admin" ? reloadUsers() : Promise.resolve()]);
+  STATE.currentUser = { id: STATE.session.user.id, email: STATE.session.user.email, nome: profile.nome, cargo: profile.cargo, permissoes: profile.permissoes || [] };
+  await Promise.all([reloadLancamentos(), reloadCartaoLancamentos(), reloadValeLancamentos(), reloadFaturamentoLancamentos(), reloadCategorias(), isAdminLevel(STATE.currentUser) ? reloadUsers() : Promise.resolve()]);
+  ajustarViewInicial();
+}
+function ajustarViewInicial(){
+  if(temAcessoView(STATE.currentUser, STATE.view)) return;
+  for(const g of NAV_GROUPS){
+    for(const it of g.items){
+      if(temAcessoView(STATE.currentUser, it.id)){ STATE.view = it.id; return; }
+    }
+  }
+  STATE.view = "sem-acesso";
 }
 async function reloadLancamentos(){ STATE.lancamentos = await sbFetch(`/rest/v1/lancamentos?select=*&order=criado_em.desc`); }
 async function reloadCartaoLancamentos(){ STATE.cartaoLancamentos = await sbFetch(`/rest/v1/cartao_lancamentos?select=*&order=data.desc`); }
@@ -432,18 +442,21 @@ function manageCategoriasBtn(tipo){
   return `<button type="button" id="btn-gerenciar-cat" style="border:none;background:none;font-size:11px;color:${BRAND[600]};text-decoration:underline;cursor:pointer;padding:0;margin-top:5px;display:inline-flex;align-items:center;gap:3px;">${icon("edit",11)} Gerenciar categorias</button>`;
 }
 
-async function criarUsuario({ nome, email, senha, cargo }){
+async function criarUsuario({ nome, email, senha, cargo, permissoes }){
   const data = await sbAuthSignup(email, senha);
   const newId = data.user && data.user.id;
   if(newId){
-    const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${newId}`, { method:"PATCH", body:{ nome, cargo } });
+    const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${newId}`, { method:"PATCH", body:{ nome, cargo, permissoes: permissoes||[] } });
     STATE.users = [...STATE.users, perfil].sort((a,b)=>a.nome.localeCompare(b.nome));
   }
   return data;
 }
-async function editarUsuario(id, { nome, cargo }){
-  const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${id}`, { method:"PATCH", body:{ nome, cargo } });
+async function editarUsuario(id, { nome, cargo, permissoes }){
+  const [perfil] = await sbFetch(`/rest/v1/profiles?id=eq.${id}`, { method:"PATCH", body:{ nome, cargo, permissoes: permissoes||[] } });
   STATE.users = STATE.users.map(u=> u.id===id ? perfil : u);
+  if(STATE.currentUser && STATE.currentUser.id===id){
+    STATE.currentUser = {...STATE.currentUser, nome: perfil.nome, cargo: perfil.cargo, permissoes: perfil.permissoes || [] };
+  }
 }
 
 /* ============================== Modal / Confirm ============================== */
@@ -571,7 +584,6 @@ function renderLogin(root){
       STATE.session = session;
       await saveRefreshToken(session.refresh_token);
       await loadProfileAndData();
-      STATE.view = "dashboard";
       renderRoot();
     }catch(err){
       errEl.textContent = err.message;
@@ -607,13 +619,53 @@ const NAV_GROUPS = [
   ]},
 ];
 
+/* ============================== Perfis de acesso e permissões por aba/subaba ============================== */
+const CARGO_LABEL = { usuario:"Usuário", admin:"Admin", super_admin:"Super Admin" };
+function isAdminLevel(user){ return !!user && (user.cargo==="admin" || user.cargo==="super_admin"); }
+function temAcessoView(user, viewId){
+  if(!user || !viewId) return false;
+  if(isAdminLevel(user)) return true;
+  return Array.isArray(user.permissoes) && user.permissoes.includes(viewId);
+}
+function temAcessoGrupo(user, groupId){
+  if(!user || !groupId) return false;
+  if(isAdminLevel(user)) return true;
+  const g = NAV_GROUPS.find(gr=>gr.id===groupId);
+  if(!g) return false;
+  return g.items.some(it=>temAcessoView(user, it.id));
+}
+function cargoBadge(cargo){
+  const label = esc(CARGO_LABEL[cargo] || cargo);
+  if(cargo==="super_admin") return `<span class="badge" style="background:${BRAND[800]};color:#fff;">${label}</span>`;
+  if(cargo==="admin") return `<span class="badge badge-ok">${label}</span>`;
+  return `<span class="badge badge-pending">${label}</span>`;
+}
+function permissoesBadges(u){
+  if(isAdminLevel(u)) return `<span class="badge badge-ok"><span class="dot" style="background:${BRAND[500]}"></span>Acesso total</span>`;
+  const perms = u.permissoes || [];
+  const partes = [];
+  NAV_GROUPS.forEach(g=>{
+    const itensPermitidos = g.items.filter(it=>perms.includes(it.id));
+    if(!itensPermitidos.length) return;
+    if(itensPermitidos.length===g.items.length){
+      partes.push(`<span class="badge badge-pending" style="margin:1px 4px 1px 0;">${esc(g.label)}</span>`);
+    }else{
+      partes.push(`<span class="badge badge-pending" style="margin:1px 4px 1px 0;" title="${esc(itensPermitidos.map(it=>it.label).join(", "))}">${esc(g.label)} (${itensPermitidos.length}/${g.items.length})</span>`);
+    }
+  });
+  if(!partes.length) return `<span class="muted" style="font-size:12px;">Nenhum acesso liberado</span>`;
+  return partes.join("");
+}
+
 function renderSidebar(){
   const sb = document.getElementById("sidebar");
   const prevNav = sb.querySelector(".sidebar-nav");
   const prevScrollTop = prevNav ? prevNav.scrollTop : 0;
   const groupHTML = NAV_GROUPS.map(g=>{
+    const itensVisiveis = g.items.filter(it=>temAcessoView(STATE.currentUser, it.id));
+    if(!itensVisiveis.length) return "";
     const open = !!STATE.navOpen[g.id];
-    const hasActive = g.items.some(it=>it.id===STATE.view);
+    const hasActive = itensVisiveis.some(it=>it.id===STATE.view);
     return `
       <div class="nav-group">
         <button class="nav-item nav-group-toggle ${hasActive?"active-group":""}" data-group="${g.id}">
@@ -621,26 +673,27 @@ function renderSidebar(){
           <span style="transform:rotate(${open?90:0}deg);transition:transform .15s;display:inline-flex;">${icon("chevron",14)}</span>
         </button>
         <div class="nav-subitems" style="display:${open?"block":"none"};">
-          ${g.items.map(it=>`
+          ${itensVisiveis.map(it=>`
             <button class="nav-item nav-subitem ${STATE.view===it.id?"active":""}" data-view="${it.id}">
               ${icon(it.ic,15)} ${esc(it.label)}
             </button>`).join("")}
         </div>
       </div>`;
   }).join("");
-  const usuariosHTML = STATE.currentUser.cargo==="admin" ? `
+  const usuariosHTML = isAdminLevel(STATE.currentUser) ? `
       <button class="nav-item ${STATE.view==="usuarios"?"active":""}" data-view="usuarios">
         ${icon("users",17)} Usuários
       </button>` : "";
+  const semAbasHTML = (!groupHTML && !usuariosHTML) ? `<p class="muted" style="font-size:12px;padding:10px 12px;">Nenhuma aba liberada ainda. Fale com um Admin.</p>` : "";
   sb.innerHTML = `
     <div class="sidebar-brand">${brandMark(34)}</div>
-    <nav class="sidebar-nav">${groupHTML}${usuariosHTML}</nav>
+    <nav class="sidebar-nav">${groupHTML}${usuariosHTML}${semAbasHTML}</nav>
     <div class="sidebar-foot">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
         <div class="avatar">${esc(STATE.currentUser.nome.slice(0,1).toUpperCase())}</div>
         <div style="min-width:0;">
           <p style="margin:0;font-size:12px;font-weight:600;color:#44403c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(STATE.currentUser.nome)}</p>
-          <p style="margin:0;font-size:11px;color:#a8a29e;text-transform:capitalize;">${esc(STATE.currentUser.cargo)}</p>
+          <p style="margin:0;font-size:11px;color:#a8a29e;">${esc(CARGO_LABEL[STATE.currentUser.cargo] || STATE.currentUser.cargo)}</p>
         </div>
       </div>
       <button class="btn btn-outline" style="width:100%;" id="btn-logout">${icon("logout",15)} Sair</button>
@@ -660,9 +713,19 @@ function renderSidebar(){
   });
 }
 
+function renderSemAcesso(container){
+  container.innerHTML = `
+    <div class="empty" style="padding:70px 10px;">
+      ${icon("lock",30,"#d6d3cd")}
+      <p style="margin-top:12px;font-size:14px;">Você não tem acesso a esta área.</p>
+      <p style="margin-top:4px;font-size:13px;">Fale com um Admin ou Super Admin para liberar essa aba para o seu usuário.</p>
+    </div>`;
+}
 function renderView(){
   const c = document.getElementById("view-container");
   Object.keys(CHARTS).forEach(k=>{ CHARTS[k].destroy(); delete CHARTS[k]; });
+  const autorizado = STATE.view==="usuarios" ? isAdminLevel(STATE.currentUser) : temAcessoView(STATE.currentUser, STATE.view);
+  if(!autorizado){ renderSemAcesso(c); return; }
   if(STATE.view==="dashboard") renderDashboard(c);
   else if(STATE.view==="entradas") renderLancamentosView(c,"entrada");
   else if(STATE.view==="saidas") renderLancamentosView(c,"saida");
@@ -678,7 +741,8 @@ function renderView(){
   else if(STATE.view==="fat-contas") renderFatContas(c);
   else if(STATE.view==="fat-duplicatas") renderFatDuplicatas(c);
   else if(STATE.view==="fat-personalizado") renderFatPersonalizado(c);
-  else if(STATE.view==="usuarios" && STATE.currentUser.cargo==="admin") renderUsuarios(c);
+  else if(STATE.view==="usuarios") renderUsuarios(c);
+  else renderSemAcesso(c);
 }
 
 /* ============================== Stat card / badge helpers ============================== */
@@ -2215,7 +2279,12 @@ function renderFatPersonalizado(container){
 }
 
 /* ============================== Usuários ============================== */
-function usuarioFormHTML(item){
+function usuarioFormHTML(item, actingCargo){
+  const cargoAtual = item?.cargo || "usuario";
+  const opcoesCargo = actingCargo==="super_admin"
+    ? [["usuario","Usuário"],["admin","Admin"],["super_admin","Super Admin"]]
+    : [["usuario","Usuário"]];
+  const permissoesAtuais = item?.permissoes || [];
   return `
     <form id="user-form">
       <label class="field"><span class="field-label">Nome completo</span><input class="input" id="uf-nome" value="${esc(item?item.nome:"")}" required /></label>
@@ -2224,9 +2293,33 @@ function usuarioFormHTML(item){
       <label class="field"><span class="field-label">Senha provisória</span><input class="input" type="password" id="uf-senha" required minlength="6" /></label>`}
       <label class="field"><span class="field-label">Perfil de acesso</span>
         <select class="input" id="uf-cargo">
-          <option value="financeiro" ${(!item||item.cargo==="financeiro")?"selected":""}>Financeiro</option>
-          <option value="admin" ${item&&item.cargo==="admin"?"selected":""}>Administrador</option>
-        </select></label>
+          ${opcoesCargo.map(([v,l])=>`<option value="${v}" ${cargoAtual===v?"selected":""}>${l}</option>`).join("")}
+        </select>
+        ${actingCargo!=="super_admin" ? `<span class="field-hint">Só um Super Admin pode criar ou editar contas Admin/Super Admin.</span>` : ""}
+      </label>
+      <div id="uf-permissoes-wrap" style="display:${cargoAtual==="usuario"?"block":"none"};">
+        <span class="field-label">Categorias e abas liberadas para este usuário</span>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:6px;">
+          ${NAV_GROUPS.map(g=>{
+            const todosMarcados = g.items.every(it=>permissoesAtuais.includes(it.id));
+            return `
+            <div class="card" style="padding:10px 12px;">
+              <label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:${BRAND[700]};cursor:pointer;margin-bottom:7px;">
+                <input type="checkbox" class="uf-group-check" data-group="${g.id}" ${todosMarcados?"checked":""} style="width:15px;height:15px;flex-shrink:0;" />
+                ${icon(g.ic,15,BRAND[600])} ${esc(g.label)}
+              </label>
+              <div style="display:flex;flex-direction:column;gap:5px;padding-left:23px;">
+                ${g.items.map(it=>`
+                  <label style="display:flex;align-items:center;gap:8px;font-size:12.5px;color:#57534e;cursor:pointer;">
+                    <input type="checkbox" class="uf-perm-check" data-group="${g.id}" value="${it.id}" ${permissoesAtuais.includes(it.id)?"checked":""} style="width:14px;height:14px;flex-shrink:0;" />
+                    ${esc(it.label)}
+                  </label>`).join("")}
+              </div>
+            </div>`;
+          }).join("")}
+        </div>
+        <span class="field-hint">Marque a categoria inteira ou só as abas específicas dentro dela. Admins e Super Admins sempre têm acesso a tudo, incluindo esta tela.</span>
+      </div>
       ${item ? `<p class="field-hint">Alteração de e-mail ou senha deve ser feita pelo próprio usuário na tela de login do Supabase.</p>` : `<p class="field-hint">Dependendo da configuração do projeto, pode ser necessário confirmar o e-mail antes do primeiro acesso.</p>`}
       <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px;">
         <button type="button" class="btn btn-outline" id="uf-cancel">Cancelar</button>
@@ -2235,25 +2328,44 @@ function usuarioFormHTML(item){
     </form>`;
 }
 function openUsuarioModal(item, onSaved){
+  const actingCargo = STATE.currentUser.cargo;
   openModal({
     title: item ? "Editar usuário" : "Novo usuário",
-    bodyHTML: usuarioFormHTML(item),
+    bodyHTML: usuarioFormHTML(item, actingCargo),
     mount:(body)=>{
       body.querySelector("#uf-cancel").addEventListener("click", closeModal);
+      const cargoSel = body.querySelector("#uf-cargo");
+      const permWrap = body.querySelector("#uf-permissoes-wrap");
+      cargoSel.addEventListener("change", ()=>{ permWrap.style.display = cargoSel.value==="usuario" ? "block" : "none"; });
+      body.querySelectorAll(".uf-group-check").forEach(gc=>{
+        gc.addEventListener("change", ()=>{
+          body.querySelectorAll(`.uf-perm-check[data-group="${gc.dataset.group}"]`).forEach(ic=>{ ic.checked = gc.checked; });
+        });
+      });
+      body.querySelectorAll(".uf-perm-check").forEach(ic=>{
+        ic.addEventListener("change", ()=>{
+          const grupo = ic.dataset.group;
+          const irmaos = body.querySelectorAll(`.uf-perm-check[data-group="${grupo}"]`);
+          const gc = body.querySelector(`.uf-group-check[data-group="${grupo}"]`);
+          if(gc) gc.checked = Array.from(irmaos).every(s=>s.checked);
+        });
+      });
       body.querySelector("#user-form").addEventListener("submit", async (e)=>{
         e.preventDefault();
         const nome = body.querySelector("#uf-nome").value.trim();
-        const cargo = body.querySelector("#uf-cargo").value;
+        const cargo = cargoSel.value;
+        const permissoes = cargo==="usuario" ? Array.from(body.querySelectorAll(".uf-perm-check:checked")).map(el=>el.value) : [];
         const btn = body.querySelector("#uf-submit");
         btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> Salvando...`;
         try{
           if(item){
-            await editarUsuario(item.id, { nome, cargo });
+            await editarUsuario(item.id, { nome, cargo, permissoes });
+            if(item.id===STATE.currentUser.id){ ajustarViewInicial(); renderSidebar(); renderView(); }
           }else{
             const email = body.querySelector("#uf-email").value.trim();
             const senha = body.querySelector("#uf-senha").value;
             if(!email || senha.length < 6) throw new Error("Preencha e-mail e uma senha com pelo menos 6 caracteres.");
-            await criarUsuario({ nome, email, senha, cargo });
+            await criarUsuario({ nome, email, senha, cargo, permissoes });
           }
           closeModal(); onSaved && onSaved();
         }catch(err){ toast(err.message, true); btn.disabled=false; btn.innerHTML = `${icon("check",15)} Salvar`; }
@@ -2266,19 +2378,23 @@ function renderUsuarios(container){
     container.innerHTML = `
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
         <div><h2 class="serif" style="margin:0;font-size:24px;color:${BRAND[800]};">Usuários</h2>
-        <p class="muted" style="margin:4px 0 0;font-size:13px;">Gerencie quem tem acesso ao sistema financeiro.</p></div>
+        <p class="muted" style="margin:4px 0 0;font-size:13px;">Gerencie quem tem acesso ao sistema financeiro e a quais abas cada um pode chegar.</p></div>
         <button class="btn btn-primary" id="btn-novo-user">${icon("plus",16)} Novo usuário</button>
       </div>
       <div class="card" style="overflow:hidden;">
-        <table><thead><tr><th>Nome</th><th>Perfil</th><th style="text-align:right;">Ações</th></tr></thead>
-        <tbody>${STATE.users.map(u=>`
+        <table><thead><tr><th>Nome</th><th>Perfil</th><th>Abas liberadas</th><th style="text-align:right;">Ações</th></tr></thead>
+        <tbody>${STATE.users.map(u=>{
+          const podeEditar = STATE.currentUser.cargo==="super_admin" || (STATE.currentUser.cargo==="admin" && u.cargo==="usuario");
+          return `
           <tr>
             <td style="font-weight:500;color:#44403c;">${esc(u.nome)}${u.id===STATE.currentUser.id?` <span class="muted" style="font-size:10px;">(você)</span>`:""}</td>
-            <td style="color:#78716c;text-transform:capitalize;">${esc(u.cargo)}</td>
+            <td>${cargoBadge(u.cargo)}</td>
+            <td>${permissoesBadges(u)}</td>
             <td><div style="display:flex;justify-content:flex-end;gap:2px;">
-              <button class="icon-btn edit-user-btn" data-id="${u.id}">${icon("edit",15,"#78716c")}</button>
+              ${podeEditar ? `<button class="icon-btn edit-user-btn" data-id="${u.id}">${icon("edit",15,"#78716c")}</button>` : `<span class="muted" style="font-size:11px;">—</span>`}
             </div></td>
-          </tr>`).join("")}</tbody></table>
+          </tr>`;
+        }).join("")}</tbody></table>
       </div>
       <p class="muted" style="font-size:11px;margin-top:10px;">Remover o acesso de um usuário exige a chave de administração do Supabase (Service Role) e, por segurança, não fica disponível dentro do app — faça isso pelo painel do Supabase em Authentication → Users.</p>`;
     container.querySelector("#btn-novo-user").addEventListener("click", ()=> openUsuarioModal(null, build));
